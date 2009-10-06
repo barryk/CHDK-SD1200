@@ -16,12 +16,15 @@ void boot();
 void DumpMemory(char *path, void *start_address, int length);
 
 void taskCreateHook(int *p) {
- p-=17;
+    p-=17;
+    if (p[0] == 0xFFC61374)     // SD1200 task_InitFileModules
+        p[0] = (int) init_file_modules_task;
+
 //VERIFY_SD780 - MORE?
-// if (p[0]==0x)  p[0]=(int)capt_seq_task;
-//Corrected by JHARP - if (p[0]==0xFF91A6AC)  p[0]=(int)movie_record_task;
+// if (p[1]==0x)  p[0]=(int)capt_seq_task;
 // task_InitFileModules
 //if (p[0]==0xFF85D754) p[0]=(int)capt_seq_task;
+
 if (p[0]==0xFF877DD0) p[0]=(int)init_file_modules_task;
 
 }
@@ -29,6 +32,7 @@ if (p[0]==0xFF877DD0) p[0]=(int)init_file_modules_task;
 // ??? from sx10
 void taskCreateHook2(int *p) {
  p-=17;
+
  //VERIFY_SD780 - Does this need to be here at all anymore?
 //Uncomment if (p[0]==0xFF881534)  p[0]=(int)init_file_modules_task;
 }
@@ -127,8 +131,7 @@ void boot() { //#fs
 	// Search on 0x12345678 finds function that is called from function with
     // this code (SD780 0xFF842A90, SD1200 0xFFC307C4).
     *(int*)(0x222C)= (*(int*)0xC02200F8)&1 ? 0x400000 : 0x200000;
-    //VERIFY_SD780 replacement of sub_FF842A90/sub_FF821B7C for correct power-on.
-    // jump to init-sequence that follows the data-copy-routine
+
     asm volatile ("B      sub_FFC001A0_my\n");
 }
 
@@ -242,43 +245,15 @@ void __attribute__((naked,noinline)) sub_FFC04D38_my() {
 "                 CMP     R0, #0\n"
 "                 LDRLT   R0, =0xFFC04E6C\n" // "termDeviceCreate"
 "                 BLLT    sub_FFC04E2C\n" // err_init_task
-
-
-
-// For Debugging, turn on red LED while in the loop below
-// VERIFY_SD1200
-    "                 STMFD SP!, {R2, R3}\n" 
-    "                 LDR R3, =0xC0223030\n"
-    "                 MOV R2, #0x46\n"
-    "                 STR R2, [R3]\n"
-    "                 LDMFD SP!, {R2, R3}\n"
-
-"try_stdioSetup:\n"         // Call fails the first time and we end up in err_init_task...
-                            // MAJOR_VERIFY_SD1200
 "                 LDR     R0, =0xFFC04E64\n" // "/_term"
 "                 BL      sub_FFC03578\n" // stdioSetup
 "                 CMP     R0, #0\n"
-
-//"                 BLT     try_stdioSetup\n" // MAJOR_VERIFY_SD1200
-
 "                 LDRLT   R0, =0xFFC04E80\n" // "stdioSetup"
 "                 BLLT    sub_FFC04E2C\n" // err_init_task
-
-// VERIFY_SD1200 Turn off LED when exit loop
-    "                 STMFD SP!, {R2, R3}\n" 
-    "                 LDR R3, =0xC0223030\n"
-    "                 MOV R2, #0x44\n"
-    "                 STR R2, [R3]\n"
-    "                 LDMFD SP!, {R2, R3}\n"
-
-
-
 "                 BL      sub_FFC08BCC\n" // stdlibSetup
 "                 CMP     R0, #0\n"
-
 "                 LDRLT   R0, =0xFFC04E8C\n" // "stdlibSetup"
 "                 BLLT    sub_FFC04E2C\n" // err_init_task
-
 "                 BL      sub_FFC014A8\n"
 "                 CMP     R0, #0\n"
 "                 LDRLT   R0, =0xFFC04E98\n" // "armlib_setup"
@@ -308,8 +283,7 @@ void __attribute__((naked,noinline)) taskcreate_Startup_my() {
 "loc_FFC0C294:\n"
 "                B       loc_FFC0C294\n"
 "loc_FFC0C298:\n"
-"               BL      sub_FFC11B20\n"
-    // I'm keeping this as a reference. Duplicate of above. //"                BL      sub_FF821B7C\n" // VERIFY_SD780 is this true? - removed for correct power-on on 'on/off' button.  Hmm seems fine...
+"                BL      sub_FFC11B20\n"
 "                BL      sub_FFC11B1C\n"   //nullsub
 "                BL      sub_FFC16D84\n"
 "                LDR     R1, =0x34E000\n"
@@ -384,8 +358,8 @@ asm volatile (
 "                 STR     R0, [R4,#4]\n"
 "                 BL      sub_FFC4E494\n"
 "                 BL      sub_FFC4FB6C\n"
+"                 BL      sub_FFC4D624\n"
 "                 BL      sub_FFC48B54_my\n"
-"                 BL      sub_FFC48B54\n"
 "                 BL      sub_FFC4E750\n"
 "                 LDR     R0, [R4,#4]\n"
 "                 LDMFD   SP!, {R4,LR}\n"
@@ -480,7 +454,6 @@ void __attribute__((naked,noinline)) taskcreate_CaptSeqTask_my() {
 //SD780 - ASM matches
 //SD1200 - Changed offsets [ Original Location 0xFFC11A14 ]
 void __attribute__((naked,noinline)) taskcreate_PhySw_my() {
-
 	asm volatile (
 "                STMFD   SP!, {R3-R5,LR}\n"
 "                LDR     R4, =0x1C28\n"

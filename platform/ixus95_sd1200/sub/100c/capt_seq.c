@@ -109,7 +109,7 @@ void __attribute__((naked,noinline)) sub_FFC4A3B8_my() {
 "                BL      sub_FFCFCEA0\n" // SsShootLib.c:32768
 "                MOV     R0, R4\n"
 "                BL      sub_FFCFC540_my\n" // SsCaptureSeq.c:0 nr setup
-"                BL      capt_seq_hook_raw_here\n" // Inserted this
+//"                BL      capt_seq_hook_raw_here\n" // Inserted this
 "                MOV     R5, R0\n"
 "                B       loc_FFC4A464\n"
 "loc_FFC4A454:\n"

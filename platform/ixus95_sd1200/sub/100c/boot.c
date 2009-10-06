@@ -462,10 +462,9 @@ void __attribute__((naked,noinline)) taskcreate_PhySw_my() {
 "                BNE     loc_FFC11A48\n"
 "                MOV     R3, #0\n"
 "                STR     R3, [SP]\n"
-//"                LDR     R3, =mykbd_task\n" // task_PhySw
-"                LDR     R3, =0xFFC119E0\n" // task_PhySw
+"                LDR     R3, =mykbd_task\n" // task_PhySw
+//"                LDR     R3, =0xFFC119E0\n" // task_PhySw
 "                MOV     R2, #0x2000\n" 	// Increate stack size from 0x800 to 0x2000 for new task_PhySw so we don't have to do stack switch
-//"                MOV     R2, #0x2000\n" 	// Increate stack size from 0x800 to 0x2000 for new task_PhySw so we don't have to do stack switch
 "                MOV     R1, #0x17\n"
 "                LDR     R0, =0xFFC11C1C\n" // "PhySw"
 "                BL      sub_FFC16FCC\n" // KernelCreateTask
@@ -495,7 +494,8 @@ void __attribute__((noinline)) task_blinker() {
     int counter = 0;
 
     int *led = (void *) ledlist[0];
-    int i_led = 0;
+    //int i_led = 0;
+    int i_led = 1;
 
     int *anypointer;       // multi-purpose pointer to poke around in memory
     int v1, v2, v3, v4;    // multi-purpose vars
@@ -508,7 +508,8 @@ void __attribute__((noinline)) task_blinker() {
             if (ledstate == 1) {    // toggle LED
                     ledstate = 0;
                     *led = 0x44;      // LED off
-                    led=(void *)ledlist[(++i_led)%4];
+                    led=(void *)ledlist[(i_led)%4];
+                    //led=(void *)ledlist[(++i_led)%4];
                     //ubasic_set_led(i_led % 6, ledstate, 0);
                     //core_test(1);
             } else {
@@ -719,6 +720,7 @@ void __attribute__((naked,noinline)) sub_FFC3F1F4_my() {
 }
 
 
+/*
 //VERIFY_SD780 - FAT32 is OFF
 void __attribute__((naked,noinline)) sub_FF851B50_my() {  //Need to fix
   asm volatile (
@@ -859,4 +861,4 @@ void __attribute__((naked,noinline)) sub_FF851B50_my() {  //Need to fix
 "                 LDMFD   SP!, {R4-R8,PC}\n"
   );
 }
-
+*/

@@ -1,42 +1,57 @@
 #include "stubs_asm.h"
 
-DEF(physw_status, 0xE238) // 0xFF8219DC ShowPhySwStatus
-			//0xE23C or 0xE248
-			
-DEF(physw_run, 0x1c34) // 0x1C1C + 0xC @0xFF821894 task_PhySw SD990
-			// 0x1C28 + 0xC @ 0xFF821A3C SD780
-			
-DEF(FlashParamsTable,0xFFB2E6AC) // sub_FFA58670, search for ParameterManager.c
-				// sub_FFA$A620 SD780
-				
-DEF(zoom_busy, 0x5A3C)  // 0x8A08 + 0x14, found in sub_FF93368 search on "ZoomLens" OK
-			// 0x5A28 + 0x14  found in sub_FF9165F0 search on "aZoomlens" OK
-			
-DEF(focus_busy, 0x5938) //  0x890C + 0x8, via _sub_FF92E770__FocusLensController_c__201 and comparison to s5is OK
-			//  0x5930 + 0x8, via _sub_FF9115C8__FocusLensController.c__201
-			
-DEF(canon_menu_active,0x2CA0) // 0x582C+4, StartRecModeMenu OK      
-				// 0x2C9C + 4 look for EraseAllMenu
-				
-				
-DEF(canon_shoot_menu_active,0x6E29)   // 0xA350+1, search on "AC:StartShutTimer", similar to a720 OK
-					//sub_FF973928 sd990 vs sub_FF953AA8 sd780 
-					//0x6E28+1 (1 is assumed)
-					
-DEF(recreview_hold, 0x6C10) // 0x9FDC + 0xC4 sub_FF9659B4, via search on int 0x3007, similar to s5 101b. Doesn't appear to work.
-			    // 0x6B4C + 0xC4 sub_FF946A18, via search on int 0x3007 SD780
+DEF(physw_status, 0xC338) // 0xFFC11B90 ShowPhySwStatus
+DEF(physw_run, 0x1C28 + 0x0C) // SD1200: 0xFFC119E4 task_PhySw
+DEF(FlashParamsTable, 0xFFEB37A8) // SD1200 0xFFDF737C ParameterManager.c__90
+DEF(zoom_busy, 0x559C + 0x14) // SD1200 0xFFCF4AB0 ZoomLensController.c 
+DEF(focus_busy, 0x54A0 + 0x08) // SD1200 0xFFCEF6B0 FocusLensController.c
+DEF(canon_menu_active, 0x2BAC + 0x04) // SD1200 0xFFC5ACDC calls sub from EraseAllMenu.c
+
+DEF(canon_shoot_menu_active, 0x681C + 0x01) // SD1200 0xFFD2A0D0
+// Search on "CtrlSav.c:0", there are a bunch of them, the function looks like
+// this, on the SD1200 with 0x681C (+1) the value of interest. Note it appears
+// above the CtrlSrv.c:0 and below it (next sub).
+// And R4 is offset by #4 (twice in the same sub).
+// SD990 and SD780 match this too.
+/*
+sub_FFD2A0CC                            ; CODE XREF: sub_FFD29F3C+10j
+                                        ; sub_FFD29F94+4p ...
+        STMFD   SP!, {R4,LR}
+        LDR     R4, =0x681C
+        LDR     R0, [R4,#4]
+        CMP     R0, #0
+        LDMEQFD SP!, {R4,PC}
+        BL      _sub_FFC5C5E0__CtrlSrv.c__0 ; LOCATION: CtrlSrv.c:0
+        MOV     R0, #0
+        STR     R0, [R4,#4]
+        LDMFD   SP!, {R4,PC}
+; End of function sub_FFD2A0CC
+
+; =============== S U B R O U T I N E =======================================
+sub_FFD2A0F0                            ; CODE XREF: sub_FFD29F50+4p
+                                        ; sub_FFD29F64+4p ...
+                LDR     R1, =0x681C
+*/
 
 
+    // SD990 suggests this but also says "Doesn't appear to work"
+DEF(recreview_hold, 0x6548 + 0xC4) // Above Immediate #0x3007 at beginning of function
+    // Search for immediate 0x3007, it's immediate prior to it, at
+    // the beginning of a function (not 0x2000)
+/* SD1200
+sub_FFD1D67C                            ; CODE XREF: sub_FFD1F2D4+1F4p
+                                        ; sub_FFD2007C+20Fp
+        STMFD   SP!, {R4-R6,LR}
+        LDR     R1, =0x6548
+        LDR     R12, =0x3007
+        LDR     R2, [R1,#0x64]
+*/
 
-DEF(movie_status, 0x5B74)  // 0x53A0 + 0x3C via  loc_FF861EAC and _sub_FF860E64__MovieRecorder_c__0 OK
-			   // 0x5AD8 + 0x9C ???
 
+DEF(movie_status, 0x5648 + 0x3c) // SD1200: 0xFFCF8060, Regex Search for BLNE.*SoundDevice_CODEC.c
 
-
-DEF(some_flag_for_af_scan, 0x6068) // search on "SsPrepareSeq.c", refs at FF93BF9C similar to a720 OK
-					//0x6068 SD780 ff85dd44
-DEF(zoom_status, 0xAC68) // sub_FFA599D4, search on ZoomCon_EnterCaptModeChange OK, NOTE may have more values than other cams ?
-			// 0xAC68 look for BackupWrapper.c scrolldown 
+DEF(some_flag_for_af_scan, 0x5B4C) // LOCATION SsPrepareSeq.c:4, SD1200: 0xFFC4A5D0 LDR R10, =
+DEF(zoom_status, 0x96B4) // below DCB "Backupwrapper", sub is called from ZoomController.c sub
 			
 DEF(some_f_for_dng, 0xDEAD) // TODO NOT FOUND!
 DEF(second_ext_for_dng, 0xDEAD) // TODO NOT FOUND!

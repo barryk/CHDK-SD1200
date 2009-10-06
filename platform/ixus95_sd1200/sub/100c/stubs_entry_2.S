@@ -36,8 +36,10 @@ NHSTUB(PutInNdFilter, 0xFFC00950) // String TurnOnNdFilter at 0xFFDEAD54 but I d
 NHSTUB(PutOutNdFilter, 0xFFC00950) 
 
 NHSTUB(kbd_p2_f, 0xFFC116B0) // Similar to SD780, PhySw+1C
-NHSTUB(kbd_read_keys, 0xFFC11D80)
-    // Look for LDR R0, =YYYY then BL GetKbdState then LDR R0, =YYYY
+NHSTUB(kbd_read_keys, 0xFFC11D80) // Look for LDR R0, =YYYY then,
+    // BL GetKbdState then LDR R0, =YYYY
+    
+NHSTUB(kbd_read_keys_r2, 0xFFC30824) // autodetect basically right, just go to beginning of function
 NHSTUB(strchr, 0xFFC6CAD4) // Similar to SD780. AND R2, R1, #0xFF then LDRB R1, [R0]
 
 NHSTUB(RefreshPhysicalScreen, 0xFFC00950) // Unknown. nullsub for now

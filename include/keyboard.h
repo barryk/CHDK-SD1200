@@ -24,6 +24,9 @@
 #define KEY_MICROPHONE	21
 #define KEY_FACE        22  //SX100IS
 #define KEY_DUMMY	23     //dummy key for pressing to disable energy saving in alt mode
+#define KEY_PLAY    24
+#define KEY_POWER   25
+
 
 #define JOGDIAL_LEFT   100
 #define JOGDIAL_RIGHT  101

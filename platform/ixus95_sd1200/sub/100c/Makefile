@@ -9,6 +9,6 @@ include $(topdir)/platform/makefile_sub.inc
 #boot.S: boot.c
 #	$(CC) $(CFLAGS) -S boot.c
 
-#capt_seq.S: capt_seq.c
-#	$(CC) $(CFLAGS) -S capt_seq.c
+capt_seq.S: capt_seq.c
+	$(CC) $(CFLAGS) -S capt_seq.c
 

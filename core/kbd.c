@@ -120,6 +120,12 @@ static int nTxtbl[]={0,1,2,3,4,5,6,7,8,9};
 static int nTxtbl[]={0,16,32,62,78,102,125};
 #endif
 
+#if defined(CAMERA_ixus100_sd780) || defined(CAMERA_ixus95_sd1200)
+#define ZSTEP_TABLE_SIZE 5
+static int nTxtbl[]={0,1,2,3,4};  //TODO VERIFY_SD1200 VERIFY_SD780 Why is this here?  What is correct for SD780?
+#endif
+
+
 void kbd_sched_delay(long msec)
 {
     KBD_STACK_PUSH(msec);

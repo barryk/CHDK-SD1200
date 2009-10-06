@@ -1219,7 +1219,9 @@
     #define PARAM_CAMERA_NAME 4 // parameter number for GetParameterData
 
     #define CAM_EXT_TV_RANGE            1
-
+//----------------------------------------------------------
+#elif defined (CAMERA_ixus95_sd1200)
+    #include "../platform/ixus95_sd1200/camera_features.h"
 //----------------------------------------------------------
 #elif defined (CAMERA_ixus700_sd500)
     #define CAM_PROPSET                 1

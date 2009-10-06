@@ -1,0 +1,9001 @@
+gaonisoyP
+-- Illegal inter 0x%x(%d) --
+-- IRQ stack overflow --
+meminfo
+< Error Exception >
+undefined
+prefetch
+abort
+ TYPE : %s
+FALSE
+TRUE
+ ISR  : %s
+ TASK ID   : %d
+ TASK Name : %s
+ R%2d  : %08x
+ R13  : %08x
+ R14  : %08x
+ PC   : %08x
+ CPSR : %08x
+DRYOS PANIC: Module Code = %d, Panic Code = %d
+pvm_alloc
+ARM Library runtime error : signal=%d, type=%d
+arithmetic instruction => divide by zero
+Detail: %s
+stdioLock
+fopen
+mallocSem
+System Memory Information
+Malloc Information
+  Start Address       = 0x%08lx
+  End Address         = 0x%08lx
+  Total Size          = 0x%08x (%9d)
+  Allocated Size      = 0x%08x (%9d)
+  Allocated Peak      = 0x%08x (%9d)
+  Allocated Count     = 0x%08x (%9d)
+  Free Size           = 0x%08x (%9d)
+  Free Block Max Size = 0x%08x (%9d)
+  Free Block Count    = 0x%08x (%9d)
+usage: meminfo [-{l|s|m}]
+       -l  allocated memory list
+       -s  system memory info
+       -m  malloc memory info
+wrsem
+rdsem
+termLock
+dmSetup
+termDriverInit
+/_term
+termDeviceCreate
+stdioSetup
+stdlibSetup
+armlib_setup
+=== Dry-shell start ===
+==== Dry-shell end ====
+-- %s() error in init_task() --
+MLHClock.c
+ClockSave
+init
+idle
+0123456789ABCDEF
+0123456789abcdef
+(null)
+dmLock
+%s : %s
+Unknown command name: %s
+[%s]
+ %s 
+list command names.
+  usage : help [command name]
+help
+Dry> 
+Unknown Command : %s
+Can't create a task.
+Debug
+display extended task information
+usage : extask [task ID]
+extask
+delete a task
+kill
+suspend a task
+suspend
+resume a task
+resume
+release a task from wait status
+release
+delete a kernel object
+delete
+change a priority of task
+prio
+print Dry-MK configuration information
+mkcfg
+print memory information
+meminfo
+dump contents of memory
+write in memory
+print memory map
+memmap
+print object information
+objinfo
+Misc
+print version information
+vers
+finish Dry-shell
+exit
+print information of Dry-DM
+dminfo
+KerTask.c
+Assert: File %s Line %d
+%s%s
+Change Console
+%s%s
+LowConsole
+ConsoleSvr
+CPrintf Size Over!!
+Console.c
+Console All Closed
+Startup
+A/uartr.req
+A/%08d.log
+UartLog
+task
+display semaphore information
+usage : sem [sem ID]
+display event-flag information
+usage : event [event ID]
+event
+display mq information
+usage : mq [mq ID]
+display mutex information
+usage : mutex [mutex ID]
+mutex
+display condition variable information
+usage : cond [cond ID]
+cond
+display timer information
+usage : timer [timer ID]
+timer
+print all sizes of Dry-MK's objects
+mkobjsize
+ArandSem
+xd [- | address(hex) | > | <]
+xd {address(hex) | > | <} [line count]
+xd {address(hex) | > | <}  line count  [b | w | l]
+    >  : next page
+    <  : previous page
+    b  : 1byte access
+    w  : 2byte access
+    l  : 4byte access
+         
+  %x
+    %x
+        %x
+%08lx: 
+%02x 
+%04x 
+%08lx 
+xm [- | address(hex)]
+xm address(hex) [b | w | l] [end_address value (f|s)]
+    b : 1byte access
+    w : 2byte access
+    l : 4byte access
+    f : fill by value
+    s : search for value
+fill start
+search start
+%08lx
+done.
+%08lx : 
+%08lx  -> 
+%02x  -> 
+%04x  -> 
+prio <task ID> <priority>
+illegal task ID=%d or priority=%d
+O.K.
+release <task ID>
+Success.
+Error. Illegal task ID %d.
+delete <object name> <object ID>
+  Dry-SPI object name : sem, event, mq, mutex, cond, timer
+Error : ID 0 is not exist.
+event
+mutex
+cond
+timer
+Error : %s ID %d is could't delete.
+Error : "%s" is a illegal object name.
+%s ID %d is deleted.
+vers_dry                 %s
+vers_mk                  %s
+act_spi_sem       %8d
+act_spi_event     %8d
+act_spi_mq        %8d
+act_spi_mutex     %8d
+act_spi_cond      %8d
+act_spi_timer     %8d
+act_spi_clock     %8d
+act_spi_mem       %8d
+act_spi_isr       %8d
+act_spi_objlist   %8d
+act_spi_objinfo   %8d
+act_spi_objsetname%8d
+act_timeout       %8d
+act_objname       %8d
+dbg_stack_check   %8d
+dbg_error_check   %8d
+dbg_logging       %8d
+sys_mem_start   0x%08lx
+sys_mem_max       %8ld
+user_mem_start  0x%08lx
+user_mem_max      %8ld
+sys_objs_start  0x%08lx
+sys_objs_end    0x%08lx
+priority_max      %8d
+task_max          %8d
+semaphore_max     %8d
+event_max         %8d
+message_q_max     %8d
+mutex_max         %8d
+condition_max     %8d
+timer_max         %8d
+vector_max        %8d
+it4_mbx_max       %8d
+it4_mpf_max       %8d
+it4_mpl_max       %8d
+level_low         %8d
+level_timer       %8d
+level_kern        %8d
+prio_default      %8d
+stack_default     %8ld
+stack_idle        %8ld
+stack_init        %8ld
+stack_addr_idle 0x%08lx
+stack_addr_init 0x%08lx
+PEAK
+COUNT
+      
+%s %6s %6s %6s
+task  
+sem   
+event 
+mq    
+mutex 
+cond  
+timer 
+%s %6d %6d %6d
+logout
+[Driver Entry]
+  total : %3d (DRV_ENTRY_MAX)
+  used  : %3d
+[Created Devices]
+  drvNo  name
+   %3d   %s
+[Default Device]
+  device name : %s
+[File Descriptor]
+  total : %3d (DM_FILE_MAX)
+  open  : %3d
+tio_lock
+DiUSB20DM.c
+LowBat.c
+TempCheck
+LoadTest.c
+ExecuteLoadTest Mode = %d
+BeforeV = %dmV(%d) , AfterV = %dmV(%d) , PredictV = %dmV(%d)
+PhySw
+PhySwDrv.c
+NotifyMask  
+%s 95-64 |0x%08lx|  63-32 |0x%08lx|  31-0 |0x%08lx|
+SwitchMask  
+InvertData  
+GpioStatus  
+SwitchStatus
+SD Exist
+SD Not Exist
+SD Not Protect
+SD Protect
+PhySW SendID [0x%08lx]
+  Dry-%s %s
+stdlib
+shell
+command
+== ITCM ==
+DRY_VECTOR_ADDR
+%08x : %s
+DRY_HANDLER_ADDR
+DRY_HANDLER_END_ADDR
+DRY_IRQ_STACK_START
+DRY_RESET_STACK_START
+DRY_IRQ_STACK
+DRY_RESET_STACK
+ITCM_END_ADDR
+== DTCM ==
+DRY_VECTOR_FUNC
+           0x%08x(%d)
+DRY_VECTOR_ARG
+DTCM_END_ADDR
+== ROM  ==
+text start
+romdata start
+romdata end
+== DRAM ==
+data start
+bss start
+heap start
+DRY_HEAP_END
+DRY_SYS_OBJS_START
+DRY_SYS_MEM_START
+DRY_ERREX_STACK_START
+DRY_ERREX_STACK
+DRY_EXCEP_STACK_START
+DRY_EXCEP_STACK
+SLEEP
+EVENT
+SNDMQ
+RCVMQ
+COND
+MUTEX
+ NAME            ID   STATE PRI         WAIT(ID)
+      STACK  %        SP
+%-10.10s 
+%08x %7s 
+%7s(%08x)
+         ------- 
+  %04lx/%04lx %02d
+  %08lx
+%08x
+NAME
+STATE
+PRIORITY
+%s(%08x)
+%08lx
+ENTRY
+ARGUMENT
+STACK START = %08lx
+SIZE
+%11s = %08lx
+USED
+%11s = %08lx
+(%d%%)
+REGISTER SP = %08lx
+RUNNING
+READY
+WAIT
+WAIT+S
+SUSPEND
+can't malloc(%d)
+OpLog.Play
+OpLog.ReadFromROM
+OpLog.ReadFromSD
+OpLog.WriteToSD
+OpLog.Get
+OpLog.Stop
+OpLog.Start
+ExMem.View
+ExMem.AllocUncacheable
+ExMem.FreeUncacheable
+ExMem.AllocCacheable
+ExMem.FreeCacheable
+ExMem
+StartCameraLog
+ShowCameraLog
+ShowCameraLogInfo
+StopCameraLog
+PutsCameraLogEvent
+OpLog.Create
+drysh
+NewTaskShell
+StartRedirectUART
+StopRedirectUART
+ShootSeqAPI.c
+Evf=%d
+%04x->%04x
+BitR
+S-Imag
+Lens1stP
+ImgSys
+InitPTM
+StrLens
+#ImgSys
+#ImgSys %d
+#Rec
+StopLens
+IsEmpt=%d
+Write
+PreBuf
+ToRec
+ToPlay
+IsLens=%d
+Tele %d
+Wide %d
+OptStop
+OptAt=%d %d
+CZ=%d
+DigTele
+DigWide
+DigStop
+DigAt=%d
+ModChgPre
+ModChg
+ModChg*
+AFFChg
+AFDChg
+AFL*
+AFUL
+AFUL*
+R-Eye=%d
+ExpOn
+ExpOff
+ExpChg
+ReEVF
+AEUL
+P-Shift
+P-Shift*
+StartFdr
+StopFdr %d
+UnEVF
+UnEVF*
+StrbModChg
+WBChg
+ISOChg
+ReExp
+DispChg
+MyColChg
+MyCollIn
+MyColOut
+ShootCol
+ResolChg
+ISChg
+C-LensChg
+S-NightChg
+MenuIn
+MenuOut
+MenuOut*
+MyCamIn
+MyCamOut
+LcdBIn
+LcdBOut
+AllRst
+Raw[%i]
+PreCapt
+Shoot
+IsQ=%d
+Q-Shoot
+S-Timer
+SW1L
+BrdgEvf
+StopContiShoot
+CancelPre
+ShootW
+ShootW*
+StartFcsChk
+StopFcsChk
+ExitShoot
+StartRev
+StopRev
+RevHld
+RevRls
+ChgMovPara
+StartMov
+StopMov
+IniTRec
+PreTRec
+ExitTRec
+NDChg
+_MFOn
+_MFOff
+Script
+A/autotest.m
+H-Err
+%04d:%02d:%02d %02d:%02d:%02d
+DeveloperAid.c
+TestAssert
+TestAssertInt
+TestException
+TestExceptionInt
+TestPanic
+TestPanicInt
+KerQueue.c
+KerSem.c
+KerSys.c
+KernelMisc.c
+Size: %ld
+Memory.c
+Size: %ld
+Cache.c
+%08d: 
+StartDiskboot
+A/DISKBOOT.BIN
+A/Upgrader.bin
+Diskboot file not found
+not executable
+SndCvrOP
+_SImage
+StartupImage
+DlvrUSBCnct
+_DispLB
+_IsWrt:TRUE
+_IsWrt:FALSE
+ex:PB
+ex:REC
+ex:OFF
+BufAccBeep
+RegPTM
+NotActImgSys
+_PBBusyScrn
+WAITING TASK COUNT = %d
+%15s    = 
+%08x 
+ID %08x is not exist
+ITRON4.0
+ID %d is not created by Dry-%s
+SLEEP
+EVENT
+SNDMQ
+SDTQ
+RCVMQ
+RDTQ
+COND
+MUTEX
+      ID   STATE PRI         WAIT(ID)
+FLAGS
+ACT WUP SUS
+  %s
+     ENTRY(ARGUMENT)     STACK   SIZE   USED
+  NAME
+%08x %7s 
+%7s(%08x)
+         ------- 
+    %s
+  %08lx(%08lx)  %08lx %06lx %06lx
+%08x
+NAME
+STATE
+PRIORITY
+WAIT(ID)
+%s(%08x)
+%08lx
+ENTRY
+ARGUMENT
+STACK START = %08lx
+SIZE
+%11s = %08lx
+READY
+WAIT
+WAIT+S
+SUSPEND
+CNT|
+BIN|
+Q_FIFO
+Q_PRIO
+  MAX  
+   FLAGS
+      ID    %s  VALUE  %sTASK  NAME
+%08x  
+ %6d
+  %4d
+  %s
+%08x
+NAME
+FLAGS
+ATTRIBUTE
+VALUE
+FLAGS
+          ATR
+      ID   %s     VALUE  TASK  NAME
+%08x  
+  %08lx  %4d
+  %s
+%08x
+NAME
+ATTRIBUTE
+%08lx
+VALUE
+SINGLE
+MULTI
+      ID  
+ FLAGS    MAX   COUNT  TASK
+  NAME
+%08x   %5s 
+%6d  %6d  %4d
+  %s
+%08x
+NAME
+FLAGS
+ATTRIBUTE
+MESSAGE MAX
+DTQCNT
+MESSAGE COUNT
+SDTQCNT
+     
+(PRI)
+MESSAGE%s       = 
+%08lx
+(%d)
+FIFO
+PRIO
+INH|
+REC|
+Q_FIFO
+Q_PRIO
+      ID           FLAGS LOCK RECURSION OWNER  TASK  NAME
+%08x  
+    %d %9d  
+  --
+  %4d
+  %s
+%08x
+NAME
+FLAGS
+LOCK
+RECURSION
+OWNER TASK
+      ID   FLAGS  TASK  NAME
+%08x  
+  %4d
+  %s
+%08x
+NAME
+FLAGS
+Q_FIFO
+Q_PRIO
+      ID   STATE     ENTRY(ARGUMENT)
+  REMAINDER(sec:nsec)
+  NAME
+%08x  
+  %08lx(%08lx) 
+         ----------- 
+  %s
+%08x
+NAME
+STATE
+ENTRY
+%08lx
+----
+ARGUMENT
+EXPIRE(sec:nsec)
+CYCLE(sec:nsec)
+REMAINDER(sec:nsec)
+%10ld:%09ld
+%20s
+-------
+READY
+ACTIVE
+dlqueue_t
+ sizeof(%9s) = %3d
+task_t
+sem_t
+event_t
+mq_t
+mutex_t
+cond_t
+timer_t
+ExpCtrl.c
+GetAvControlLimit
+GetTvControlLimit
+SleepExpCtrl
+SleepExpCtrlWithoutExpDrv
+SleepExpCtrlOnlyMecha
+SleepExpCtrlExceptMecha
+PreExpCtrl
+StartContiAE
+StartContiAENoResetIris
+StartContiAENoMoveIris
+StopContiAE
+PauseUniUniContiAE
+ResumeUniUniContiAE
+DoOneShotAE
+DoAEForFocus
+DoAEForFocusAdjust
+DoAEForFocusWithProgress
+DoAEForPreFix
+DoAEForStillOnMovie
+DoAEForFix
+DoAEForFixWithProgress
+DoAEForLock
+DoAEForCompensation
+DoManualExposure
+StartManualExposure
+StartManualExposureNoMoveIris
+StartManualExposureNoMoveIrisKeepBv
+StopManualExposure
+ReviveExposure
+ReviveReferenceExposure
+ReviveCompensationExposure
+LockExposureForFix
+KeepPreviousExposure
+KeepPreviousExposureWithProgress
+KeepPreviousExposureToProgPoint
+PreExposureForStartConti
+PreExposureForStartManual
+FixExposure
+DoNDFilterCtrl
+ShiftExposureForFix
+GetAvControlLimitWithoutTv
+GetDeltaGainControlLimit
+GetDeltaDigitalControlLimit
+GetProgShiftLimit
+GetProgShiftedParam
+ExpCtrl: %s
+ImgSensDrvConv.c
+Imager.c
+ImgSens.c
+ImageSensorTask
+Force Quit PTP Mode
+COMMUNICATION_SendEvent:Undefined Event[%d]
+NotSuportComEvent[%d]
+PTPRspnd.c
+Error:Not Supprted MultiSession!
+PTPRspnd.StartUpPTPFrameworkClient
+Error:StartUpPTPOperationObjectHandler
+PTPRspnd.ShutDownPTPFrameworkClient
+ScriptHdl.c
+[ScriptHdl]Error:CompleteCreatePTPScriptObject
+DiUSB20Hal
+DiUSB20Hal.c
+HDMAC_INT
+DiUSB20HDMACHal.c
+DiUSB20CP.c
+DiUSB20DP.c
+[USBDrv] EPx_Unexpected EP=%d STATE=%d EVENT=%d
+DispCon.c
+NFC?
+PB_VD
+PB_ERR
+Index     Data
+%-5lu     0x%02x
+Index     OldData -> NewData
+%-5lu     0x%02x    -> 0x%02x
+Illegal Parameter!!
+LcdCon.c
+SioDrv.c
+ADCScn.c
+//(/#/)/%/)/*/(/
+LvComp.c
+LPFParameter.c
+RTC.c
+LowBatAdjust.c
+BeepDrv.c
+BeepTask
+LEDDrv.c
+LEDCon
+PhySwConfig.c
+PhySwGpio.c
+AudioIC_AK4636.c
+O"rg
+SoundDevice_CODEC.c
+ASIF.c
+ASIF
+Thermometer
+Thermometer.c
+Capture.Create
+Mecha.Create
+FA.Create
+System.Create
+DispDev.Create
+Driver.Create
+A/Factory.m
+ **** FactoryMode ****
+EraseError
+Parameter WriteError
+Adjustment WriteError
+Header WriteError
+Dump
+DefaultAdjTable Version is %ld.%03ld
+  = AdjTableMap = 
+              Offset   Size     Address
+  Header      0x%04x   0x%04x   0x%p
+  BeforeOS    0x%04x   0x%04x   0x%p
+  Adjustment  0x%04x   0x%04x   0x%p
+  TempDefect  0x%04x   0x%04x   0x%p
+  DefectProg  0x%04x   0x%04x   0x%p
+ === KabotanInfo === 
+NotInit
+TransparentMemory.c
+CheckEVFDrive executed.
+DoPostCaptureWBSw2 executed.
+DummyWBSw2 executed.
+GetPropertyFromCase Error [HSCapture]
+PrepareHsPhotographicCapture exec.
+PreparePhotographicCapture exec.
+NotifyCaptureCompleteToWBInteg executed.
+DoPeakHoldCapture count
+DoPeakHoldCapture Error
+Error WaitEvent SHUTTER_CLOSED.
+DoCaptureDarkSub executed.
+Error: Not Support Drive requested...
+ALLINTEGDATA
+GetOnlyAEIntegData Error
+Error WaitEvent INTEG_COMPLETED.
+GetPropertyFromCase Error [Resolution]
+GetPropertyFromCase Error [Compression]
+GetPropertyFromCase Error [DigitalZoomPos]
+GetPropertyFromCase Error [NoizeReduction]
+Resolution    
+Compression   
+DigitalZoomPos
+OpticalZoomPos
+HSCapture     
+NR            
+Dister        
+RedEye        
+ DevelopProcess RAW -> YC.
+@ Use JPEG_BUFFER_NARROW_ADDR. 
+EncodeSize
+LT@0u
+ DevelopProcess NR&REDEYE.
+ DevelopProcess YC -> JPG.
+Error WaitEvent DEVELOP_COMPLETED.
+JpegAddress
+JpegOutputSize
+StartDevelopProcess executed.
+PRE_FLASH_AVAILABLE
+WB_EVFCRW_COMPLETED
+PreparePhotoCapture Failed.
+PRE_FLASH_COMPLETED
+Start WBEVFCRW.
+Error WaitEvent PRE_FLASH_AVAILABLE.
+GetPropertyFromCurrentCase Error [FELock]
+GetPropertyFromCurrentCase Error [FlashAdjust]
+Error WaitEvent WB_EVFCRW_COMPLETED.
+Error WaitEvent PRE_FLASH_COMPLETED.
+FlashDecision
+FixExposure executed.
+ChangeImagerToWholeParallel
+ChangeImagerToWideDraft
+ChangeImagerToSuperWideDraft
+ChangeImagerToJetDraft
+ChangeImagerToMangoPudding
+ChangeImagerToMontblancWhole
+ChangeImagerToMontblancMillefe
+ChangeImagerToJumboDraft
+ChangeImagerToDigiconMode
+ChangeImagerToHarleyDavidson
+ChangeImagerToFocusJet
+ No Case For Control Exposure!!!
+TestRecMan.c
+DoUnpackedMovieFrameCapture executed.
+DoMovieFrameCapture executed.
+==== AF Shift ====
+==== Control Exposure For CaptureDrive ====
+CancelImager
+ZoomPoint 
+==== Do Photo ====
+Error WaitEvent WB_COMPLETED.
+==== Control Exposure For MovieDrive ====
+==== Developer Process ====
+.jpg
+.crw
+.ccd
+File Open Fail.
+SaveSize
+File Write Fail.
+WindowSetting
+RegisterForCaptureData.
+ sw1 PrepareTestRec completed. 
+Error WaitEvent PREPARE_TESTREC_EXECUTED.
+Error WaitEvent COMPLETE_EF_CHARGE.
+SetTestRecParameterFromPC Error 
+==== sw1 sequence ====
+==== sw2 sequence ====
+==== Regist Capture Data ====
+YUV Result(x100) : Y %05ld, U %05ld, V %05ld
+YUV Skimming Setting : H %02ld, V %02ld
+SetRecParameterFromPC Error 
+GetImagerSpecification error = %ld
+DoUnpackedCaptureFordccd RecMode = %ld
+dccdCalucTask
+***dccdFirmScan Start***
+GetdccdScanParameter error = %ld
+FocusMinPosition = %ld
+FocusMaxPosition = %ld
+GetCcdDataSize error = %ld
+InitializedccdForFirmScan error = %ld
+FocusLensMoveRange error
+TestRec dccdFirmScan = %ld
+CreateTask = dccdCalcTask
+dccdCalcTask
+CreateTask Error
+FocusPosition_i = %ld
+MoveFocusPosition
+SetFocusStep = %d
+Capture error = %ld
+GetdccdError error = %ld
+ForwarddccdData error = %ld
+TerminatedccdForFirmScan error = %ld
+***dccdFirmScan End***
+***Executedccd***
+Executedc = %ld
+ILLEGAL_PARAMETER
+***Executedccd End***
+DoUnpackedCaptureFordccd error = %ld
+AttachdccdImageData error = %ld
+GetShootingInfo error = %ld
+GetdccdFilterValue error = %ld
+ CurrFocusPosition
+ ShiftAFPulse
+***dccdNormalScan Start***
+RegistdccdWindowData error = %ld
+***dccdNormalScan End***
+DPOFClientIF.c
+ChoosePrintOrderType
+ChooseFIDDescriptionStatus
+CChooseDTMDescriptionStatus
+NewCatFsIO.c
+FsIoNotify.c
+FsIoNotifyTask
+StatCache.c
+FileSem.c
+DriveLetterManager.c
+BOOTDISK
+SCRIPT
+Mounter.c
+EMEM MOUNT ERROR!!!
+O"T.
+SdPower.c
+SD1stInit
+ImagePlayer.c
+LT@F
+ImagePlayDriver.c
+ImgPlayDrv
+RedEyeCapt
+RedEyeCapture.c
+LensController.c
+M:%s 0x%08X
+M:FIRST_S
+M:SH_OPN_S
+M:SH_OPN_E
+M:FC_RST_S
+M:FC_RST_E
+M:FC_TRM_S
+M:FC_TRM_E
+M:ZM_RST_S
+M:ND_OFF_S
+M:ND_OFF_E
+M:IS_RST_S
+M:FC_STB_S
+M:FC_STB_E
+M:IS_RST_E
+M:ZM_RST_E
+M:ZM_MVP_S
+M:ZM_MVP_E
+M:FIRST_E
+M:TERM_S
+M:SH_CLS_S
+ M:SH_CLS_E
+P |C
+0 M:ZM_TRM_S
+0 M:ZM_TRM_E
+M:IS_PWS_S
+M:IS_PWS_E
+M:TERM_E
+ISDriver.c
+ISMainTask
+Error AutoCenter A : %ld
+Error AutoCenter B : %ld
+Error Gain & Offset A : %ld
+Error Gain & Offset B : %ld
+M:%s 0x%08X
+%2x 
+Reset -- High
+Reset -- Low
+SrpvMainClock is already output
+SrpvMainClock -- Start
+SrpvMainClock is already stopped
+MainClock -- Stop
+MyCamFunc.c
+MyCamFuncImage.c
+MyCamFuncSound.c
+%Y/%m/%d %H:%M:%S
+SS.Create
+SsShootCtrl.c
+NextAvail(%d),ReviewAvail(%d)
+SsStartupTask.c
+SsStartupTask
+SsShutdown.c
+SsShootInfo.c
+SsShootTask.c
+CaptSeqTask
+SsPrepareSeq.c
+SsMovieRec.c
+SsImgProcBuf.c
+SsCaptModeChange.c
+SsImgCtrl.c
+SsLiveCtrl.c
+SsLiveFunc.c
+SsZoomCtrl.c
+ChargeComplete
+StrobeLB
+SsStrobeCtrl.c
+ShootSeqCommon.c
+SsExpFcsWb.c
+SsExpCtrl.c
+SsFcsCtrl.c
+SsISIF.c
+SsTask.c
+SsTask
+ClkEnabler_D.c
+Occured Time  %s
+ISR : vector=%d
+ShootConDump:
+%02x 
+CameraConDump:
+<ISR>
+errLogTask
+ASSERT!! %s Line %d
+ASSERT!! %s Line %d
+Task ID: %d
+Task name: %s
+SP: 0x%08X
+StackDump:
+%s Task was Suspended.
+undefined instruction
+prefetch abort
+data abort
+Exception!! [%s]
+Exc Registers:
+Shutdown Now !!
+System Panic: Module = %d, Panic = %d
+StackDump(0x%X - 0x%X):
+IC_OC.c
+KerFlag.c
+KerRLock.c
+property.c
+%s!!!.
+Script.c
+%s is not found
+LoadedScript
+LoadScript
+UnLoadScript
+Printf
+File Access LimitOver
+Not ScriptSD
+File Open Error
+Can't execute Script!!
+ %s %s
+Not Plane Text
+Not Encode Data
+PublicDim
+PublicDimStr
+not executed
+Parse Fail
+ LoadScript NameService Invalid [%d]
+GlobalData
+StrData
+EvProc
+PrivSub
+Extern
+gaonisoy8@-
+SystemTime.c
+--------------------------------------------------------
+=================================================
+ Name                 [Address]    , [Size]      
+-------------------------------------------------
+ %s [0x%08lX] , [0x%08lX]
+ExMemMan.c
+NameSvc.c
+EventProcedure
+RegisterEventProcedure: INVALID_HANDLE
+RegisterEventProcedure: ALLOC_ERROR
+NOT_FIND 
+UnRegisterEvntProc: 
+%s%s
+Can not Execute 
+EvntProc.c
+ not started
+ === CAMERA LOG STATUS ===
+ CAMERA LOG is started.
+ CameraLogLevel = 0x%02x
+ CameraLogBufferSize = 0x%lx
+ CAMERA LOG has not started.
+ Camera Log is not starting 
+ already started
+ USAGE:    StartCameraLog <Level> <BufferSize>
+ not enough memory in [StartCameraLog]
+CameraLog
+*** Camera Log Start ***
+CameraLog.c
+ %s can not searched
+ OccureTime
+Event  
+Param  
+Status2
+Status1
+Status0
+ %08d
+0x%08X
+0x%08X
+0x%08X
+0x%08X
+OpLog.Show
+OpLog.WriteToROM
+ File Open Error
+ Memory allocate error
+ File Read Error
+#VERSION=
+[OCCUR]
+PRODUCT_ID=
+ ProductID Unmatch
+TIME=
+[START]
+ %s have not data
+[DATA]
+ data format error [%d]
+ data over [%d]
+#OPERATION LOG
+0101
+%s%s
+#COMMENT=
+%s %X
+%s %s
+%s %04d:%02d:%02d %02d:%02d:%02d
+ File Write Error
+%08d,0x%08X,%d,0x%08X,0x%08X,0x%08X
+OpePlay
+A/OpLog.txt
+ !!!WatchDog expired!!! 
+ [%s (LR:0x%08lx , PC:0x%08lx)] -> [%s] 
+WdtInt
+WdtReset
+WdtPrint
+WatchDog.c
+RomCheckSum
+Jan  9 2009
+14:57:24
+Firmware Version 1.00
+1.00
+Firmware Ver GM1.00C
+BuildInfo.c
+CheckSum Skip (no %s)
+CheckSum OK
+ [%s]
+ too many parameters
+The string parameter is
+ %s not enclosed by(")
+ %s longer than %dchar
+ Syntax error in command line
+ %s is not installed !
+ %s returned %ld(0x%0lx)
+Event[%d]>
+Quiting event shell...
+EvShel
+EvntShel.c
+PropertyCase.c
+ModeMenu.c
+DateTimeMenu.c
+CtrlEx.c
+StartEventExchanger__ok
+CtrlSrv.c
+1 : %p != %p
+2 : %p != %p
+3 : %p != %p
+CtrlSrv
+StartControllerService__Ok!
+CtrlMan.c
+@2]
+/1F-
+@2K
+.@2
+/@2
+/@2
+=@2y
+UnknowControlEvent
+LogiEvnt_NotPowerType:0x%04x:adr:%p,Para:%ld
+LogicalEvent:0x%04x:adr:%p,Para:%ld
+ShootSeqToUI:0x%04x:adr:%p,Para:%ld
+00000000
+ (LogiEvnt_LoadCameraLog)File Open Error
+No Memory...
+ (LogiEvnt_LoadCameraLog)File Close Failed
+PostLogicalEventToUI
+PostLogicalEventForNotPowerType
+PostEventShootSeqToUI
+ShowLogicalEventName
+TimeInt:%d
+Button:0x%08X:%s
+EventReciever.c
+AutoShut.c
+SetAutoShutdownTime
+LockMainPower
+UnlockMainPower
+ErrColct.c
+HardwareDefect
+HardwareDefectWithRestart
+PropertyTableManager.c
+BootParam.c
+PropertyID:%d
+ParameterID:%d
+UiMemory.c
+Size: %ld, MaxRegion: %ld
+HwErrPreShtDwn
+HwErrShtDwn
+VALDispErr
+_DummyNotifyCompleteCBR
+CameraConState.c
+CmrCon State
+*******************************
+[%d]0x%02x
+AC:TStoreLens
+AC:OpCover
+AC:EnryNShtDwn
+_EnrySRec
+AC:PB2PC
+AC:BtPB
+AC:BtRec
+AC:InitLens
+AC:SUpShowI
+AC:DispSht
+_EnryToRec
+_EnryPreLens
+AC:PrepareLens
+ChkStoreLens
+CC_ShtdwnRec
+CC_CompFlhJpg
+AC:StoreLens
+_CnctUSBCBR
+_CompFlhJpg
+AC:ExitPB
+AC:CapModePreF
+AC:ShtDwnRec
+AC:PB2Rec
+AC:Rec2PB
+AC:PBOff
+AC:RecOff
+AC:ShwCaptI
+AC:EnryRecBt
+AC:InitPB
+AC:SStoreLens
+AC:EnryPB
+AC:ChkCom2PB
+AC:EBtn
+AC:StartPB
+AC:TstEVF:Ok
+AC:TstOVF:Ok
+AC:TstOVF:NG
+InitFileModules
+CommonDrivers
+AC:PTM_Init
+AP:ChkCnctUSB
+AP:AlreadyCnct
+AP:ChkDiscnctUSB
+IntPcCnct
+DispSW: Start
+DispSw: After
+DispSwCon_TurnOnBackLight
+DispSw: Done
+DispSwCon:Unlock
+DispSw: Lock
+DispSw: Unlock
+DispSwCon_DisableMute
+DispSwCon_TurnOffBackLight
+DispSwCon_MuteOnPhysicalScreen
+DispSwCon_MuteOffPhysicalScreen
+DispSwCon_TurnOnDisplayDevice
+DispSwCon_TurnOffDisplayDevice
+DispSwCon_TurnOffDisplayDeviceWithMuteOff
+DispSW: Set
+No Error...
+>ID:%04x ,Time:
+%04d/%02d/%02d %02d:%02d.%02d
+NoError
+E%02d
+_DecideCaptureMode
+_MovieToMovie
+_StillToMovie
+_MovieToStill
+_StillToStill
+PROPERTY_CAPTUREMODEINFUNC:%d
+PROPERTY_SCENEMODEINFUNC:%d
+_DecideModeDial
+No Change Capture Mode
+_BootupModeChange
+ShutdownRecMode
+ShutdownRecMode.wait.
+ExitRecModeBeforeStopEVF 
+__PrepareCaptureModeChange__
+_BeforeCBRForPlay
+_AfterCBRForPlay
+_ChangeModeInFunc
+CaptModeChanger_CheckRTCRrepared
+StartRecMode
+_StartStill
+_StopStill
+_StartMovie
+_StopMovie
+ShtCon_StopReview
+StopRecReviewController
+RecReviewCon_SetMode:0x%04x
+ShootController.c
+%s(%d)
+_EnableReviewHold:IsPressSwTwo:%d
+_EnableReviewHold:IsAvailableShots:%d
+PassExtSht
+ClearEventComp
+_MuteOff
+ShootCon_BeforeChangeDisplayType
+CrawBuffer Wait
+_BeforeCaptureModeChange...wait
+AR:Review_DispOff
+ShtCon_Activate
+ShtCon_PrepareCapture
+ShtCon_Deactivate
+_MuteOn
+ShtCon_ContiShootPicture
+PassStartReview
+ShtCon_StartReview
+StartBridgeEVF
+_EntryActionReview
+ShtCon_SetPreCapt
+ShtCon_ResetPreCapt
+ShtCon_NotifyQuickShooting
+ShootCon_NotifyStartReviewHold
+ShootCon_NotifyCompleteReviewHold
+_ExitActionReview
+_ResetShootingMode
+MviCon_ShtDwn
+MviCon_ext
+MviCon_fShtDwn
+MviCon_InitChkBuf
+MviCon_Act
+MviCon_EmpBuf
+_EntryActionOnPreMoving
+_EntryActionOnSelfTimer
+_ActionPrepareCapture
+MovieState:0x%x
+_EntryActionOnMoving
+_dsi_StopRecordMovie
+_ActionStopRecordMovie
+FaceFrame
+DSIC:%x,%d
+DSITask
+DSITask.c
+TurnOnDisplay
+TurnOffDisplay
+TurnOnBackLight
+TurnOffBackLight
+MuteOnPhysicalScreen
+MuteOffPhysicalScreen
+SetDisplayType
+GetDisplayType
+SetPanelBrightnessToLcdController
+SetCvfBrightnessToLcdController
+SetPanelDirectionToLcdController
+SetCvfDirectionToLcdController
+SetLcdTypeToLcdController
+SetSyncroDisplayDeviceController
+ShutDownDisplay
+EmergencyShutDownDisplay
+EmergencyMuteOn
+TurnOnDisplayForStartup
+StartPowerLCD
+StopPowerLCD
+UiPublish.c
+PBModeMan.c
+PB.StopR
+PB.EndPMenu
+PB.Flash
+PB.DPOF
+PB.TOTAL
+PB.Create
+PB.CreateE
+PB.Start
+AppPlay.c
+PB.StartE
+PB.EndPub
+PB.EndCtr
+ErrorMessageController.c
+LowBattery.c
+%d"%d
+%d/%d
+GUIService.c
+%s %s %2d %02d:%02d:%02d %d
+%02d:%02d:%02d
+ %2d %02d:%02d:%02d %d
+%02d/%02d/%02d
+ExxTbl.c
+Shutter.c
+ImgGain.c
+ImgPixel.c
+WBInteg.c
+----------Start
+IsChangedAEIntegPrm
+GetWBIntegValue
+GetWBIntegCrwValue
+EnableWBIntegCrwClamp
+DisableWBIntegCrwClamp
+EnableWBIntegCrwAdjustOBLevel
+DisableWBIntegCrwAdjustOBLevel
+GetWBIntegHybridValue
+GetAEIntegValue
+ConfirmNoMoveAEIntegValue
+AbortAEIntegValue
+GetAEIntegWinInfo
+GetAEIntegCrwValue
+EnableAEIntegCrwAdjustOBLevel
+DisableAEIntegCrwAdjustOBLevel
+GetOBIntegValue
+GetOBIntegCrwValue
+EnableOBIntegCrwAdjustOBLevel
+DisableOBIntegCrwAdjustOBLevel
+GetOBIntegValueDirect
+StartWBIntegSrv
+Start: %s %s
+StopWBIntegSrv
+Stop : %s 
+&r@d7
+dr@l7
+WBIntegTask
+WBInteg: %s
+UsageError!! WBInteg.c 
+:%s -> %s:%s
+----------Stop
+Sensitive.c
+CaptureSystem.c
+ChangeImagerToFocusJet
+CancelImager
+ContiCaptureSystem.c
+EvfCaptureSystem.c
+O"wT
+HsCaptureSystem.c
+BrtCrct.c
+BrtMsr.c
+BrtMsrTask
+BrtMode.c
+ExpCmp.c
+ExpCtrl: ILLEGAL CAPTURE_MODE !!
+ExpMode.c
+ExpDrv.c
+ExpDrvTask
+ExpRange.c
+ExpRes.c
+Tv(JudgeFlash) = %d
+SubjectDistance(JudgeFlash) = %ld
+FixedDistance(JudgeFlash) = %ld
+FlashDec.c
+WBCtrl.c
+WBCtrl
+OBCtrl.c
+RefreshOBCtrl
+StartOBCtrl
+StopOBCtrl
+IsStartedOBCtrl
+ReviveOBCtrl
+OBCtrlTask
+OBCtrl: %s
+ImageSizeEstimator.c
+ImgTbl.c
+DetectMove.c
+ResetSaridon
+ResetFaceMove
+ResetAE
+ResetShakeQuantity
+ResetMoveState
+DetectMoveTask
+Start
+Stop
+StopNoReset
+DetectMove: %s
+0cB
+lB0
+ChaceFace
+DispFace
+EnableLog
+DevelopModule.c
+v@(%
+DevelopModule
+EFCharge.c
+PreFlash.c
+MainFlash.c
+AFInteg.c
+AfIntSrvTask
+FocusController.c
+AFTask
+AFSpec.c
+Read Def_maxmin0_Small_Frame
+CDSDrv.c
+ImagePower.c
+VsubCont.c
+Extract.c
+SSG.c
+SsgMainTask
+SsgPeriodTask
+FldCreat.c
+FldSpec.c
+SsioDrv.c
+TgCtrl.c
+TgTask
+LiveImage.c
+<<<LivePictureCaptureVramForMovieMode>>>
+PrcssFil.c
+PrcssFil
+SyncServ.c
+SynchTask
+SyncPeriod
+AUTPLAY
+%7s%1d%4s
+AUTPRINT
+AUTXFER
+ComFileUtil.c
+%9s%3s
+%c/%s
+%04d%02d%02dT%02d%02d%02d.%01d
+ComMemMan.c
+MemPoolFix.c
+TimerUtility.c
+TimerUtility
+BatteryMan.c
+PropMgr.c
+[MTPPROPMGR]Bug: PTPRspnd: Error GetPTPObjectHandles
+[MTPPROPMGR]!!EXCEPTION!!: DoGetObjectPropDesc()
+[MTPPROPMGR]WARNING: NotFind!!, RemoveMTPProperty()
+[MTPPROPMGR]ERROR: Set PTP Property, SendResponseOfProperty()
+[MTPPROPMGR]WARNING: OverWrite MtpProperty
+fail load ProductID
+%08X
+USB PTP Device
+USB PTP Configuration for FS
+USB PTP Configuration for HS
+USB MTP MS
+USB PTP Device Qualifier
+USB PTP Other Speed Configuration for FS
+USB PTP Other Speed Configuration for HS
+USB PTP String0
+USB PTP String1
+USB PTP String2
+USB PTP String3
+PTP Framework PTP Event
+PTP GetDeviceInfo Configuration
+PTPConfig.SupportedSize
+PropCam.c
+PTPConfig.SupportedSlideShow
+PTPConfig.DPOFVesrion
+Canon IXY DIGITAL 500
+PTPConfig.VenderExtensionVerrsion
+PTPConfig.SupportedThumbSize
+PTPConfig.SupportedSize
+ PropMgr.c
+EventCdn.c
+OpeCdn.c
+Session.c
+PTPSessionTASK
+PTP GetDeviceInfo Configuration
+%08X
+FramCtrl.c
+ObjInfoTable.c
+.WAV
+%04d%02d%02dT%02d%02d%02d.0
+ObjTreeMgr.c
+V/GLOBALOB.JPG
+Storage.c
+FragmentCache.c
+NormalThumbCache
+OpObjHdl.c
+%8lx
+SendGetDeviceStatusData, Res:%#04x, P1:%#08lx, P2:%#08lx
+[TrnsCtrl] Legacy Connect
+Entry:ControlDataTransferRequestCBR
+TrnsCtrl.c
+0K^@2
+ClassRequest, bRequest=%#02x
+TrnsCtrl.ExitTask
+USB PTP Device
+USB PTP Configuration for FS
+USB PTP Configuration for HS
+USB MTP MS
+USB PTP Device Qualifier
+USB PTP Other Speed Configuration for FS
+USB PTP Other Speed Configuration for HS
+USB PTP String0
+USB PTP String1
+USB PTP String2
+USB PTP String3
+TrnsCtrlTask
+Event[%#04lx], P1[%#08lx]
+RapiSW.c
+s <%s>
+  <%s>%08lX</%s>
+  <%s/>
+ </%s>
+</%s>
+ <%s>
+  <%s/>
+ </%s>
+</%s>
+   <%s>
+    <%s>%08lX</%s>
+    <%s>%s</%s>
+   </%s>
+????/??/??
+%d/%m/%Y
+%Y/%m/%d
+%m/%d/%Y
+    <%s>%03d</%s>
+MovieObj
+    <%s>%04X %04X %04X %04X</%s>
+  </%s>
+ </%s>
+</%s>
+ <%s>
+  <%s>
+   <%s>
+    <%s %s="%08lX"/>
+    <%s/>
+   </%s>
+  </%s>
+ </%s>
+</%s>
+<%s %s="%s">
+Q%2d"%02d
+%2d'%02d"%02d
+ImgDDev.c
+BmpDDev.c
+ Set LCD Driver: Address 0x%04x <-- Data 0x%04x
+Illegal Parameter!!
+Index     OldData -> NewData
+%-5u     0x%04x  -> 0x%04x
+Index     Data
+%-5u     0x%04x
+ Set LCD BackLight Brightness: 0x%04x
+Illegal Parameter!!
+Index     OldData -> NewData
+%-5u     0x%04x  -> 0x%04x
+Index     Data
+%-5u     0x%04x
+DispPower.c
+EngApp.Delete
+Scene.ForbidContiSceneDetect
+Scene.FakeBv
+EngApp.Create
+OhyearKi.c
+BlockYHist.c
+O"Ii
+MotionVector.c
+MotionVector
+SceneDetect.c
+SceneDetectTask
+DecodeJpegPass.c
+EncodeJpegPass.c
+ManageImgTbl.c
+BT@ 2T@8@-
+LotusPath.c
+PreProPath.c
+LclkChg.c
+Pwrcnt.c
+EDmac.c
+JpCore.c
+JpCoreIntrHandler
+Sharemem.c
+xbuf
+HeadInterrupt1
+HeadInterrupt2
+HeadErrorInterrupt
+HeadInterrupt3
+HeadInterrupt4
+Head.c
+SsgStopIrq
+angel.c
+Hist.c
+CompleteReadOperation
+Af.c
+AfComplete
+AfOverRun
+WbThumb.c
+obwb.c
+Lucky.c
+BltDmac
+Cartridge.c
+CompleteOperation
+CompleteOperation
+Dister.c
+DefMarkMan.c
+KIZU
+Fencing_A
+Fencing_B
+Fencing
+Fencing_C
+MedianFilterMan.c
+(  v,  h )
+( %02ld, %02ld ) %04ld : %04ld %04ld %04ld %04ld 
+ OB      : %04ld %04ld %04ld %04ld 
+INTEG_WINDATA
+ CrwAddress %lx, CrwSize H %ld V %ld
+ IntegPos H %ld V %ld Size H %ld V %ld
+WBCoeff A %04ld B %04ld C %04ld D %04ld
+OutWin     : %ld
+CenterWin  : %ld
+CancelImager
+### LineDefect On ###
+### LineDefect Off ###
+### SetAEIntegAverageOB On ###
+### SetAEIntegAverageOB Off ###
+INTEGCRW
+Cannot GetFileStatus
+NotEnoghMemory
+Save Offset %ld Size %ld
+UniqueID : %08lx [Sum. %016llx]
+Length %ld, "%s"
+%s  %s
+ShowFaexeVersion
+ FileName %s
+ BuffSize %ld
+-----------[ RecParam ]-------------
+-- FundamentalSetting -------------
+AFDistance              
+InternalStrobeMode      
+FlashDuration           
+RedEyeReduction         
+SlowSynchro             
+Resolution              
+RecordMode              
+Compression             
+RealExposureCompensation
+WBMode                  
+Contrast                
+ColorGain               
+Sharpness               
+MeteringMode            
+SpotPosition            
+NDFilter                
+FixGammaFlag            
+-- CorrectMode --------------------
+fUseDefect              
+NRLevel                 
+MontblancSize           
+fUseShading             
+fUseDister              
+fUseDarkSub             
+-- FocusMode ----------------------
+FocusMode               
+FocusModeFlag           
+SubjectDistance         
+FocusStep               
+AFShiftPulse            
+-- AEMode -------------------------
+CaptureMode             
+AEModeFlag              
+AvSetting               
+TvSetting               
+-- GainMode -----------------------
+ISOSpeed                
+-- PeakHoldSetting ----------------
+PeakHoldSampleTime      
+PeakHoldWaitTime        
+-----------------------------------
+---------[ ShootingInfo ]-----------
+Bv                      
+Av                      
+Tv                      
+DeltaGain               
+Sv                      
+TargetDistance          
+FlashLightValue         
+DayLightValue           
+ExposureCompensation    
+AFresult                
+AFstep                  
+DeltaEF                 
+CurrZoomPosition        
+AFWindow                
+FocalLength             
+CurrOptTemperature      
+CurrCcdTemperature      
+BvC                     
+BvL                     
+BvS                     
+WhiteBalanceWx(CenterCx)
+WhiteBalanceWy(CenterCy)
+RotationAngle           
+CurrZoomPoint           
+CrwCenterYi             
+BvForFix                
+DeltaDigital            
+BrtCaptGain             
+BrtWBCorrectGain        
+BrtCrctGain             
+SvFix                   
+DeltaND                 
+CurrentTargetDistance   
+CurrentAFstep           
+BPCorrectValue          
+AvForAF                 
+TvForAF                 
+DGainForAF              
+RecParam
+GetShootingInfo....
+ShootingInfo
+Error : GetBvResult
+Error : GetAvResult
+Error : GetTvResult
+Error : GetDeltaGainResult
+Error : GetSvResult
+Error : GetTargetDistanceResult
+Error : GetFlashLightValueResult
+Error : GetDayLightValueResult
+Error : GetRealExposureCompensationResult
+Error : GetAFResult
+AFresult = 0
+AFresult = 1
+Error : GetBvCResult
+Error : GetBvLResult
+Error : GetBvSResult
+Error : GetCenterCxCyResult
+Error : GetPropertyFromCurrentCase [PCH_CENTER_CX_CY]
+CenterCxCy.Cx
+CenterCxCy.Cy
+Error : GetRotationAngleResult
+Error : GetBvForFixResult
+Error : GetDeltaDigitalResult
+Error : GetSvFixResult
+Error : GetDeltaNdResult
+Error : GetAFStepResult
+Error : GetFlashDurationResult
+Error : GetPropertyFromCurrentCase [PCH_FLASH_DECISION]
+Error : GetPropertyFromCurrentCase [PCH_FLASH_DURATION]
+%s : %s
+%s : %d
+%s : %u
+%s : %ld
+%s : %lu
+***GetIniFileParameter Start***
+WindowSetting
+WindowNumber
+WindowNumber = %ld
+dcValueType
+fdcValueType = %ld
+FilterType
+fFilterType = %ld
+FilterChannel
+FilterChannel = %ld
+ScanLineInfo
+ScanLineInfo[%ld] = %ld
+ColorFilterInfo
+ColorFilterInfo[%ld] = %ld
+SubtractOB
+SubtractOB = %ld
+ApproximateType
+HV_ID
+HV_ID[%ld] = %ld
+Black_HV_ID = %ld
+***GetIniFileParameter End***
+***GetScanParameter Start***
+ScanStartPosition
+ScanStartPosition = %ld
+ScanStep
+ScanStep = %ld
+ScanCount
+ScanCount = %ld
+***GetScanParameter End***
+***GetFilterValue Start***
+MANUALVALUE
+Auto
+ColorFilter_CH%ld_%ld = %ld
+GetFilterValue error = %ld
+ColorFilter_Black_%ld = %ld
+REV_FOR_FACTRY
+***GetFilterValue End***
+CalcContrastData error = %ld
+CalcWeightedAverage error = %ld
+333333
+CurrCh = %ld
+PeakValue = %ld
+RawPeakNum = %ld
+HoseiStartPos = %ld
+HoseiEndPos = %ld
+CreateMatrix Failure ( pAData )
+AllocateMemory Failure ( pXData )
+AllocateMemory Failure ( pXData[%ld] )
+AllocateMemory Failure ( pYData )
+pXData[%ld][%ld] = %ld
+pYData[%ld] = %ld
+CalculateLeastSquare error = %ld
+pAData[ %ld ][%ld] = %lf
+DCCOEFFICIENT
+CalcdccdApxData error = %ld
+***CutCrawData Start***
+CcdDataSizeH = %ld
+CcdDataSizeV = %ld
+OBAvValue = %ld
+%ldCH_Offset_H = %ld
+%ldCH_Offset_V = %ld
+Black_Ch = %ld
+Black_Offset_H = %ld
+Black_Offset_V = %ld
+***CutCrawData End***
+***RegistdccdWindowData Start***
+CutCrawData error = %ld
+GetContrastData error = %ld
+dccdValue.CH_Ave_Max[%ld] = %ld
+dccdValue.CH_Ave_Min[%ld] = %ld
+dccdValue.Ave_Black = %ld
+W_AVEVALUE
+Set W_AVEVALUE error = %ld
+CRAW
+Set CRAW error = %ld
+***RegistdccdWindowData End***
+***AttachdccdImageData Start***
+RAW_WIDTH
+Set CcdDataSizeH error
+RAW_HEIGHT
+Set CcdDataSizeV error
+DCCDCRAW
+Set DCCDCRAW error
+***AttachdccdImageData End***
+***GetScanMode Start***
+ScanMode
+ScanMode = %ld
+***GetScanMode End***
+***GetdccdScanParameter Start***
+GetScanParameter error = %ld
+Get ScanStartPosition error = %ld
+Get pScanStep error = %ld
+Get ScanCount error = %ld
+***GetdccdScanParameter End***
+***SynchronousdccdData Start***
+gCaptureCount = %ld
+SetRawDataIndex = %ld
+gpUseArrayTable[%ld] = %ld
+***SynchronousdccdData End***
+***TerminatedccdForFirmScan Start***
+free gpdccdParam passed
+free gpWindowSetting passed
+free gpScanParam passed
+free gpdccdValue passed
+free gpRawDataArray passed
+free gpUseArrayTable passed
+DeleteSemaphore passed
+***TerminatedccdForFirmScan End***
+***InitializedccdForFirmScan Start***
+GetIniFileParameter error = %ld
+***InitializedccdForFirmScan End***
+***SetdccdData Start***
+RawDataIndex = %ld
+***SetdccdData End***
+***WaitedccdCaluc Start***
+***dccdCalucTask***
+***dccd Calclation***
+dccdCalcTask : CaptureCount = %ld
+dccdCalcTask : ScanCount = %ld
+gpdccdValue[%ld].CH_Ave_Max[%ld] = %ld
+gpdccdValue[%ld].CH_Ave_Min[%ld] = %ld
+gpdccdValue[%ld].Ave_Black = %ld
+dccdCalucTask Exit
+***ForwarddccdData Start***
+CalcdccdWaveData error = %ld
+pdccdWaveData[%d] = %ld
+DCCDVALUE
+ApproximatedccdValue error = %ld
+***ForwarddccdData End***
+***RegistFilterValue Start***
+FILTER_VALUE
+***RegistFilterValue End***
+***CalcOBValue Start***
+OB_StartH = %ld   OB_StartV = %ld
+OB_EndH = %ld   OB_EndV = %ld
+***CalcOBValue End***
+CobjMngr.c
+%c%s
+CobjSearch.c
+CobjCamera.c
+FolderCreateCheckTask
+DPOFFileIO.c
+/MISC/
+/MISC/AUTPRINT.RSM
+DPOFOrder.c
+DPOFTask
+AUTPRINT.MRK
+AUTXFER.MRK
+FileMan.c
+0020i
+%lx 
+CheckMark.c
+MARK_OBJ_KIND ERROR!
+FileManMarkAllTask
+AvailClusters.c
+WrCacheMgr.c
+FileStore.c
+FsCache.c
+FsLinkLib.c
+for DC_bootdisk
+A/boot.req
+for DC_scriptdisk
+A/script.req
+        
+.          
+..         
+NO NAME    
+%s.%s
+%s~%d
+%s~%d.%s
+catFsSkipFile.c
+%s(%d)
+RamDisk.c
+FAT12   
+FAT16   
+SdDrv.c
+ThmDecode.c
+MakeHDVram.c
+@p@-
+FaceSearch.c
+QuickReview.c
+ImageTrim.c
+ImgTrim
+OhyearKiLib.c
+RedEyePlay.c
+LT@/
+RedEyePly
+RedEyeLib.c
+RedEyeFaceSearch.c
+ComputerZoom.c
+Idx,ZmPoEs,ZmRaEs,ZmPoAc,ZmRaAc,FcsEs,FcsAc,FcsTgt, Dist,Speed
+%3d,   %3d,   %3d,   %3d,   %3d,%5d,%5d, %5d,%5d,%5d
+FocusLensController.c
+FocusLens
+IrisController.c
+MechaDeviceController.c
+DriverIC.c
+MechaShutterDriver.c
+PmcDrv.c
+O" `
+PMC%dPMCEN    [0x%08lX]: 0x%08lX
+PMC%dPMCRAM   [0x%08lX]: 0x%08lX
+PMC%dCTRL     [0x%08lX]: 0x%08lX
+PMC%dPMCMODE  [0x%08lX]: 0x%08lX
+PMC%dOUTSEL   [0x%08lX]: 0x%08lX
+PMC%dV_SPD    [0x%08lX]: 0x%08lX
+PMC%dV_CNT    [0x%08lX]: 0x%08lX
+PMC%dPOSITON  [0x%08lX]: 0x%08lX
+PMC%dSTATUS   [0x%08lX]: 0x%08lX
+PMC%dAVC_STEP [0x%08lX]: 0x%08lX
+PMC%dAVC_DEC  [0x%08lX]: 0x%08lX
+PMC%dTP_CFG   [0x%08lX]: 0x%08lX
+PMC%dPI_CFG   [0x%08lX]: 0x%08lX
+PMC%dOCDP_CFG [0x%08lX]: 0x%08lX
+PMC%dTP       [0x%08lX]: 0x%08lX
+PMC%dPI_LAP   [0x%08lX]: 0x%08lX
+PMC%dPI_LDP   [0x%08lX]: 0x%08lX
+PMC%dOCDP_LAP [0x%08lX]: 0x%08lX
+PMC%dOCDP_LDP [0x%08lX]: 0x%08lX
+PMC%dCMP%d     [0x%08lX]: 0x%08lX
+PMC%dIEN0     [0x%08lX]: 0x%08lX
+PMC%dIST0     [0x%08lX]: 0x%08lX
+PMC%dIEN1     [0x%08lX]: 0x%08lX
+PMC%dIST1     [0x%08lX]: 0x%08lX
+PMC%dMSC      [0x%08lX]: 0x%08lX
+PMC%dPH       [0x%08lX]: 0x%08lX
+PMC%dGAIN     [0x%08lX]: 0x%08lX
+PMC%dTGAIN    [0x%08lX]: 0x%08lX
+PMC%dGAIN_SLP [0x%08lX]: 0x%08lX
+PMC%dGAIN_NEXT[0x%08lX]: 0x%08lX
+PMC%dISTM0    [0x%08lX]: 0x%08lX
+PMC%dISTM1    [0x%08lX]: 0x%08lX
+PMC%dDIGOUT   [0x%08lX]: 0x%08lX
+PMC%dDIGPH    [0x%08lX]: 0x%08lX
+ZoomLens
+ZoomLensController.c
+ISHeartBeat.c
+ISCommunication.c
+ISComTask
+SumData:%lx
+SIO_Int
+Sharapova->%d
+ISAutoCenter.c
+ISSlant.c
+MovieRecorder.c
+MovieRecord
+MechaUnRegisterEventProcedure
+Mecha.Create
+MoveLensToFirstPoint
+MoveLensToTerminatePoint
+OPTICAL_EC237
+#define %s
+#define _EC%x
+RENESAS R2A30421BM
+DispDev_EnableEventProc
+GetAdVBattBottom
+GetAdChValue
+BeepDrive
+BeepDriveComp
+LEDDrive
+VbattGet
+ShowPhySwStatus
+SetRawSWCheckMode
+OnPrintPhySw
+OffPrintPhySw
+GetSwitchStatus
+ShowSDStatus
+GetSDDetect
+GetSDProtect
+SetIgnoreAVJACK
+GetDialEventId
+GetBatteryCoverClose
+SetSDPwrPort
+Driver_EnableEventProc
+Driver.Create
+MakeBootDisk
+MakeScriptDisk
+System.Delete
+strcpy
+strlen
+strcmp
+sprintf
+memcpy
+memset
+memcmp
+sscanf
+atol
+Open
+Read
+Write
+Close
+Lseek
+Fopen_Fut
+Fread_Fut
+Fwrite_Fut
+Fclose_Fut
+Fseek_Fut
+CreateCountingSemaphore
+DeleteSemaphore
+TakeSemaphore
+GiveSemaphore
+GetTimeOfSystem
+CreateTask
+ExitTask
+SleepTask
+CPrintf
+CPutChar
+GetCh
+OpenConsole
+CloseConsole
+GetStringWithPrompt
+RotateConsoleZOder
+ExecuteEventProcedure
+ExportToEventProcedure
+DeleteProxyOfEventProcedure
+CreateProxyOfEventProcedure
+WriteToRom
+EraseSectorOfRom
+EraseSignature
+GetSystemTime
+ShowAllTaskInfo
+memShow
+Wait
+AllocateMemory
+FreeMemory
+Poke32
+Poke16
+Poke8
+Peek32
+Peek16
+Peek8
+Dump
+Dump32
+SDump
+MonSelEvent
+exec
+Printf
+LoadScript
+UnLoadScript
+GetBuildDate
+GetBuildTime
+GetFirmwareVersion
+CheckSumAll
+MemoryChecker
+VerifyByte
+StartWDT
+StopWDT
+EraseLogSector
+GetLogToFile
+AdditionAgentRAM
+SystemEventInit
+System.Create
+UIFS_ChangeShootState
+UIFS_ShootSeqToUI
+SetScriptMode
+UIFS_StopPostingUIEvent
+UIFS_RestartPostingUIEvent
+UIFS_SetCaptureModeToP
+UIFS_SetCaptureModeToTv
+UIFS_SetCaptureModeToM
+UIFS_SetCaptureModeToMacro
+UIFS_SetCaptureModeToISO3200
+UIFS_IsAvailableISO3200
+UIFS_IsCurrentCaptureModeISO3200
+UIFS_PostModeDial
+UIFS_Capture
+UIFS_CaptureNoneStop
+UIFS_StartMovieRecord
+UIFS_StopMovieRecord
+UIFS_OpenPopupStrobe
+UIFS_ClosePopupStrobe
+UIFS_MountExtFlash
+UIFS_UnmountExtFlash
+UIFS_PressTeleButton
+UIFS_UnpressTeleButton
+UIFS_PressWideButton
+UIFS_UnpressWideButton
+UIFS_ConnectVideo
+UIFS_DisconnectVideo
+UIFS_ConnectHDMI
+UIFS_DisconnectHDMI
+UIFS_MoveZoomTo
+UIFS_SetDialStillRec
+UIFS_SetDialMovieRec
+UIFS_SetDialPlay
+UIFS_StartClockMode
+StartClockMode
+UIFS_EndClockMode
+EndClockMode
+UIFS_WriteFirmInfoToFile
+UIFS_GetMovieRecoadableNumber
+UIFS_GetStillShotableNumber
+UiEvnt_SetLogicalEventActive
+UIFS_SetCradleSetting
+UiEvnt_StartDisguiseCradleStatus
+UiEvnt_StopDisguiseCradleStatus
+PTM_RestoreUIProperty
+PTM_AllResetToFactorySetting
+PTM_AllReset
+PTM_GetWorkingCaptureMode
+PTM_SetCurrentCaptureMode
+PTM_SetCurrentItem
+PTM_GetCurrentItem
+PTM_NextItem
+PTM_PrevItem
+PTM_BackupUIProperty
+PTM_SetProprietyEnable
+PTM_IsEnableItem
+CreateController
+DeleteController
+MoveControllerToTopOfZOrder
+GetSelfControllerHandle
+SetCurrentCaptureModeType
+GetCurrentCaptureModeType
+ExecuteResetFactoryWithRomWrite
+StartGUISystem
+UI_ShowStateOfRecMode
+IsControlEventActive
+FmtMenu_ExecuteQuickFormat
+UI_RegistDebugEventProc
+UI.Create
+UI.CreatePublic
+FA.Delete
+DispDev_EnableEventProc
+FA.Create
+DispDev.Create
+Capture.Create
+EngineDriver.Create
+SsPrepareSeqBase.c
+SsPrePreSeq.c
+SsExpCompSeq.c
+SsChgExpSeq.c
+SsMFSeq.c
+SsCaptureSeq.c
+ShutterSoundTask
+SsShootLib.c
+SsShootEvent.c
+SsDvlpSeq.c
+DvlpSeqTask
+NRTable.c
+ Can not DarkShadingCapture!!
+SsImgCtrlEvent.c
+SsExpFcsWbEvent.c
+SsWbCtrl.c
+LIST
+exif
+1.1.3.LZC.1.0.1
+Compander.c
+Operation Log Write to ROM... 
+Unsuccessful.
+%s %ld
+Successful.
+OpLog is not Saved.
+%s%s
+ASSERT!! %s Line %ld
+Occured Time  %s
+Task ID: %d
+Task name: %s
+SP: 0x%08X
+StackDump:
+ISR : vector=%d
+ShootConDump:
+%02x 
+CameraConDump:
+Exception!! Vector 0x%02X
+Exc Registers:
+A/ROMLOG.txt
+Filename is fail.
+Allocate fail.
+Log is not Saved.
+ROMLOG is not Saved.
+A/RomLogErr.txt
+Filename is fail.
+Allocate fail.
+ File Create Error
+Erase Done. %p
+Erase Failure. %p (%d)
+Log Write to ROM... 
+RomLogSetFinish  CheckSum Error[%d][%d]
+System Panic: Module = %d, Panic = %d
+StackDump(0x%X - 0x%X):
+ [%s] redefined
+Public Dim Area overflow 
+ScriptGen.c
+Global Area overflow 
+Variable
+Local Area overflow 
+Public Dim String Area overflow 
+GeneCode overflow... op_Retval
+GeneCode overflow 
+[%s] Not defined! 
+labelno overflow
+ - Script %s : LineNo = [%d] -
+EventProc Area overflow 
+1 stack overflow 
+ScriptExec.c
+2 stack overflow 
+nodearea overflow
+parameter err
+syntax error
+Do not use Exit_do without do_loop 
+Exit do stack overflow
+Exit for stack overflow
+Do not use Exit_for without for... 
+parameter  err
+for nestMax overflow
+yacc stack overflow
+do loop nestMax overflow
+out of dynamic memory in yy_create_buffer()
+fatal flex scanner internal error--end of buffer missed
+fatal error - scanner input buffer overflow
+input in flex scanner getc not support
+input in flex scanner failed
+character invalide1
+strlex too long
+character invalide2
+character invalide3
+fatal flex scanner internal error--no action found
+out of dynamic memory in yy_scan_buffer()
+out of dynamic memory in yy_scan_bytes()
+bad buffer in yy_scan_bytes()
+exit from yy_fatal_error 
+ - Script %s : LineNo = [%d] -
+\"~O
+AdditionAgent.c
+%ld-byte from heap
+AdditionAgent
+%ld%ld%ld'%ld%ld"
+RecFuncBase.c
+_TryEnterToCompensationEVF
+RecFuncContainer.c
+WBSlct.c
+ (DPOF)
+MenuContainer.c
+EraseAllMenu.c
+%-28s
+%Y.%m.%d %H:%M:%S
+Total Shoot: %ld
+Zoom Retry Count: %ld
+Mecha Condition: 0x%08X
+IS Firm Ver.  %c%c%c%c
+IS Param Ver.  %c%c%c%c
+Adj %-24s
+Driver Info: 0x%08X
+Vers.req
+%c/%s
+Ver.req
+FirmInfoMenu.c
+A/FirmInfo.txt
+P-ID:%04X  %s %s
+%s   %s
+Empty Error List.
+No error
+%s  
+E%02d %s
+PowerSavingMenu.c
+VolumeMenu.c
+ResetSettingsMenu.c
+%3d         %s
+Language Name List
+[ID]           [LanguageName]
+FormatMenu.c
+%ld.%c
+-----
+%s%s
+VersionCheck
+VersionID
+ConfirmDialog.c
+VersionID
+%d.%d.%d.%d
+FolderCreateMenu.c
+USBSettingMenu.c
+FirmVersionDialog.c
+%d.%d.%d.%d
+%04x%04x%04x
+Serial No. %10s
+StrobeSettingsMenu.c
+ResetStrobeMenu.c
+PrintMenu.c
+(DPOF)
+PrintAllImage.c
+UiEvnt.c
+EventFilter.c
+PropertyTableManagerCore.c
+Mode error: 0x%4x
+DC97/MISC/CANON/FACTORY/RSTFNO
+DisplayOffController.c
+ShootState:0x%X
+ShootState.c
+_CaptureStanbyForReview
+ShtFlag
+_fReviewConCreate
+_fReservedPrepareShutDownShootCon=TRUE
+_PrepareShutDownShootCon
+_EntryIdleShoot
+_fResExSeq=TRUE
+_fReservedExitSequence=TRUE
+_ExitSequence
+_EntryPrepareShoot
+_EntryPrepareShootForRedEyeCmp
+_EntryPre_PrepareShoot
+ShootState:Err01
+comp
+_fReservExitConti
+_ExitContiSequence
+_CancelSequence
+_ExecuteStopContiShooting
+fWaitForEVFAvail -> TRUE
+ShootState
+_fSw1On               :%d
+_fSw2On               :%d
+_fSw1OfShootingOn     :%d
+_fSw2OfShootingOn     :%d
+_fSw2OnForRedEysLamp  :%d
+_fQuickRelase         :%d
+_fStrobeOn            :%d
+_fSelfTimer           :%d
+_fRemoteShootingOn    :%d
+_fDialChange          :%d
+_fShutDown            :%d
+_fContiShooting       :%d
+_fContiSecond         :%d
+_fLastContiShooting   :%d
+_DisableShooting      :%d
+_fCompleteStrobeCharge:%d
+_fExecPrepareCapture  :%d
+_fNextShotAvail       :%d
+_fNextShotFail       :%d
+_fAvailableExitShooting:%d
+_fReservExitConti     :%d
+_fFirstContiShooting  :%d
+_fReservedPrepareShutDownShootCon :%d
+_fReservedExitSequence :%d
+_fReservedExitSequenceWithoutSw1Check :%d
+_fReviewConCreate :%d
+_fEnableReview        :%d
+_BracketCount         :%d
+_ContiCount           :%ld
+_SettingCostomSelfShots:%d
+_CurrentCostomSelfShots:%d
+_SettingFaceSelfShots:%d
+_CurrentFaceSelfShots:%d
+_ShootState           :0x%x
+_ShootingMode         :0x%x
+_QuickReleaseMode     :0x%x
+[%d]0x%02x
+_EntryPrepareRecreviewOff
+_PrePrepareShoot
+_EntryPrepareContiEvfOn
+ShootState:Err03
+_ShutDownShootCon
+_PreRevOff_NA
+AR:Snd:0x%04x
+TimeoutSelf8_10
+StartSelf8_10
+TimeoutSelf0_8
+_TimeoutFaceSelf
+StartSelf0_8
+TimeoutSelfCostom1s
+_StartFaceSelf
+ShootCon_SelfTimer.c
+ShtCon_FaceSelf0_2
+Sht_StartStrobeChargeTimer
+Sht_CancelStrobeChargeTimer
+AR:Snd_Stop
+_StopBlinkSelfTimerLamp
+_StartSelfCostom
+_StartSelfCostom1s
+Current Position: OPTI[%d] DIGI[%d]
+OPTICAL_ZOOM_MIN_POS
+OPTICAL_ZOOM_NOT_MIN
+OPTICAL_ZOOM_MAX_POS
+DIGITAL_ZOOM_POS
+DIGITAL_MACRO_POS
+ZoomController.c
+DeactivateZoomController
+PRESS_TELE_BUTTON
+PRESS_WIDE_BUTTON
+UnpressZoomLever
+OPT_TO_OPT
+DIGI_TO_OPT
+OPT_TO_DIGI
+DIGI_TO_DIGI
+ZoomCon_SetZoomForMovie
+DigitalZoom for Movie
+ZoomCon_UnsetZoomForMovie
+ActivateZoomController
+ZoomCon_EnterCaptModeChange
+ZoomCon: StopZoomUponShutdown
+Finder.c
+_ManagePTMProperty
+AFFrameController.c
+MacroController.c
+UI_StrobeCon_CanNotItemSelect
+UI_StrobeCon_BusyOfShootSeq
+UI_StrobeCon_ExecuteChangeStrobe
+UI_StrobeCon_PressFlashButton
+UI_StrobeCon_Start
+StrobeController.c
+UI_StrobeCon_Stop
+U!2@
+EXPCompController.c
+UiComIF.c
+DesignInfo.c
+GrVramInfo.c
+PB.DrawI
+GrImg.c
+PB.StartM
+PB.FistMv
+PB.OneMv
+PB.IHist
+PB.MHist
+PB.EfctM
+PB.EfctS
+PB.RestEf
+ReadAhead.c
+AllConsumeController.c
+SyncOperationSound.c
+PBPlayVolume.c
+PB.DcdCBR
+A/extend.m
+SinglePlayController.c
+SingleImageView.c
+PB.RfrsM
+PB.RfrsI
+;Canon
+PBInformation.c
+%02ld
+%ld.%c%c
+%ld.%c
+%ldx%ld
+%lu/%lu
+#######
+######
+#####
+####
+%s/%s
+%d/%m/'%y
+%d/%m/%Y
+'%y/%m/%d
+%Y/%m/%d
+%m/%d/'%y
+%m/%d/%Y
+%H:%M
+%03d-%04d
+Unknown
+%01ld"
+%02ld'%02ld"
+%d.%dM
+SlideShow.c
+SingleEraseController.c
+GuideController.c
+%s%s
+PBDonSur.c
+JumpController.c
+\"d!
+####
+%ld/%ld %s
+#####
+%s/%s %s
+---/%ld
+---/---
+SearchController.c
+MagnifyController.c
+%ld'%02ld"
+%H:%M
+MoviePlayController.c
+MultiPlayController.c
+PB.RfrsIM
+RecReviewController.c
+FocusCheckerController.c
+MarkSetSingleController.c
+PlayOhyearkiController.c
+PlayResizeController.c
+RedEyeController.c
+SimpleSlideShowController.c
+DpConnect.c
+DpofPrompterCtl.c
+CaptureInformation.c
+Movie.c
+SW1Disp.c
+AFFrame.c
+Error.c
+Busy.c
+E%02d
+SpotFrame.c
+Zoom.c
+ChargeStrobe.c
+EXPLock.c
+ShotsTime.c
+9999
+GridLine.c
+CaptModeAnime.c
+CaptInfoAnime.c
+LargeWide.c
+RecParamList.c
+RPLDetailMenu.c
+FaceGuide.c
+AFGuide.c
+CaptInfo.c
+%ldx%ld %s
+%s %ldx%ld
+0.%d
+%sM %ldx%ld
+%ldx%ld 
+DlgItm.c
+FntMan.c
+ResLoad.c
+StrMan.c
+/!$!
+Not found icon resource.
+UTF8Str.c
+VideoDrv.c
+ % p, % d Byte
+(-DT
+ScreenLock
+ScreenUnLock
+ % 04X 
+Window.c
+incorrent header check
+unknown compression method
+invalid window size
+invalid block type
+incorrect data check
+WBIntegPrm.c
+""ww
+""ww
+@BpCaptureSystem.c
+DetectVerticalWound
+DetectVerticalWound.c
+BrtAngle.c
+,0
+BrtDrv.c
+CalcYL.c
+BrtFace.c
+BrtLib.c
+BrtMthd.c
+ D@4
+BrtWei.c
+ExpDrvSub.c
+ExpDrvSubTask
+ExpProg.c
+ExpCalc.c
+ExpData.c
+WB1Push.c
+WBAxis.c
+WBCapSqH.c
+WBEVFSeq.c
+WBMovSeq.c
+WBPprSeq.c
+WBOpSeq.c
+WBLcSqH.c
+WBOsfSeq.c
+WBFHSeq.c
+WBDefCo.c
+WBDrv.c
+WBEva.c
+WBFaceWin.c
+WBFace.c
+ bB
+WBExt.c
+WBShtInf.c
+WBSmth.c
+WBLPFace.c
+WBLPFace
+WBTblAdj.c
+DevParamTable.c
+A/%08x.CRW
+LT@A/%08x.txt
+0x%08lx
+A/%08x.dat
+PutDayData.c
+DevelopPath.c
+EFTable.c
+CntFlash.c
+CalcEF.c
+EFTool.c
+AFDataManager.c
+AFScanDriver.c
+AFFrameProp.c
+FaceAFFrame.c
+SingleAF.c
+Move FaceFixPos
+AFParam.c
+AFCalc.c
+Peak Exist
+No Peak
+CheckPrev Used FixPos
+CheckPrev Not Macro
+CheckPrev Not FixPos
+CheckPrev Angle OK
+FaceFrame Execute Prev
+SingleAFExecute Execute Prev
+CheckPrev fCheckRes = %d
+PeakPosCalc.c
+SearchCalc.c
+SceneCheck.c
+ScanRange.c
+ContinuousAF.c
+Evt_CalcWobbling
+Evt_CalcWobbling Stop
+Evt_CalcClimbing
+Evt_CalcClimbing Stop
+Evt_CheckSceneChange
+Evt_CheckSceneChange Stop
+OK_OBSERVATION_STATE Start
+NG_OBSERVATION_STATE Start
+AFTool.c
+TargetFrameCalc.c
+Length %ld, "%s"
+BlockID = %d, Num = %d
+BlockID = %d
+BlockNum = %d
+LowConResult Selected FrameID = %d
+***CheckExistTargetBlock***
+PeakResult Selected FrameID = %d
+LowConResult
+%3d 
+Zone Block Result
+PeakPosition
+%4d 
+LowConResult
+SelectFrame Block Result
+TargetFrame Result
+DataIndex = %d
+Tes = %d
+Fes = %d
+Tep = %d
+Fep = %d
+Mmp = %d
+pYiItg = %d
+pYvlPeak = %d
+Set CenterTargetFrame
+EvaluationData = %d
+count = %d
+CalcTargetEvaluationData Err Mode = %d
+Result EvaluationData = %d
+***Judge BlockZone Start***
+ ZoneCounter = %d
+Not Exist OK_Cnt
+Center is LC_CHK_UNFIXED
+**Attach BlockID 
+~ Start**
+**Attach BlockID 
+~ End**
+Exist LC_CHK_UNFIXED 3
+~3 Block
+Exist LC_CHK_UNFIXED 5
+~5 Block
+Exist LC_CHK_OK Block
+Center is LC_CHK_NG
+**Attach BlockID 
+ Start**
+**Attach BlockID 
+ End**
+Exist LC_CHK_UNFIXED or LC_CHK_NG 3
+~3 Block
+Exist LC_CHK_UNFIXED or LC_CHK_NG 5
+~5 Block
+Judge Stop BlockZone
+***SelectFocusFrameBlock Start****
+FocalDepthPulse = %d
+NearPeakPos[%d] = %d
+AttachBlockIDSameDepth 3
+~3 Start
+AttachBlockIDSameDepth 3
+~3 End
+AttachBlockIDSameDepth 5
+~5 Start
+AttachBlockIDSameDepth 5
+~5 End
+Select CenterFrame
+Selected Only Center
+Exist 3_3 Block
+Exist 5_5 Block
+NearPeakPos = %d
+Select Error!!
+FixedPosition = %d
+pHFrame = %d   pVFrame = %d
+***SelectFocusFrameBlock End****
+fExistTarget = %d
+SetExistTarget
+fRequest = %d
+FocusFrames = %d
+H_FocusFrame = %d
+V_FocusFrame = %d
+AFLockPosition = %d
+Not SuperMulti
+Detect TargetFrame Result
+fIsDetect = %d
+DebugType = %d
+DebugType = ALL
+INVALID DebugType!
+Clear DebugType
+StableGyroDataThld = %d
+StableCheckGyroData = %d
+StableGyroCount = %d
+S_GyroNG
+UnStableGyroDataThld = %d
+UnStableCheckGyroData = %d
+UnStableGyroCount = %d
+US_GyroNG
+StabilityCheck.c
+Single Th = %d
+UniCheck Tes = %d
+CenterTes = %d
+DiffUpperLeftYi = %d
+DiffLowerLeftYi = %d
+DiffUpperRightYi = %d
+DiffLowerRightYi = %d
+YiTh = %d
+TesTh = %d
+UltraEasySonicAiAF.c
+FLATSCENE
+STABLE
+UniUni ON
+Face Non Detect Start Conti
+Face Detect Start SingleScan
+Face Non Detect Start UenicScan
+Face Non Detect Start SingleScan
+Evt_StartObservation End
+Evt_StartObjectDetectAF
+ZoomPoint = %d
+DigitalZoomPoint = %d
+Evt_StartObjectDetectAF Stop
+Evt_StartObjectDetectAF UnStableOccurred
+Evt_StartObjectDetectAF StartConti
+Evt_StartObjectDetectAF End
+Evt_StartContinuousAF
+Evt_StartContinuousAF End
+StartUltraEasySonicAiAF
+StartUltraEasySonicAiAF End
+RequestStopUenicAiAF
+IsUnStable
+IsNDStateChange
+IsFrameRateOver
+IsAvValueChange
+RequestStopUenicAiA
+IsFaceDetectStatusChange
+IsBvValueChange
+CurrentFrame = %d   BeforeFrame = %d
+IsFrameModeChange
+Request Stop
+CDSGain.c
+CDSAccs.c
+CdsTable.c
+ImgEvent.c
+TgExpRes.c
+TgPixelRes.c
+LiveImageSub.c
+LiveImageTool.c
+FCreate.c
+PFMyColor.c
+PTPtoFAPI.c
+PTPtoFAPI_EventProcTask
+Dataset.c
+PTP Framework PTP Event
+TrnspMgr.c
+TrnspIF.c
+OpDefault.c
+.RPC
+ObjMethdRW.c
+ObjMethd.c
+RemoteStorage.c
+O"c{
+VirtualObjec
+AltObject___
+EventCnt.c
+StallChangeOfBulkInCBR, Status=%d
+StallChangeOfBulkOutCBR, Status=%d
+BulkTrns.c
+BulkOutEvent!, DataPhase
+Error:QuickReadUSBDataPipe
+PtpBulkLogFlag
+A/BulkTrns.Log
+DeleteBulkTransport()
+SetNullPacketActionMode(), fBulkIn=%d, fBulkOut =%d
+GetNullPacketActionMode(), fBulkIn=%d, fBulkOut =%d
+EnablePtpBulkOutDMAMode(), fDMA=%d
+InvalidResponseData, ContainerLength
+StallBulkTransport
+Invalid State, SetTotalLengthOfPTPSendData()
+SET:SendTotalSize = %lu
+OverSendData
+SendData,Len=%d
+SendDataWithResponse,Len=%d
+ResponseCode=%04x
+AsyncWriteUSBDataPipeMulti Error
+OverReceiveData
+ReceiveData,Len=%d
+ Parameter[%d] = %08lx
+Op.[0x%04x], P1[0x%08lx]
+Op.[0x%04x]
+InvalidOperation, Code = %04x
+AsyncWriteUSBDataPipe Error
+Enter:FirstSendPhase
+NoOperation BulkIn! Remain.Length = %lu
+Faile DataSendPhase, Result = %d
+DoBulkInComplete(), Size = %ld
+ChangeBulkOutDMAMode, ContainerLength = %ld
+InvalidReceiveData
+NoOperation BulkOut!Remain.Length = %lu
+Faile DataReceivePhase, Result = %d
+DoSendPTPResponse
+DoSendPTPResponse, Code=%04x
+Faile SendResponsePhase, Result = %d
+Res.Comp
+DoStallBulkTransport()
+DoOperateStallClearedCBR()
+DoTransactionCanceled()
+OperTrns.c
+PlatformWrapper.c
+OhyearKiPrm.c
+O"9g
+OhyearKiAlgor.c
+0`2 
+0`2@
+0`2`
+MotionDetect.c
+SceneEva.c
+CalcScene.c
+:0B
+CalcDPlus.c
+\"gPb
+CalcYuv.c
+EncodePictJpegPass.c
+OhyearKiInOutPath.c
+MovieThumbnailDecPass.c
+MjpegEncPass.c
+=== Dump Sta ===================================
+Sta Add   : 0x%08lx -> %p
+Dump Size : D'%ld (byte)
+ Address  +0       +4       +8       +C
+%p: 
+%08lx 
+=== Dump End ===================================
+Qtable.c
+Huffman.c
+Lotus.c
+Fencing.c
+HivShdMan.c
+SumiaMan.c
+O"L-
+O"%-
+RshdMan.c
+[%ld] FirstDuration   %ld   Second   %ld
+ExpTime = %ld
+Duration  %ld
+Power     %ld
+ClearEvent Error
+WaitOpenMechaShutterEvent Error
+DoPhoto Error
+WaitGetAEIntegEvent Error
+================= Curr DrvType %02ld
+UnRegistFaexeEvent
+Not Execute RegistFunc Addr %ld
+USB Faexe Error
+ FAEXE_DRAM_START_ADDRESS : %lx
+Faexe USB Mem is 0 Error
+Faexe Size is LimitOver
+ === Start Faexe From USB ===
+FileSize is 0 Error
+Not Enoght Memory For BootFAEXE
+File ReadError
+ReadError Size is 0
+ === Start Faexe From SD ===
+ %-25s
+%7lu
+Dump32
+SoundDataSize
+RECORDSOUNDDATA
+PLAYSOUNDDATA
+GetTransparentMemoryPosition Error 
+PlaySoundSize  
+%s/%3d%s
+%s/%03d%s/%s%04d
+Catalog.c
+l(Kind:%lx)
+Cobj4PTP.c
+[%s:%d] CobjID Err ID:%x(Dir=%d:File=%d)
+DCIM
+%s%s
+MISC
+SNDR
+%c/%s
+%c%s
+.JPG
+.CRW
+.AVI
+.MOV
+.WAV
+.CR2
+.THM
+.MRK
+C4P_TryMakeNewtPTPObjectID Kind Error[%lx]
+C4P_GetNoTransObjectNumber Kind ERROR [Kind:%lx]
+C4P_GetFirstNoTransObjectID Kind ERROR [Kind:%lx]
+C4P_GetLastNoTransObjectID Kind ERROR [Kind:%lx]
+C4P_GetNoTransObjectNumber ID ERROR [ID:%lx]
+C4P_GetPrevNoTransObjectID Kind ERROR [Kind:%lx]
+CobjNaming.c
+%s%04d
+:d A
+[CobjDate] PARAMETER_FOLDERMAKINGINFORMATION ERROR 
+%c%c%c
+.TMP
+MISC
+DPOFObjMngr.c
+DPOFCache.c
+DPOFResume.c
+DPOFDisplayFile.c
+DPOFInstance.c
+DPOFReader.c
+DPOFWriter.c
+AUTPRINT.RSM
+!BLc2
+DPOFFileUpdate.c
+!Blc2
+%03u
+FileAppFs.c
+FileFormatLibrary.c
+ImageHeader.c
+ErrorResult = %lX(ReadFile:%s)
+ImageHeaderParser.c
+dwFSchdl.c
+FileScheduleTask
+dwFList.c
+FileWriteTask
+dwFWrite.c
+dwMemMan.c
+RDCScdl.c
+ReadScheduleTask
+RDCList.c
+RDCMem.c
+FORMAT_TASK_PROGRESS
+FORMAT_TASK_NAME
+ReadFDir.c
+rrAa
+@16M   
+32M   
+SdCon.c
+SdConInt
+SdDma.c
+SdDmaInt
+FirmUpgrade.c
+SlideEffect.c
+ImageDLight.c
+ImgDLight
+JpegWriter.c
+:J?O
+MechaEventHdr.c
+FocusActuator.c
+FocusEvent
+FocusLensConverter.c
+FocusLensDriver.c
+FocusLensTool.c
+IrisSpecification.c
+MechaDeviceDriver.c
+M:%s 0x%08X
+0T@ResetSensor.c
+MechaShutter
+MechaShutterActuator.c
+NdActuator.c
+PwmDrv.c
+PWM%dCEN  [0x%08lX]: 0x%08lX
+PWM%dOMSK [0x%08lX]: 0x%08lX
+PWM%dCFG  [0x%08lX]: 0x%08lX
+PWM%dCNT  [0x%08lX]: 0x%08lX
+PWM%dMAX  [0x%08lX]: 0x%08lX
+PWM%dAMP  [0x%08lX]: 0x%08lX
+PWM%dOCAM [0x%08lX]: 0x%08lX
+ZoomActuator.c
+ZoomEvent
+@dBh
+MoveError
+FocalLengthConverter.c
+ZoomLensDriver.c
+M:%s 0x%08X
+ZoomLensResetDriver.c
+M:%s 0x%08X
+LISTR
+RIFFAVI hdrlavih+A
+strlvidsmjpg
+strfMJPGindx00dcauds01wbodmldmlhIDITINFOISFTCanonMVI07
+CanonMVI06
+JUNKV
+moviidx1
+AVIX
+AviWriter.c
+AviWrite
+A0<`
+ix00ix01a
+00dc
+ComputerZoomPublicEvent.c
+FocusLensPublicEvent.c
+SpeedCnt = %d
+Speed[%d] = %d
+Pulse[%d] = %d
+SubjectDistance=%d
+ReceiveData[%d] = 0x%08X
+ZoomLensPublicEvent.c
+ISDriveAaxis : %d
+ISDriveBaxis : %d
+ISPositionAaxis : %d
+ISPositionBaxis : %d
+ISHallOffsetAaxis : %d
+ISHallOffsetBaxis : %d
+ISHallGainAaxis : %d
+ISHallGainBaxis : %d
+ISGyroGainAaxis : %d
+ISGyroGainBaxis : %d
+GetGyroFilterCharge : %d
+ ISCPU Firm Version : %s
+ ISCPU Param Version : %s
+TblNumA : %d
+TblNumB : %d
+Aaxis : %d,  Baxis : %d
+LoopGainCalc Finished.
+Calc_Data :%ld
+AdjValue:%d
+StartImStEventProc
+SsCreateHeaderTask.c
+CreateHeaderTask
+SsCreateJpeg.c
+NRMan.c
+ ERROR!!
+ SiP check start 
+ Write data is 0x55555555
+UUUU
+ Write data is 0xAAAAAAAA
+ Write data is 0x00000000
+ Write data is 0xFFFFFFFF
+VerifyByte Start
+Count %ld
+@x4U
+%d %%
+Error(Byte Read Check)!
+pWriteAdr = 0x%lX : %02X
+pErrorAdr = 0x%lX : %02X
+CVerifyByte End
+AmdCommand.c
+extask
+0x%08X
+%08x:  
+     
+         
+%02x 
+%04x 
+%08x 
+-> exec Vector [argv1 ... ]
+DriveModeSlct.c
+MyColorSlct.c
+MyColor2ndSlct.c
+ (DPOF)
+DpofPlayLoading.c
+BaseMenu.c
+MenuItemList.c
+RecMenu.c
+PlayMenu.c
+SetupMenu.c
+-----
+%d.%m.'%y %H:%M
+'%y.%m.%d %H:%M
+%m.%d.'%y %H:%M
+MyCameraLib.c
+AlreadyDialog.c
+ErrorDialog.c
+StrobeMenuItem.c
+%1d 
+%1d/3
+%c%s%s
+1/%d
+%s %s
+H 0 
+PropertyManager.c
+ParameterManager.c
+BackupWrapper.c
+DIGITALMACRO - ST_OPTICAL_TELE_TERM
+ST_OPTICAL_WIDE_TERM
+TerminateDeliverToZoomController
+ZoomCon State...
+*******************************
+m_fWideOn              :%d
+m_fTeleOn              :%d
+m_fDigiMoving          :%d
+m_fOptMoving           :%d
+m_ZoomState            :%d
+_StopDigitalZoom
+_StopOpticalZoom
+_MoveOpticalToTele
+_MoveOpticalToWide
+_MoveDigitalToTeleForDigi
+_MoveDigitalToTele
+_MoveOpticalToWideForDigi
+_MoveDigitalToWide
+FramePropertyManager.c
+StrobePropertyManager.c
+O"yB
+%s/%s
+PBCommon.c
+?ffffff
+@0@-
+MarkSetMultiController.c
+MarkSetCommon.c
+RedEyeFrameController.c
+/%03d-%04d.LOG
+ImageSelectController.c
+DpsMainMenu.c
+DpsPaperFrame.c
+(%ld/%ld)
+DpsMovie.c
+warning: (Length > 32 length = %d) or (>SetStr " strings ")
+FAILED
+Can't Create!!
+AnimIcon.c
+BinBmp.c
+Button.c
+Counter.c
+0x%02x
+0x%02X
+Frame.c
+Histogram.c
+IconChanger.c
+ItemSlct.c
+Indicator.c
+LstIcon.c
+LstSlct.c
+LstText.c
+MenuItem.c
+MenuTab.c
+MobileIcon.c
+NaviIcon : IconID is RICO_NOT_DEFINED.
+ % s btn_l_g
+ % s btn_l_w
+ % s btn_r_b
+ % s btn_r_g
+NaviIcon.c
+Progress.c
+Rect.c
+AnimRect.c
+Scroll.c
+Slider.c
+Status.c
+Text.c
+UserText.c
+VolumeSlct.c
+FocusCushon.c
+WidgetBase.c
+invalid code lengths set
+invalid literal/lengths set
+invalid distances set
+invalid literal/length code
+invalid distance code
+invalid stored block length
+1.1.3.LZC.1.0.1
+CalcBrtFace.c
+%lu,%d,%d,%d,%d,%d,%d
+WBCalc.c
+WBEvaBkS.c
+WBEvaFL.c
+WBFadeFace.c
+WBKeepFace.c
+WBMem.c
+WBCalcDM.c
+ImagePropLib.c
+B d 
+DefectDetect.c
+%04d;%02d;%02d %02d:%02d
+%02d;%02d;%04d %02d:%02d
+%04d;%02d;%02d
+%02d;%02d;%04d
+PutYuv.c
+SuperMultiFrame.c
+FrameSelect.c
+ClimbCalc.c
+TgAccs.c
+ManageFCInfo.c
+FCReviser.c
+ColExt.c
+PTPBulkState
+PTPEventCnt
+[PTPState] PTP_Unexpected Type=%d STATE=%d EVENT=%d
+EDmacUtility.c
+PutDayDataPath.c
+Saridon2Path.c
+PetitYuvPath.c
+SetPgaGain %d
+PgaGain %d
+Set DeltaGain  %ld ( Delta  %ld )
+ObClamp %d
+SetObClamp %d
+Set CDSPreGain %d
+Get CDSPreGain %d
+Set CDSPreGainReg %d
+Get CDSPreGainReg %d
+SetCDSGainApex %d
+SetMechaTv[%03d]
+SetTv[%03d]->RealTv[%03d]
+NOT_AVAILABLE
+?CalculateProduct Error %ld
+RefWBLevel Target %04ld A %04ld B %04ld C %04ld D %04ld
+WBGain %d, %d, %d, %d
+Cx %d, Cy %d
+ResetPlus %d
+ZOOMRESET
+Reset ToWide: ----  ToSink: %04ld
+Reset ToWide: %04ld  ToSink: %04ld
+Reset ToWide: %04ld  ToSink: ----
+**** ZoomResetToWide ******
+**** ZoomResetToTerminate ******
+ Speed     [pps]  :  %ld
+ Current   [DAC]  :  %ld
+ ControlGain_P    :  %ld
+ ControlGain_I    :  %ld
+ ControlGain_D    :  %ld
+ PwmLevel         :  %ld
+Cannot Find Param
+ CurrentLimit     :  %ld
+ SpeedControl     :  %ld
+ADJ_ZOOMCOMMONDRIVE_PARAM
+ =Default=
+ =Set=
+ZoomEnd %d
+ADJ_ZOOMDRIVE_PARAM
+ [ %03ld ]  %04ld:   %05ld   %05ld   %05ld   %05ld   %05ld
+ [ %03ld ]  %04ld:   %05ld   %05ld   %05ld
+SelectType  : %ld
+ChangeImagerToWideDraft
+CancelImager
+@ChangeImagerToWholeParallelBPOne
+Capture Error %ld
+[WIN4] %ld  :   %ld   %ld   %ld
+Scan StartPos : %ld
+Scan StopPos  : %ld
+Scan Step     : %d
+ [Index]  Focus     TES      YI     FES
+ [Index]  Focus    TES1      YI    FES1    TES2    FES2
+ILLEGAL Parameter!!
+%ldOder Approximation Sample Index %ld - %ld ( Num %ld )
+Opt %ld Ccd %ld
+      FocusPos      Tes       Yi      Fes
+[%03d]    %05ld    %05ld    %05ld    %05ld
+TES Data
+Yi Data
+Fes Data
+CrwScan Start  : %d
+CrwScan End    : %d
+CrwScan Step   : %d
+EF.StartInternalPreFlash
+Coeff A %04ld, B %04ld, C %04ld, D %04ld [Nor %04ld]
+Exp  Av %d, Tv %d, Gain %d
+AE_TV %ld + Delta_Tv %d
+Store AE_TV %ld AE_Gain %ld ( TargetYl %ld )
+MaxY %ld MinY %ld
+v@SumY %ld Size %ld
+VRAM DataSize H : %04ld, V : %04ld
+VRAM Address  : %p
+VRAM Size     : 0x%x
+Threshold %ld
+%ld : POS %ld
+CurrLine %ld TargetLine %ld
+Left    =       %ld
+Right   =       %ld
+Width   =       %ld
+MJ VRAM DataSize H : %04ld, V : %04ld
+@MJVRAM Address  : %p
+MJVRAM Size     : 0x%x
+Fail ImagerActivate(ErrorCode:%x)
+Error WaitImagerEvent(0x%x)
+Error StartEVFCommand(0x%x)
+Add: %p Width : %ld Hight : %ld
+pBmpBuff_Size : %d
+FALSE : AllocateMemoryStrictry 
+DataWidth : %d , DataHeight : %d
+FreeMemory : OpenFileWitDir 
+FreeMemory : Write 
+FreeMemory : Close 
+FreeMemory 
+FROMIMAGE
+ === Serial Number ===
+ InputSerialNumber %ld%ld
+[ %ld ]  %x
+FactoryNumber (Hex)  : 0x%x%x
+FactoryNumber (Dec)  : %ld
+SerialNumber (Hex)  : 0x%x%x
+SerialNumber (Dec)  : %ld
+ Save to FactoryReserve[%02ld] : %04ld
+  -- OB --
+  start : (%d, %d)
+  end   : (%d, %d)
+  -- UL --
+  -- UR --
+  -- Center --
+  -- LL --
+  -- LR --
+  [%3ld]     [%3ld]
+       [%3ld]
+  [%3ld]     [%3ld]
+  OB : (R, G1, G2, B) = (%ld, %ld, %ld, %ld)
+SHD_CAPTURE_INFO
+CaptureSize    : ( %04ld, %04ld )
+AngelOutputSize : ( %04ld, %04ld )
+GetTestRecCrwAddress
+v@p@-
+JpegData Add %p  Size 0x%lx
+LT@|
+@JPEG BUFF       %p ( %lx )
+IMG VRAM BUFF   %p
+THUM VRAM BUFF  %p
+CRAW BUFF       %p
+CRAW BUFF SIZE  %p
+ Capa Over!!
+DataA : A %ld  B %ld , DataB : A %ld  B %ld
+***** LoopGain Result *******
+In  Sin : %ld
+    Cos : %ld
+Out Sin : %ld
+0.009
+ReadDirEntryWithStat Err!![%s]
+/%3d.CTG
+%s/%s
+CtgTotalTask
+\"`
+FileCtg.c
+%s/%s
+DPOFJobParser.c
+CIFF1
+JFIF
+FPX1
+UNDEF
+EXIF1
+EXIF2
+01.10
+01.00
+%s %s = "%04d/%02d/%02d"
+%s %s = "%02d/%02d/%04d"
+EXIF1
+%s %s = %s -%s
+EXIF2
+CIFF1
+JFIF
+%s %s = %s
+UNDEF
+[%s]
+01.10
+01.00
+%s %s = "%s" -%s
+%s %s = %04u:%02u:%02u:%02u:%02u:%02u
+%s %s = %03u
+<%s %s = "..%s">
+ -%s %s
+%s %s = "..%s"
+%s %s = "%03u-%04u"
+%04d:%02d:%02d %02d:%02d:%02d
+%d:%d:%d %d:%d:%d
+CreateHeader.c
+0221
+ExifIFD.c
+0100
+@ffffff9@
+0100
+GM1.00C
+MakerNote.c
+MakerNoteParser.c
+F%d.%d
+SetPCase4Play.c
+dwWrtBuf.c
+dwLinkList.c
+RDCFile.c
+ReadFileTask
+FAT12   
+FAT16   
+FAT32   
+FIRhandler.c
+EffectDriver.c
+EffectMulti.c
+DCMDrv.c
+FocusLensResetDriver.c
+M:%s 0x%08X
+ZoomLensIC.c
+RIFFAVI vidsindxCanonMVI01
+CanonMVI02
+CanonMVI03
+CanonMVI04
+CanonMVI06
+CanonMVI07
+auds`
+AviRead
+AviReader.c
+01wb
+00dc
+RIFF
+AVI vidsindxT
+auds0
+AviPlayer.c
+AviPlay
+ [OK] 
+ [NG] 
+Adr:
+,Write:
+,Read:
+ FROM sum is 
+ Data bus check for all DRAM cell : 
+ Address bus check for all DRAM cell : 
+ Data bus check (Simple version) : 
+ Address bus check (Simple version) : 
+ Writing to ROM : 
+RecMenuItem.c
+WBFa.c
+HistPass.c
+MjpegDecResizePass.c
+MjpegDecRotatePass.c
+PCaseWrapper.c
+MVI:%s Movie
+ST*:Stitch assist mode
+IMG:%s JPEG
+ThumbnailViewArea.c
+ Ap@-
+\" 
+RRaA
+rrAa
+EffectPatterns.c
+#@Pe2
+EffectController.c
+EfctConTask
+EfctConLowTask
+FrameRateGenerator.c
+00dc
+idx100dc01wb 
+00dc01wb
+F%d.%d
+@D 
+@D 
+(  R"
+aB@02
+?UUUUUU
+a\ 
+?v<y5
+UUUUUU
+$>ED
+IUUUUU
+1#B#
+~}|{zyxwvvutsrqqponnmllkjjihhgffeddccbaa``__^^]]\\[[ZZYYXXWWVVUUUTTSSRRRQQPPPOOONNMMMLLLKKKJJJIIIHHHGGGGFFFEEEDDDDCCCCBBBBAAA
+c!B
+* 0b
+:  R
+JN B
+You must "#define MALLOC_LOG" in cfg_stdlib.h if you need allocated memory list.
+Copyright (C) 1997-2007 by CANON Inc.
+DRYOS version 2.3, release #0031
+2.43
+display task information
+usage : task [-l | task ID]
+         -l  long format
+         `````                  H
+                                                                                                                                 
+alpha 039
+1.35
+1.15
+1.12
+ Index %02ld    Task  App   Frm   SetType   SetMenu   PCLang        PCTime
+      [%02ld]   %4s   %02ld    %02ld      0x%02lx      0x%02lx     %04ld    %010ld
+JFIF
+$3br
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+`i7T
+u*gT)
+1b~c
+GU'fb]
+#cLaG1
+G=jV/
++G{m-
+4(O.{
+TerN+
+)97&~59
+M*kD
+iQ~u
+3)"
+sJ#JRm&
+JSLu
+<SvVM
+?ZaJ
+/ 19
+Ep}g
+TFzSH
+zW\Q
+QX4C
+RwCD
+UM{9u>
+i:4a
+TFF)+
+1RyG
+s["R
+=kKO
+tcQp
+&)Os
+)bj9
+&*29
+dX@9
+BfRB
+M1Cf
+v+Nb
+O, a
+^W=$
+trhwGa~
+=<=Tdj
+CKSI
+^=VP
+g=)Y
+th!jij
+CKRc#
+Wu6rIXx\
+tFcK
+~i_Cu!CS
+E;v*
+5K=7O
+ArKX
+M)(/
+.s~
+5i%9
+BWpx
+27GuM
+#Io)
+dWbs
+gl$J
+=NrG
+Idy\
+V5x5.
+H>(Y
+73Iqs7
+=I'9
+5mG"
+6mW8
+r;0{U
+R-e$w
+_L#-'s
+/>#x
+%zns
+)4x~
+xB3u
+fOJV
+q[Vo
+k)#X
+hlV^
+K{w=
+vV-F.JMjR-
+F|q<8f
+C4Eg
+]c$wS
++W/A>+Z
+4&rU
+ijC&H
+#90Zz
+ s[3
+W=*s!u
+{WT)
+rJE[
+R[lv
+b9,N:U
+:uu2
+)&Vc
+v%t_
+{VM
+2Z!h
+Q2{T
+^KOj
+J{Oj
+`$V-
+\W/{
+'C@5
+q[v6|
+%d|Vg_
+\Wwoe
+\Vm\
+rv6m 
+FhO<U)`
+T4tE
+SSFpqN(
+,HlWAa
+_:~2:
+{Jqw8
++.Xv
+Ep5f~
+3_V~9BWf%
+4R)Kl}*
+:ott
+.EpU
+ZK_j
+R)Me
+,E?eZP}
+TuEV
+-sN'b!h
+%LW*Me
+Va~+
+!hi
++KkTn-:
+wjFx
+?+~U
+<l~e
+qls^u
+=GA\R
+RIFF4
+WAVEfmt 
+data
+"&$)
+%$+$$5
+3)T+!!w
+(=)`
+m".(
+4O+z
+)Y% 
+/d"{
+/'-0
+6!O%
+/& *]
+e,,$
+T"r!
+Y%G"
+Y%K%
+#)9&
+~h
+"(
+5<
+AV;1C
+CheckSum ERROR: from 0x%08X %d bytes -- expect 0x%08X but 0x%08X
+SIGEsige
+""ww
+[MTPPROPMGR]ERROR: Set PTP Property ConvertPtpErrorToResponse()
+[MTPPROPMGR]!!EXCEPTION!!: Invalid FormFlag of Object Property
+<%s %s="%s">
+ <%s>
+  <%s>
+   <%s>%08lX</%s>
+  </%s>
+ </%s>
+</%s>
+ <%s>
+  <%s>
+   <%s>
+    <%s>%08lX</%s>
+    <%s>%08lX</%s>
+    <%s>%08lX</%s>
+    <%s>%08lX</%s>
+    <%s>%08lX</%s>
+ <%s>
+  <%s>
+   <%s>%s</%s>
+   <%s>%s</%s>
+   <%s>%s</%s>
+   <%s>%s</%s>
+  </%s>
+ </%s>
+</%s>
+                                                                                
+                                                            
+*ang
+                                                  
+                                            
+                                                            
+b'[/]/f'
+WA9O
+@A3LF
+@A L3
+:jg*c
+fgL:
+(jG*@.@
+ju*t
+W/A2
+c?pL
+/W&A
+W/A(
+_A*L
+?*2*
+?*2*
+?*2*
+Z/f'L
+C,L$
+S*LB
+ C5L
+rb'J
+rb'J
+b'W/
+rb'J
+W/C
+Z/f'O
+WOAS
+3?pL
+3?tL
+bGWB
+ WBA
+bGWBA
+f>u>b>xj
+x>d>i>xj
+aAlnaj
+!j'* 
+sb'*!
+W/AT
+c?pL
+c?pL
+c?tL
+o*d.
+QfWO
+qL9bF
+nwn7
+b'W/
+LIL7L=L4
+OoO]
+/n"n
+b'W/
+b'W/
+4W#A
+1*8n
+A*Hn
+Q*Xn
+!*(n
+!*(n
+,* n
+Z!f'L
+!Z2f7
+1*8n
+3AAn
+Z!f'L
+b'W/
+rb'J
+1*8n
+A*Hn
+(nGn
+Z!f'L
+c?pL
+c?tL
+f!L'
+V*X*@
+V*X*p
+1*8n
+Z!f'
+Q*Xn
+1*8n
+Z!f'
+1*8n
+Z!f'
+1*8n
+Z!f'
+f>u>b>xn
+x>d>i>xn
+f>u>b>xj
+x>d>i>xj
+Lanr
+#.(* 
+sb'*!
+W/A_
+c?pL
+W/A^
+c?tL
+b'W/
+bWW_
+O~LT
+?n'n7nwn
+rb'J
+rb'J
+rb'J
+b'W/
+rb'J
+b'W/
+rb'J
+b'W/
+j".(
+rb'J
+b'W/
+b'W/
+b'W/
+CHj5jR
+@Cj
+Y %04ld, A %04ld - %03ld, B %04ld - %03ld, C %04ld - %03ld, D %04ld - %03ld
+[%ld] AdjDrvType[%02ld] -> DrvType[%02ld] : H %04ld, V %04ld, Rate %02ld, RawSize %ld
+"&()*+,./:;<>[]\=|^
+DIALOG
+DIALOGITEM
+Font Manager Instance
+Palette Class.
+Window Instance
+lI(
++*,|,
+,"-u-
+.!/x/
+78t8
+%h%#%
+ ` % 
+"%*+,-
+!&).123456
+ '(/0789:;<=>?
+"%*-2345
+!&).169:;<=>
+ '(/078?
+#&+,-.
+"'*/234567
+!)19:;<=>?
+!$)*+,
+ %(-012345
+&.689:;<=>
+ "" 
+$'))'$
+#(,--,(#
+%*.//.*%
+%*.//.*%
+#(,--,(#
+$'))'$
+ "" 
+------
+------
+------
+------
+!((!
+!((!
+      
+      
+!!!((((((!!!
+!!!((((((!!!
+!!!((((((!!!
+!!!((((((!!!
+      
+      
+ (( 
+ (( 
+      
+      
+   ((((((   
+   ((((((   
+   ((((((   
+   ((((((   
+      
+      
+ (( 
+ (( 
+ (( 
+ (( 
+4+"2
+w<#&<
+i -1
+ AH]"
+ n!;
+g;p!
+o~;o
+8L "
+4q ,q
+$s@t
+ (X]"
+"H!R
+|s3
+{,#'@
+i0-1
+ AH]"
+ n!;
+g;p!
+NullPacketSending, fNullEnd = %d, SendDataPhase.Total=%ld, SendDataPhase.Current=%ld, SendLength=%ld
+WaitNullPacket fNullEnd = %d, Total=%ld, Current=%ld, SendLen=%ld
+ZYXWVVUTSRQPOONMLKJIIHGFEEDCBBA@??>==<;;:998776655433221100//..---,,++***))((('''&&&%%%$$$####"""!!!!    
+
+ddddddeeeefffgghhiijjklmmnopqrsuvwyz|}
+}|zywvusrqponmmlkjjiihhggfffeeeeddddd
+$)4,$'1'
+-=-167:::"*?D>8B3796
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+))##))
+)))'))))))))))))))))))))))))
+%%%%
++>@'@>+5TTHHTT5TTTNTTTTTTTTTTTTTTTTTTTTTTTT
+$3br
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+.JPG
+.THM
+.CRW
+.AVI 
+.WAV@
+.CR2
+.MOV
+ecoremntCANON
+UUU@UUU@UUU@UUU@UUU@UUU@UUU@UUU@UUU@UUU@UUU@
+U@T@T
+UUU@
+Module: GUIWidget::NavigateIcon Error:Extended Bitmap
+$-6?HAZSle~w
+;2) 
+szahW^EL
+dmR[@I>7,%
+MD_Vi`{r
+!(3:
+|ungXQJC4=&/
+GNU\cjqx
++"90
+.'<5BKPYfot}
+18#*
+ypkb]TOF
+,':1XSNEt
+{pmfW\AJ#(5>
+FMP[ja|w
+29$/
+=6+ 
+ensxIB_T
+GLQZk`}v
+38%.
+<7*!
+doryHC^U
+-&;0YRODu~ch
+zqlgV]@K")4?
+49.#her
+\QFK
+kfq|_REH
+7:- m`wzYTCN
+1<+&
+2?(%nctyZW@M
+>3$)boxuV[LAal{vUXOB
+=0'*
+gj}pS^ID
+;6!,
+85"/di~sP]JG
+86$*p~lbHFTZ
+;5')
+KEWYs}oa
+MCQ_u{ig=3!/
+vxjdN@R\
+>0",
+AO]Sywek1?-#
+ztfhBL^P
+2<. 
+4:(&|r`nDJXV79+%
+GI[U
+c|w{
+9JLX
+~=d]
+lpHP
+cU!}d
+#5"?
+3?"4!=
+#5"?
+        Pos   WIN1  WIN2  WIN3  WIN4  WIN5  WIN6  WIN7  WIN8  WIN9
+[%03d] %05ld: %05ld %05ld %05ld %05ld %05ld %05ld %05ld %05ld %05ld
+  FocusPos   WIN1  WIN2  WIN3  WIN4  WIN5  WIN6  WIN7  WIN8  WIN9
+Canon
+Unknown
+0221
+everecoremntExif
+CANON
+PwrShot
+CANON_DC
+FAT12
+PwrShot
+CANON_DC
+FAT16
+PwrShot
+CANON_DC
+FAT32
+_s3
+Invalid partition table
+Error loading operating system
+Missing operating system
+Y_Z+
+No System on Disk
+Press Esc to Reboot
+Disk Boot Failure
+IBMBIO  COM
+1/10
+1/13
+1/15
+1/20
+1/25
+1/30
+1/40
+1/45
+1/50
+1/60
+1/80
+1/90
+1/100
+1/125
+1/160
+1/180
+1/200
+1/250
+1/320
+1/350
+1/400
+1/500
+1/640
+1/750
+1/800
+1/1000
+1/1250
+1/1500
+1/1600
+1/2000
+1/2500
+1/3000
+1/3200
+1/4000
+1/5000
+1/6000
+1/6400
+1/8000
+1/10000
+1/12000
+1/12800
+1/16000
+F1.0
+F1.1
+F1.2
+F1.4
+F1.6
+F1.8
+F2.0
+F2.2
+F2.5
+F2.8
+F3.2
+F3.5
+F4.0
+F4.5
+F5.0
+F5.6
+F6.3
+F6.7
+F7.1
+F8.0
+F9.0
+F9.5
+33333
+NEJ(~
+?>UUUUU
+ri7f>LUUUUU
+UUUUU
+?DR>
+?1cb
+=NONAME_TASK
+*DataLost*
+DiUSB20Drv
+Timer Heap
+LogFileClass
+LogManagerClass
+PriorityDecider
+DiUSB20CP
+DiUSB20DP
+USBControlPipe
+USBDataPipeBulkIn
+USBDeviceEvent
+USBDataPipeInterrupt
+USBDataPipeBulkOut
+DPSwitcher
+IsCCDTemperature
+GetCCDTemperature
+IsOpticalTemperature
+GetOpticalTemperature
+IsBatteryTemperature
+GetBatteryTemperature
+Ver.
+VIEWANGLEDATA
+ADJERRORLOGDATA
+GETAADJDATA
+NDWBADJDATA
+SWBADJDATA
+LCDADJDATA
+MODELIDADJDATA
+FOCUSNDADJDATA
+COLORAEADJDATA
+MECHADEVICEADJDATA
+SERVICEADJDATA
+IMAGEADJDATA
+ACCELEADJDATA
+MODELNAMEADJDATA
+AFADJDATA
+EFADJDATA
+CVFADJDATA
+HVFLAGADJDATA
+SHADINGADJDATA
+SENSITIVECAPTUREPROGADJDATA
+VGADEFECTPROGADJDATA
+HSCAPTUREDEFECTPROGADJDATA
+EVFDEFECTPROGADJDATA
+HARLEYDAVIDSONDEFECTPROGADJDATA
+FOCUSDEFECTPROGADJDATA
+ZHADJDATA
+HOSEIADJDATA
+HDMIADJDATA
+BATTERYCHECKADJDATA
+FOCUSCAMADJDATA
+VCMADJDATA
+ZOOMADJDATA
+DURIANADJDATA
+TASSENADJDATA
+LCDGAINADJDATA
+HDGAINADJDATA
+VIDEOADJDATA
+CHECKIFTOADJDATA
+BPADJDATA
+DCPADJDATA
+TEMPADJDATA
+NDFILTERADJDATA
+COLORADJDATA
+ISADJDATA
+ZOOMPOSADJDATA
+FOCUSADJDATA
+BTADJDATA
+PRODUCTADJDATA
+AVADJDATA
+WBDCXCYADJDATA
+FACTORYADJDATA
+HISTORYADJDATA
+COUNTRYADJDATA
+DEFECTPROGALLDATA
+KABOTANDATA
+IMGADJCXCYDATA
+DEFECTSPEC
+DEVICEUNIQUEID
+TGPHASECHANGE
+SIGNATURE
+LCDGAMMAPARAMETER
+SWBPARAMETER
+ADCPARAMETER
+AUDIOICPARAMETER
+LCDPARAMETER
+MECHADVICEPARAMETER
+SOUNDDEVICEPARAMETER
+AFPARAMETER
+EFPARAMETER
+CVFPARAMETER
+TGPARAMETER
+AUDIOPARAMETER
+NDFILTERPARAMETER
+MECHASHUTTERPARAMETER
+CDSPARAMETER
+IRISPARAMETER
+ZOOMLENSPARAMETER
+FOCUSLENSPARAMETER
+LOWBATPARAMETER
+DEFECTPARAMETER
+LCDBACKLIGHTPARAMETER
+CVFBACKLIGHTPARAMETER
+LOADTESTPARAMETER
+CZPARAMETER
+ADJTABLEPROPERTY
+JPEG
+YUVRESULT
+TESTRECYUV
+CRAW
+HIMGPLAYDRV
+LensController
+PT_UnlockAE
+PT_UnlockAF
+PT_ChangeZoomSpeed
+PT_MovieRecordStopped
+PT_PlaySound
+PT_mod
+PT_MoveOpticalZoomToWide
+PT_MoveDigitalZoomToWide
+PT_CompleteCaptModeChange
+PT_CompleteCharge
+PT_NextShootAvailable
+PT_RecreviewAvailable
+PT_MoveOpticalZoomToTele
+PT_MoveDigitalZoomToTele
+PT_EraseAllFile
+PT_GetSystemTime
+NR_SetDoubleNRType
+NR_GetDarkSubType
+NR_SetDarkSubType
+NR_SetTassenType
+NR_GetDefectCorrectType
+NR_SetDefectCorrectType
+NR_SetLotasPonyType
+PT_ShootPicture
+PT_CompleteFileWrite
+PT_CompleteSynchroWrite
+PT_LCD_BkColorDef
+PT_MFOff
+PT_GetLocalDateAndTimeString
+PT_DoAELock
+PT_DoAFLock
+PT_CompleteStopDigZoom
+PT_CompleteStopZoom
+PT_MFOn
+PT_CompleteStoreLens
+PT_MoveOpticalZoomAt
+PT_MoveDigitalZoomAt
+PT_GetPropertyCaseInt
+PT_SetPropertyCaseInt
+PT_CompletePreCapt
+EXMEM_EVF           
+EXMEM_COM           
+EXMEM_WIDE          
+EXMEM_PCEVF         
+EXMEM_FAMODE        
+EXMEM_FIRMUP        
+EXMEM_SCRIPT        
+EXMEM_NARROW        
+EXMEM_SHADING       
+EXMEM_RAMDISK       
+EXMEM_CRAW_REC      
+EXMEM_DVLPWORK      
+EXMEM_MOVIE_REC     
+EXMEM_FILESTORE     
+EXMEM_FORMATTER     
+EXMEM_MOVIE_PLY     
+EXMEM_FIRMUP_VRAM   
+EXMEM_FIRMUP_INFLATE
+NameService
+This Is  LogBuffer Instance
+quit
+ShutdownRecModeMenu
+StartRecModeMenu
+ShutdownPlayModeMenu
+StartPlayModeMenu
+ShutdownPlayModeMenuWithoutPbRedraw
+UITimer
+CtrlMan
+June
+March
+April
+December
+September
+November
+October
+August
+Friday
+Monday
+Sunday
+Saturday
+Wednesday
+Tuesday
+Thursday
+July
+January
+February
+SUBCPU SIO FAILED
+HDMI_I2C_ERROR
+HDMI_SEQUENCER_ERROR
+USB_PHY_ERROR
+GET CURRENT SWITCH TIMEOUT
+CFNoSpace
+BrtDrv.TimeOutConditionAgree
+JPEGBufferFullForMovie
+LATCH_E21:UnableLatchOff
+LATCH_E2:UnableLatchOff
+LATCH_E3:UnableLatchOff
+BrtDrv.TimeOutPreBvInteg
+BrtDrv.TimeOutBvInteg
+Virtual
+JPEGBufferFull
+LATCH_E21:UnableLatchOn
+LATCH_E2:UnableLatchOn
+LATCH_E3:UnableLatchOn
+ImageException
+CcdFifo
+LATCH_E21:VoltageDrop
+LATCH_E2:VoltageDrop
+LATCH_E3:VoltageDrop
+CcdShifter
+AfShifter
+CFWriteTimeOver
+JPEGICError
+ISRAMError
+ISError
+ReviewDecodeError
+FileError
+BarrierStateError
+1stLensStateError
+ISDriveError
+VCMControlError
+ISComError
+NoError
+VCMSioError
+ISGyroError
+VCMStartupError
+ISStartupError
+UsmMinFreqError
+UsmSweepFreqError
+UsmMaxFreqError
+VCMEncoderError
+UsmEncoderError
+MechaPowerError
+ZoomLensError
+FocusLensError
+WirelessError
+FormatError
+2ndLensResetError
+3rdLensResetError
+TinyError
+ExpDrv.TimeOut
+EFTimeOut
+JPEGTimeOut
+ImageTimeOut
+WbCaptureTimeOut
+AFScanTimeOut
+AFMotorTimeOut
+EvfWbPassTimeOut
+CrwWbPassTimeOut
+AfPassTimeOut
+BarrierTimeout
+ZoomLensTimeout
+FocusLensTimeout
+1stLensTimeout
+WHOLE_SERIAL_MILLEFE_DSHADE
+WHOLE_SERIAL_DSHADE
+SUPER_WIDE
+MONTBLANC_MILLEFE
+WHOLE_SERIAL_MILLEFE
+MONTBLANC_WHOLE
+WHOLE_PARALLEL_BP_ONE
+MANGO_PUDDING
+HONEY_FLASH
+WHOLE_SERIAL
+WHOLE_PARALLEL
+COMBI_PARALLEL
+HARLEY_DAVIDSON
+WHOLE_PARALLEL_BP
+FAST_BP
+ULTRA_GHOST_Q
+XAVIER_HOVER
+FOCUS_JET
+WIDE_DRAFT
+ALTERNATE_DRAFT
+JUMBO_DRAFT
+JET_DRAFT
+MILLEFE_ADJUST
+WHOLE_SERIAL_MILLEFE_WITH_DUMMY
+WHOLE_SERIAL_WITH_DUMMY
+EFChargeT
+ClampOBHook
+Field Creator
+StateClass
+StateObject
+PTPSession
+Canon Inc.
+microsoft.com/WPDNA: 1.0;microsoft.com/WPDWCV: 1.0;canon.com: 1.0
+01.0001
+Canon PowerShot G4
+GET_EXTENDED_EVENT_DATA
+GET_DEVICE_STATUS
+CANCEL_REQUEST
+DEVICE_RESET_REQUEST
+PTPTransportController
+DDISCVRY.DPS
+HDISCVRY.DPS
+http://www.cipa.jp/dps/schema/
+1.0 1.1
+1.00001
+<?xml version="1.0"?>
+???-????
+fileID
+newJobOK
+CANON
+DRSPONSE.DPS
+DREQUEST.DPS
+croppingArea
+capabilityChanged
+imagesPrinted
+printServiceAvailable
+disconnectEnable
+abortStyle
+fileName
+vendorName
+productName
+fileType
+paperType
+fixedSize
+paperSize
+imageOptimize
+jobConfig
+cropping
+?xml
+vendorSpecificVersion
+jobEndReason
+errorReason
+serialNo
+printInfo
+copies
+fileTypes
+paperTypes
+fixedSizes
+paperSizes
+imageOptimizes
+croppings
+xmlns
+dpsVersions
+progress
+fileNamePrints
+datePrints
+layouts
+dpsPrintServiceStatus
+errorStatus
+result
+fileNamePrint
+datePrint
+layout
+input
+output
+capability
+EVALUATIONVALUE
+ChangeImagerToMangoPudding
+ChangeImagerToHoneyFlash
+ChangeImagerToWholeParallel
+ChangeImagerToFocusJet
+ChangeImagerToWideDraft
+ChangeImagerToSuperWideDraft
+A/AdjTable.bin
+LOGDATASPACE
+AdjLog.txt
+/MISC
+/DCIM
+/SNDR
+FileManObserver
+EnableCzDebugLog
+DisableCzDebugLog
+CzDebugPrint
+MechaTerminate
+ShowMechaMacro
+MechaReset
+DispCon_SetDisplayType
+DispCon_ShowFiveStep
+DispCon_ShowCustomColorBar
+DispCon_ShowBitmapColorBar
+DispCon_ShowColorBar
+DispCon_SaveLcdGammaParameter
+DispCon_GetLcdGammaParameter
+DispCon_SetLcdGammaParameter
+DispCon_ShowLcdGammaParameter
+LcdCon_SaveLcdParameter
+LcdCon_GetLcdParameter
+LcdCon_SetLcdParameter
+LcdCon_ShowLcdParameter
+LcdCon_SaveLcdAdjParameter
+LcdCon_GetLcdAdjParameter
+LcdCon_SetLcdAdjParameter
+LcdCon_ShowLcdAdjParameter
+DispCon_SaveLcdGainAdjParameter
+DispCon_GetLcdGainAdjParameter
+DispCon_SetLcdGainAdjParameter
+DispCon_ShowLcdGainAdjParameter
+DispCon_SaveVideoAdjParameter
+DispCon_GetVideoAdjParameter
+DispCon_SetVideoAdjParameter
+DispCon_ShowVideoAdjParameter
+LcdCon_SaveLcdBackLightParameter
+LcdCon_GetLcdBackLightParameter
+LcdCon_SetLcdBackLightParameter
+LcdCon_ShowLcdBackLightParameter
+LcdCon_SetLcdDriver
+LcdCon_SetLcdBackLightBrightness
+DispCon_SetMaxBackLightBrightness
+DispCon_TurnOffBackLight
+DispCon_TurnOnBackLight
+DispCon_ShowWhiteChart
+DispCon_ShowBlackChart
+DispCon_ShowColorChart
+DispCon_TurnOffDisplay
+DispCon_TurnOnDisplay
+ExecuteTestRecSw1
+CreateFADBGSingalID
+ExecuteTestRecSD
+ExecuteTestRecCF
+WRITEADJUSTMENTDATATOFROM
+WRITEADJTABLETOFROM
+SetTestRecSkimmingYUV
+EraseAdjustmentArea
+CalculateTestRecYUVData
+GetLogData
+TerminateSoundRec
+InitializeSoundRec
+FreeBufferForSoundRec
+TerminateTestRec
+ExecuteTestRec
+InitializeTestRec
+Terminatedccd
+Executedccd
+Initializedccd
+StartSoundRecord
+EnableDebugLogMode
+DisableDebugLogMode
+ClearFactoryMode
+IsFactoryMode
+SetFactoryMode
+DisplayFactoryMode
+UndisplayFactoryMode
+GetdccdImage
+LoadAdjustmentTable
+SaveAdjustmentTable
+OutputLogToFile
+IsLogOutType
+GetdccdFilterValue
+LoadAdjustmentValue
+SaveAdjustmentValue
+ChangeDefectRecMontblancSize
+GetCurrentMaximumLogSize
+GetTransparentMemorySize
+FAPrintf
+FADBGPrintf
+ClearDUIDFixFlag
+IsDUIDFixFlag
+SetDUIDFixFlag
+ExecuteTestRecWithInteg
+ChangeDefectRecPeakHoldSetting
+ActivateAdjLog
+InactivateAdjLog
+FADBGSingal
+DumpTransparentMemoryItem
+TerminateAdjustmentSystem
+InitializeAdjustmentSystem
+DeviceUniqueIDCheckSum
+LoadDataFromAdjTableBin
+LoadParamDataFromAdjTableBin
+ChangeDefectRecExpGain
+PrintFaexeVersioin
+TerminateDigicon
+ExecuteDigicon
+InitializeDigicon
+GetAdjTableVersion
+ShowDefaultAdjTableVersion
+GetAdjTableValueVersion
+PrintFirmVersion
+GetAdjTableMapVersion
+SetFaexeEventTableActivation
+InitializeAdjustmentFunction
+GetTransparentMemoryPosition
+PrintAdjKabotanInfo
+PrintAdjTableMap
+StartFactoryModeController
+SetSensitiveRecParameter
+ChangeDefectRecParameter
+SetSensitiveDefectRecParameter
+SetDefectRecParameter
+SetDefaultRecParameter
+CreateAdjustmentTableMirror
+RefreshAdjustmentTableMirror
+DumpAdjMirror
+StopLogOut
+StartLogOut
+ChangeDefectRecExpTv
+StartSoundPlay
+GetLogDataOnlyAddMemory
+AddTransparentMemory
+RemoveTransparentMemory
+AttachToTransparentMemory
+GetTransparentMemory
+ShowTransparentMemory
+LiveImageTool.StartEVFMovQVGA60
+LiveImageTool.StartEVFMovQQVGA
+LiveImageTool.StartEVFMovQVGA
+LiveImageTool.StartEVFMovVGA
+LiveImageTool.StartEVFMovXGA
+LiveImageTool.StartEVFMovHD
+LiveImageTool.StartEVFMF
+LiveImageTool.StopEVF
+LiveImageTool.StartEVF
+ChangeImagerToWholeParallelBP
+ChangeImagerToFastBP
+ChangeImagerToUltraGhostQ
+ChangeImagerToOITA_XAVIER
+LiveImageTool.DzoomWide
+EF.SetChargeMode
+ChangeImagerToDigiconMode
+ExpCtrlTool.SetExpMode
+ChangeImagerToMontblancMillefe
+EF.StopEFCharge
+EF.StartEFCharge
+ChangeGradeTable
+LiveImageTool.DzoomTele
+ChangeImagerToMontblancWhole
+EF.SetMainFlashTime
+EF.SetFlashTime
+LiveImageTool.Resume
+ChangeImagerToWholeParallelBPOne
+ActivateImagerXOne
+LiveImageTool.Pause
+LiveImageTool.StopMjpegMaking
+LiveImageTool.StartMjpegMaking
+EF.AdjPreFlash
+EF.StartInternalPreFlash
+EF.StartInternalMainFlash
+PointKizuCheck
+AFTool.GetEVal
+ChangeImagerToCombiParallel
+EF.IsChargeFull
+LiveImageTool.ChangeDzoom
+LiveImageTool.StopDzoom
+E2LatOn
+LiveImageTool.GetDzoomPosition
+ChangeImagerToHarleyDavidson
+LiveImageTool.Jump
+ActivateImager
+CancelImager
+QuietImager
+GetTestRecCrwAddress
+PointDefDetect
+LiveImageTool.StartEVFFocusJet
+ChangeImagerToAlternateDraft
+ChangeImagerToJumboDraft
+ChangeImagerToJetDraft
+GetDefectCount
+PointDefMergeConvert
+DevelopTool.DevelopTest
+ChangeImagerToMillefeAdjust
+EF.SetEFChargeTimeOut
+EngDrvRead
+EngDrvIn
+EngDrvReadDump
+EngDrvBits
+EngDrvOut
+terminate
+Initialize
+initialize
+public
+while
+else
+private
+until
+then
+function
+extern
+step
+loop
+exit
+next
+Subscriber
+Publisher
+FULL
+0000
+Menu Container
+RegisterLanguageName
+SaveLanguageNameList
+ShowLanguageNameList
+CreateLanguageMenu
+DeleteLanguageMenu
+Boot
+Script
+Firm Update
+0.0.0.0
+Update firmware version?
+Updating now!!!
+Do not turn the power off!
+StrobeSettingsMenu
+PrintMenu
+IsoDialTo100
+IsoDialTo200
+IsoDialTo400
+IsoDialTo800
+ModeDialToC1
+ExpDialToM1
+ExpDialToP1
+ModeDialToC2
+ExpDialToM2
+ExpDialToP2
+ModeDialToC
+PressSw1AndAE
+PressSw1AndAF
+PressSw1AndMF
+ConnectHDMI
+DisconnectHDMI
+ModeDialToM
+ModeDialToSCN
+ModeDialToP
+WriteEnableMedia
+RemoveMedia
+WriteProtectMedia
+InsertMedia
+ModeDialToCamera
+ModeLeverMovieRec
+ModeLeverStillRec
+ModeDialToRec
+PressSw2AndFunc
+PressSw2AndSound
+IsoDialToMinSpd
+IsoDialToMaxSpd
+ExpDialToM0OneThird
+ExpDialToP0OneThird
+ExpDialToM1OneThird
+ExpDialToP1OneThird
+ExpDialToM0TwoThird
+ExpDialToP0TwoThird
+ExpDialToM1TwoThird
+ExpDialToP1TwoThird
+PressSw2AndWide
+PressSetAndWide
+ModeDialToMovie
+ConnectUSBCable
+DisconnectUSBCable
+ConnectACCable
+DisconnectACCable
+ConnectVideoCable
+DisconnectVideoCable
+DetachCradle
+AttachCradle
+PressSw2AndTele
+PressSetAndTele
+PressSwOne
+UnpressSwOne
+ModeDialToNightScene
+ModeDialToLandscape
+PressSw2AndErase
+ModeDialToCreative
+CloseLensCoverHalf
+OpenLensCoverHalf
+MountExtFlash
+UnmountExtFlash
+ModeDialToQuick
+PressSw1AndAELock
+ChangeMainDial
+ConnectDTerminal
+DisconnectDTerminal
+MoveTouchPanel
+CancelTouchPanel
+FlickDownTouchPanel
+FlickUpTouchPanel
+PressTouchPanel
+UnpressTouchPanel
+FlickLeftTouchPanel
+FlickRightTouchPanel
+StationaryTouchPanel
+PressPBButton
+UnpressPBButton
+PressDownWBButton
+UnpressDownWBButton
+PressWBButton
+UnpressWBButton
+PressMFButton
+UnpressMFButton
+PressISOButton
+UnpressISOButton
+HoldISButton
+UnholdISButton
+PressISButton
+UnpressISButton
+PressRecButton
+UnpressRecButton
+PressFuncButton
+UnpressFuncButton
+PressMFSoundButton
+UnpressMFSoundButton
+HoldSoundButton
+UnholdSoundButton
+PressSoundButton
+UnpressSoundButton
+HoldFaceButton
+UnholdFaceButton
+PressFaceButton
+UnpressFaceButton
+PressWideButton
+UnpressWideButton
+PressModeButton
+UnpressModeButton
+PressMovieButton
+UnpressMovieButton
+PressTeleButton
+UnpressTeleButton
+HoldAFFrameButton
+UnholdAFFrameButton
+PressAFFrameButton
+UnpressAFFrameButton
+HoldSetAFFrameButton
+PressSetAFFrameButton
+UnpressSetAFFrameButton
+HoldPrintShareButton
+UnholdPrintShareButton
+PressPrintShareButton
+UnpressPrintShareButton
+PressRemoteReleaseButton
+UnpressRemoteReleaseButton
+PressAEFELockEraseButton
+UnpressAEFELockEraseButton
+PressEraseButton
+UnpressEraseButton
+HoldDriveButton
+UnholdDriveButton
+PressDriveButton
+UnpressDriveButton
+PressOffButton
+UnpressOffButton
+PressSelfButton
+UnpressSelfButton
+PressTeleMagButton
+UnpressTeleMagButton
+PressMagButton
+UnpressMagButton
+PressFlashButton
+UnpressFlashButton
+PressRemoteMultiButton
+UnpressRemoteMultiButton
+PressFlashMultiButton
+UnpressFlashMultiButton
+PressMultiButton
+UnpressMultiButton
+PressAEFELockButton
+UnpressAEFELockButton
+PressPonButton
+UnpressPonButton
+PressWideReductionButton
+UnpressWideReductionButton
+PressReductionButton
+UnpressReductionButton
+HoldDownButton
+UnholdDownButton
+PressRemoteDownButton
+UnpressRemoteDownButton
+TouchDownButton
+UntouchDownButton
+PressFeatherDownButton
+UnpressFeatherDownButton
+PressDownButton
+UnpressDownButton
+RepeatDownButton
+HoldMacroButton
+UnholdMacroButton
+PressMacroButton
+UnpressMacroButton
+PressRemoteDpButton
+UnpressRemoteDpButton
+PressDpButton
+UnpressDpButton
+PressRemoteUpButton
+UnpressRemoteUpButton
+TouchUpButton
+UntouchUpButton
+PressFeatherUpButton
+UnpressFeatherUpButton
+PressUpButton
+UnpressUpButton
+RepeatUpButton
+PressMacroJumpButton
+UnpressMacroJumpButton
+PressJumpButton
+UnpressJumpButton
+HoldDispButton
+UnholdDispButton
+PressRemoteDispButton
+UnpressRemoteDispButton
+PressDispButton
+UnpressDispButton
+PressUpExpButton
+UnpressUpExpButton
+PressExpButton
+UnpressExpButton
+HoldAvExpButton
+UnholdAvExpButton
+PressAvExpButton
+UnpressAvExpButton
+PressPowerButton
+UnpressPowerButton
+PressAspectButton
+UnpressAspectButton
+HoldSetButton
+UnholdSetButton
+PressRemoteSetButton
+UnpressRemoteSetButton
+PressSetButton
+UnpressSetButton
+HoldLeftButton
+UnholdLeftButton
+PressRemoteLeftButton
+UnpressRemoteLeftButton
+TouchLeftButton
+UntouchLeftButton
+PressFeatherLeftButton
+UnpressFeatherLeftButton
+PressLeftButton
+UnpressLeftButton
+RepeatLeftButton
+HoldRightButton
+UnholdRightButton
+PressDispAndRightButton
+PressRemoteRightButton
+UnpressRemoteRightButton
+TouchRightButton
+UntouchRightButton
+PressFeatherRightButton
+UnpressFeatherRightButton
+PressRightButton
+UnpressRightButton
+RepeatRightButton
+PressEditButton
+UnpressEditButton
+PressSpotButton
+UnpressSpotButton
+PressShortcutButton
+UnpressShortcutButton
+HoldMenuButton
+UnholdMenuButton
+PressRemoteMenuButton
+UnpressRemoteMenuButton
+PressMenuButton
+UnpressMenuButton
+PressRemotePcPlayButton
+UnpressRemotePcPlayButton
+PressPcPlayButton
+UnpressPcPlayButton
+PressMoviePlayButton
+UnpressMoviePlayButton
+PressRemoteMagnifyButton
+UnpressRemoteMagnifyButton
+PressEnjoyButton
+UnpressEnjoyButton
+PressMFAndDown
+PressSetAndDown
+TransitFeatherDown
+ExpDialToZero
+IsoDialToHighAuto
+ModeDialToAuto
+IsoDialToAuto
+PressSwTwo
+UnpressSwTwo
+PressMFAndUp
+PressMenuAndSetAndUp
+PressSetAndUp
+TransitFeatherUp
+ModeDialToNightSnap
+PressSetAndJump
+PressSw2AndDisp
+PressSetAndDisp
+ModeDialToFastShutter
+ModeDialToSlowShutter
+CloseMediaCover
+OpenMediaCover
+CloseBatMediaCover
+OpenBatMediaCover
+CloseLensCover
+OpenLensCover
+CloseBatteryCover
+OpenBatteryCover
+ModeDialToFunColor
+PressSw2AndPs
+PressDispAndSetAndPs
+PressRightAndSetAndPs
+PressMenuAndSetAndPs
+PressSetAndPs
+ModeDialToKidsAndPets
+PressSw2AndSet
+PressDispAndLeft
+PressPsAndLeft
+PressSetAndLeft
+RotateJogDialLeft
+RotateElectronicMainDialLeft
+RotateIsoDialLeft
+RotateExpDialLeft
+TransitFeatherLeft
+PressPsAndRight
+PressSetAndRight
+RotateJogDialRight
+RotateElectronicMainDialRight
+RotateIsoDialRight
+RotateExpDialRight
+TransitFeatherRight
+ModeDialToPortrait
+PressMenuAndSetAndEdit
+ModeDialToSport
+ModeDialToStitchAssist
+PressSw1AndShortcut
+PressSw2AndMenu
+PressRightAndSetAndMenu
+PressSetAndMenu
+ModeDialToAv
+ModeDialToTv
+ModeDialToPlay
+ModeLeverPlay
+RemoveBattery
+InsertBattery
+ModeDialToEasy
+ModeDialToParty
+1600x1200
+320x240
+640x480
+boISO11_HDR_ta2020
+88591_HDR_3220
+88592_HDR_3220
+88595_HDR_3220
+88597_HDR_3220
+88599_HDR_3220
+ASIAN_HDR_3220
+boISO0Aar_HDR_3220
+degc3220
+degh3220
+degj3220
+dghn3220
+HCanonGothic34
+HCanonGothic26
+HCanonGothic34M
+HCanonGothic26M
+DTCanonGothic
+LanguageFnt
+8"x10"
+8.5"x11"
+2.5"x3.25"
+3.5"x5"
+4"x6"
+5"x7"
+####
+ISO 3200
+ISO 6400
+16:9
+WC-DC58A
+TC-DC58B
+NTSC
+SSID
+m/cm
+7x10cm
+15x21cm
+9x13cm
+18x24cm
+10x15cm
+13x18cm
+6x8cm
+60mm
+70mm
+110x74mm
+89x55mm
+210x297mm
+100x148mm
+254x178mm
+ft/in
+44.100kHz
+22.050kHz
+11.025kHz
+Vram Instance
+wblpface.term
+wblpface.stop
+wblpface.clear
+wblpface.init
+wblpface.start
+A/GradeTable.BIN
+CntFlashTask
+ExposureHandle
+AddPixelHandle
+PTPOperationTranscation
+HIVSHD_H1_PARAM_M1
+HIVSHD_HS_H1_PARAM_M1
+HIVSHD_IR1_PARAM_M1
+HIVSHD_HS_IR1_PARAM_M1
+HIVSHD_H2_PARAM_M1
+HIVSHD_HS_H2_PARAM_M1
+HIVSHD_IR2_PARAM_M1
+HIVSHD_HS_IR2_PARAM_M1
+HIVSHD_V_PARAM_M1
+HIVSHD_HS_V_PARAM_M1
+HIVSHD_H1_PARAM_M2
+HIVSHD_HS_H1_PARAM_M2
+HIVSHD_IR1_PARAM_M2
+HIVSHD_HS_IR1_PARAM_M2
+HIVSHD_H2_PARAM_M2
+HIVSHD_HS_H2_PARAM_M2
+HIVSHD_IR2_PARAM_M2
+HIVSHD_HS_IR2_PARAM_M2
+HIVSHD_V_PARAM_M2
+HIVSHD_HS_V_PARAM_M2
+HIVSHD_H1_PARAM_WIDE
+HIVSHD_HS_H1_PARAM_WIDE
+HIVSHD_IR1_PARAM_WIDE
+HIVSHD_HS_IR1_PARAM_WIDE
+HIVSHD_H2_PARAM_WIDE
+HIVSHD_HS_H2_PARAM_WIDE
+HIVSHD_IR2_PARAM_WIDE
+HIVSHD_HS_IR2_PARAM_WIDE
+HIVSHD_V_PARAM_WIDE
+HIVSHD_HS_V_PARAM_WIDE
+FAEXE
+A/BootFaexe.bin
+STA_
+STB_
+ETC_
+STC_
+SND_
+STD_
+STE_
+STF_
+IMG_
+STG_
+STH_
+STI_
+MVI_
+STJ_
+MRK_
+STK_
+STL_
+STM_
+STN_
+STO_
+STP_
+STQ_
+SDR_
+STR_
+STS_
+STT_
+AUT_
+STU_
+STV_
+CRW_
+STW_
+STX_
+STY_
+STZ_
+/MISC/AUTPLAY0.MRK
+/MISC/AUTPLAY1.MRK
+/MISC/AUTPLAY2.MRK
+/MISC/AUTPLAY3.MRK
+/MISC/AUTPLAY4.MRK
+/MISC/AUTPLAY5.MRK
+/MISC/AUTPLAY6.MRK
+/MISC/AUTPLAY7.MRK
+/MISC/AUTPLAY8.MRK
+/MISC/AUTPLAY9.MRK
+/MISC/AUTXFER.MRK
+/MISC/AUTPRINT.MRK
+GetZoomActuatorSpeedPPS
+SetZoomActuatorSpeedPPS
+IsZoomActuatorResetSensorPlusSide
+GetZoomActuatorCurrentPosition
+MoveZoomActuator
+MoveCZToPointByOVF
+MoveCZToWide
+MoveCZToTele
+MoveCZToPoint
+SetFocusLensSpeed
+GetFocusLensPullInMaxSpeed
+MoveFocusLensWithDistance
+GetFocusLensLoadSubjectDistance
+GetFocusLensSubjectDistance
+GetFocusLensHoldVoltage
+SetFocusLensHoldVoltage
+GetFocusLensDriveVoltage
+SetFocusLensDriveVoltage
+EnableFocusLensGainLockWithVoltage
+GetFocusLensResetVoltage
+GetFocusLensSettingWaitVoltage
+SetFocusLensSettingWaitVoltage
+SetFocusLensSpeedTable
+ShowFocusLensCurrentSpeedTable
+GetFocusLensLoadCamTable
+SetFocusLensDefaultPullOutTable
+MoveFocusLensToTerminate
+MoveFocusLensWithPositionWithoutBacklash
+EnableFocusLensWaveLock
+DisableFocusLensWaveLock
+DisableFocusLensGainLock
+SetFocusLensCondition
+MoveFocusLensWithPosition
+GetFocusLensMoveMinPosition
+ChangeFocusDistanceToPosition
+GetFocusLensResetPosition
+GetFocusLensResetDefaultPosition
+GetFocusLensCurrentPosition
+GetFocusLensMoveMaxPosition
+GetFocusLensPositionRatio
+GetFocusLensSubjectDistanceNumber
+MoveFocusActuator
+EnableFocusLens
+DisableFocusLens
+EscapeFocusLens
+ResetFocusLens
+CancelFocusLensMaxSpeedLimit
+SetFocusLensMaxSpeedLimit
+MoveIrisWithAvWithoutBacklash
+MoveIrisToTerminatePosition
+ResetIris
+MoveIrisWithAv
+GetIrisAv
+IsLensOutside
+GetFocusStartZoomPosition
+GetLensErrorStatus
+MoveLensToTerminatePoint
+MoveLensToFirstPoint
+SendMechaCircuitData
+GetZoomPiSensorLevel
+GetFocusPiSensorLevel
+ReceiveMechaCircuitDataAll
+EnableMechaCircuit
+DisableMechaCircuit
+EnableZoomPiCircuit
+DisableZoomPiCircuit
+EnableFocusPiCircuit
+DisableFocusPiCircuit
+EnableZoomEncoderCircuit
+DisableZoomEncoderCircuit
+CloseMechaShutterWithTiming
+SetMechaShutterCloseDacSetting
+SetMechaShutterOpenDacSetting
+SetMechaShutterWaitTimeSetting
+CloseMechaShutter
+OpenMechaShutter
+GetMechaShutterStatus
+SetNdDacSetting
+TurnOffNdFilter
+TurnOnNdFilter
+SetZoomLensSpeedMode
+MoveZoomLensToMechaEdge
+ResetZoomLensToTermiante
+EnableZoomLensEncoderPowerControl
+DisableZoomLensEncoderPowerControl
+GetZoomLensMechaEdgePosition
+MoveZoomLensToTerminatePosition
+MoveZoomLensWithPosition
+GetZoomLensCurrentPosition
+ResetZoomLens
+GetZoomLensTelePoint
+MoveZoomLensWithPoint
+GetZoomLensCurrentPoint
+ResetZoomLensToFirst
+ISChangeOPENtoCLOSE
+ISMoveToMechaEdgeOPEN
+ClearISZData
+GetLoopGainCalcData
+StopLoopGainCalc
+StartLoopGainCalc
+ChangeParallelMode
+GetGyroFilterCharge
+GetLoopGainAdjValue
+SetLoopGainAdjValue
+SetISHPFCutoff
+SetISTuningFlag
+GetGyro10BitDACPitch
+SetGyro10BitDACPitch
+GetGyroHPFINPitch
+GetGyroDataPitch
+GetGyroHPFINOffsetPitch
+SetGyroHPFINOffsetPitch
+SelectPositionSignal
+GetISParamVersion
+GetISFirmVersion
+SetZoomPosition
+ISInitMotion
+GetISHallOut1Amp
+ISMDStop
+ISPanModeStop
+SetGyroFilterChargeStop
+ISControlStop
+ISAutoCenter
+StartISLocalAutoCenter
+SetISLPFAaxis
+GetISDriveAaxis
+SetISDriveAaxis
+GetISHallGainAaxis
+SetISHallGainAaxis
+GetISGyroGainAaxis
+SetISGyroGainAaxis
+GetISPositionAaxis
+GetISHallOffsetAaxis
+SetISHallOffsetAaxis
+SetISLPFBaxis
+GetISDriveBaxis
+SetISDriveBaxis
+GetISHallGainBaxis
+SetISHallGainBaxis
+GetISGyroGainBaxis
+SetISGyroGainBaxis
+GetISPositionBaxis
+GetISHallOffsetBaxis
+SetISHallOffsetBaxis
+SetISMovieStatus
+SetISStillStatus
+ClearISIComponent
+ISMDStart
+ISPanModeStart
+SetGyroFilterChargeStart
+ISControlStart
+GetLPFParallelBest
+SetLPFParallelBest
+StartISLocalAdjust
+StartISLocalHallAdjust
+GetGyro10BitDACYaw
+SetGyro10BitDACYaw
+GetGyroHPFINYaw
+GetGyroDataYaw
+GetGyroHPFINOffsetYaw
+SetGyroHPFINOffsetYaw
+CalcLog10
+ChargeStrobeForFA
+StopStrobeChargeForFA
+GetExStrobeID
+SleepAE
+PreFixAE
+GetISPitchPWM
+SetISPitchPWM
+GetISYawPWM
+SetISYawPWM
+Bat_VIN
+CancelBPFilterForBP
+SetBPFilterForBP
+SetZoomPointToIS
+SetShutterSpeedWithMecha
+SetAEIntegAverageOBData
+GetContinuousMovieJpegVRAMData
+SaveBmpVRAMData
+StopContinuousVRAMData
+GetContinuousVRAMData
+ClearISCalcZData
+SavePaletteData
+SaveFactoryReserveData
+PrintAllAEIntegData
+GetOnlyAEIntegData
+GetAEIntegWinData
+GetCaptureInfoData
+ReloadShadingAdjustmentData
+ReloadDefectAdjustmentData
+AttachIntegCrawData
+Bat_Calc
+CancelLoopGainCalc
+GetUserSetShutterSPeed
+MoveFocusLensToPositionWithSpeed
+SetAE_ShutterSpeed
+SetShutterSpeed
+GetCurrentShutterSpeed
+MoveFocusLensToPositionWithMaxSpeed
+MoveZoomLensToMechaEnd
+GetSecond
+SetSecond
+ConvertApexToApexStd
+ChargeStrobe
+TerminateMechaDevice
+InitializeMechaDevice
+StopAdjAFService
+StartAdjAFService
+StopAEIntegralService
+StartAEIntegralService
+OneShotWhigeBalance
+OneTypeWhiteBalance
+MoveFocusLensToDistance
+MoveFocusDistance
+GetCurrentTargetDistance
+CancelAdj_AEMode
+SetAdj_AEMode
+SetISLensPWMMode
+CancelExStrobeMode
+SetExStrobeMode
+GetAEIntegralServiceMode
+SetImageMode
+IsEvfDriveMode
+SetLineDefMarkThroughMode
+GetAEIntegWinDataWithMode
+StartEVFDriveWithMode
+ChangeFilterMode
+CancelAdjCdsMode
+IsAdjCdsMode
+SetAdjCdsMode
+SetAEIntegWindowsMode
+TurnOffVideoOutMode
+TurnOnVideoOutMode
+ChangeAdjImgDrvMode
+GetCurrentImgDrvMode
+SetScanWindowMode
+ChangeDistortionSetForLiveImage
+SaveFromImage
+GetVBatVoltage
+SetInputVoltage
+HitISLensAgainstBottomEdge
+HitISLensAgainstTopEdge
+HitISLensAgainstLeftEdge
+HitISLensAgainstRightEdge
+SetISGyroFilterCharge
+PrintMultiWinScanTable
+PrintScanTable
+SaveBatSenseOffsetAdjustmentTable
+GetPixelsOfViewangle
+ConvertTvToExposureTime
+GetCurrentExposureTime
+GetZoomDrivingTime
+GetSumYOfVRAMCenterLine
+ConvertAdjImgDrvModeToAdjImgDriveType
+ChangeAEIntegDrvTypeToAdjImgDriveType
+ConvertAEIntegDrvTypeToAdjImgDriveType
+GetCurrentAdjImgDriveType
+GetVideoOutType
+SetVideoOutType
+SetLangMenuType
+DevelopStillPicture
+MoveIrisFullClose
+SetDate
+ResetZoomToTerminate
+MoveFocusToTerminate
+SetZoomResetState
+SetFocusResetState
+GetMinute
+SetMinute
+AbortAEIntegralValue
+GetUnpackCrwIntegralValue
+SetAE_CdsGainValue
+GetCdsGainValue
+SetCdsGainValue
+GetObClampValue
+SetObClampValue
+GetCurrentAvValue
+Bat_Save
+StopBDrive
+StartBDrive
+StopEVFDrive
+IsEVFDrive
+StartEVFDrive
+StopISDrive
+StartISDrive
+StopBPanDrive
+StartBPanDrive
+StopISPanDrive
+StartISPanDrive
+StopISAdjustmentDrive
+StartISAdjustmentDrive
+GetMovieJpegVRAMHPixelsSize
+GetVRAMHPixelsSize
+GetMovieJpegVRAMVPixelsSize
+GetVRAMVPixelsSize
+GetCdsPreGainReg
+SetCdsPreGainReg
+StopAdjAFInteg
+GetAdjAFInteg
+GetISGyro10BitDACPitch
+SetISGyro10BitDACPitch
+GetISGyroHPFINPitch
+GetISGyroDataPitch
+GetISGyroHPFINOffsetPitch
+SetISGyroHPFINOffsetPitch
+ExecuteInternalPreFlash
+SetWBYlStandardWidth
+GetMonth
+SetMonth
+MoveZoomLensToPositionByManual
+GetLastVBatADLevel
+GetZoomResetSensorLevel
+ChangeToISCloseControl
+HitISMechaEdgeInOpenControl
+SetZoomLensEncoderPowerControl
+SetOneTypeWBParam
+SetOneShotWBParam
+GetZoomNormalDriveParam
+SetZoomNormalDriveParam
+ClearZoomDriveParam
+SetZoomDriveParam
+ClearZoomCommonDriveParam
+SetZoomCommonDriveParam
+GetZoomDefaultCommonDriveParam
+GetZoomResetDriveParam
+SetZoomResetDriveParam
+GetZoomDefaultDriveParam
+ResetZoom
+StopCustomScan
+StartCustomScan
+StartCrwCustomScan
+MoveIrisFullOpen
+ConvertCxCyToWBGain
+SetDeltaCDSGain
+SetCDSGain
+GetCdsPreGain
+SetCdsPreGain
+GetISHallDevicePitchGain
+SetISHallDevicePitchGain
+GetISGyroPitchGain
+SetISGyroPitchGain
+CalcLoopGain
+GetLoopGain
+SetLoopGain
+GetISHallDeviceYawGain
+SetISHallDeviceYawGain
+GetISGyroYawGain
+SetISGyroYawGain
+SetReferenceWBGainForCalibration
+AfAEWithCompensation
+FocusAEWithCompensation
+FixAEWithCompensation
+GetCurrentZoomLensDirection
+IsZoomLensOutSidePosition
+IsFocusLensOutSidePosition
+MoveFocusLensToTerminatePosition
+GetISShiftLensPitchPosition
+SearchBCentralPosition
+MoveISLensToCentralPosition
+SearchISLensCentralPosition
+MoveZoomPosition
+GetCurrentZoomPosition
+MoveZoomLensToPosition
+MoveFocusLensToPosition
+GetCurrentZoomLensPosition
+GetCurrentFocusLensPosition
+MoveFocusPosition
+GetCurrentFocusPosition
+GetFocusResetPosition
+GetFocusDefaultResetPosition
+MoveISLensToBottomLimitPosition
+MoveISLensToTopLimitPosition
+MoveISLensToLeftLimitPosition
+MoveISLensToRightLimitPosition
+GetISShiftLensYawPosition
+SetCDSGainStep
+SetObClamp
+GetCurrentCcdTemp
+GetCurrentOptTemp
+IsExStrobeChargeComp
+ShowCurrentExp
+GetYear
+SetYear
+LoadSerialNumber
+SetFactorySerialNumber
+LoadFactoryNumber
+GetContinuousVRAMDataWithRingBuffer
+SelectAdjBPFilter
+PutInNdFilter
+PutOutNdFilter
+SetLPFForParallelFilter
+SetAdjAEIntegSmearLimitter
+SetDefaultAEIntegSmearLimitter
+CloseMShutter
+OpenMShutter
+GetHour
+SetHour
+GetISLensEViAaxis
+GetISLensDampAaxis
+SetISLPFCutOffFreqAaxis
+GetISLensEViBaxis
+GetISLensDampBaxis
+SetISLPFCutOffFreqBaxis
+SetAdjAFWinPos
+ResetFocus
+GetZoomLensResetPlus
+GetGyroFilterChargeStatus
+CalculateBatSenseOffset
+GetISHallDevicePitchOffset
+SetISHallDevicePitchOffset
+GetISGyroPitchOffset
+SetISGyroPitchOffset
+GetISHallDeviceYawOffset
+SetISHallDeviceYawOffset
+GetISGyroYawOffset
+SetISGyroYawOffset
+GetAEIntegValueBit
+SetAEIntegValueBit
+GetShutterSpeedRegularMinLimit
+GetShutterSpeedRegularMaxLimit
+CalculatePeakFromLeastSquareResult
+SetWhiteCoefficient
+SetToolCorrectCoefficient
+ReloadWBAdjustment
+WritePWMAdjustment
+WriteHallDeviceAdjustment
+ReloadEfAdjustment
+ReloadZoomAdjustment
+WriteGyroAdjustment
+ReloadNdFilterAdjustment
+ReloadColorAdjustment
+ReloadCdsAdjustment
+ReloadIrisAdjustment
+ReloadFocusLensAdjustment
+TerminateDefectAdjustment
+InitializeDefectAdjustment
+GetZoomTelePoint
+ResetZoomToAdjTerminatePoint
+ResetZoomToTerminatePoint
+ConvertToPositionWithDistanceAndZoomPoint
+MoveZoomPoint
+GetCurrentZoomPoint
+MoveZoomLensToPoint
+GetCurrentZoomLensPoint
+ResetZoomToAdjFirstPoint
+ResetZoomToFirstPoint
+CalcSqrt
+ResetZoomToFirst
+MoveIrisToAv
+GetISGyro10BitDACYaw
+SetISGyro10BitDACYaw
+GetISGyroHPFINYaw
+GetISGyroDataYaw
+GetISGyroHPFINOffsetYaw
+SetISGyroHPFINOffsetYaw
+SetISHPFCutOffFreqIndex
+SetISCutOffFreqIndex
+SetScanLensIndex
+CalculatePow2FromApex
+CalculateLog2ToApex
+ConvertApexStdToApex
+GetAEIntegralValueWithFix
+GetAllAEIntegralAllValueWithFix
+RegistColorMatrix
+UnregistColorMatrix
+GetDay
+SetDay
+SwitchOffDisplay
+SwitchOnDisplay
+StopZoomEmergency
+AfAEWithAperturePriority
+AdjAEWithAperturePriority
+SetAEIntegStrobeProperty
+SetAEIntegralValueProperty
+ (DPOF)
+RecMenu
+PlayMenu
+SetupMenu
+01.27.'04 15:54 
+Updated already
+Update File Error!!!
++0.3
+-0.3
++0.7
+-0.7
+Canon
+Unknown
+Comment
+CANON_DC
+2.0x2.0inch
+1.8x1.4inch
+1.8x1.5inch
+2.0x1.8inch
+25x20mm
+30x30mm
+40x30mm
+35x30mm
+40x40mm
+50x40mm
+60x40mm
+45x40mm
+55x40mm
+50x50mm
+60x50mm
+70x50mm
+55x50mm
+30x25mm
+25x25mm
+35x25mm
+40x35mm
+50x35mm
+35x35mm
+45x35mm
+50x45mm
+60x45mm
+45x45mm
+55x45mm
+(1/1)
+160x120
+1280x720
+1920x1080
+1024x768
+02"00
+LCDMsg_Create
+LCDMsg_Delete
+LCDMsg_Move
+LCDMsg_SetNum
+LCDMsg_SwDisp
+LCDMsg_ChangeColor
+LCDMsg_SetStr
+stream end
+incompatible version
+data error
+file error
+stream error
+buffer error
+need dictionary
+insufficient memory
+KIZU
+PTPWakeUpState
+PTPBulk
+PTPEventCnt
+MWFOCUSSCAN
+COLORMATRIX
+VRAM_DATA
+VRAM_YLINE
+VRAM_YLINE_PROP
+HIVSHAD_INTEGVALUE
+/CANONMSC
+/D.CTG
+JFIF
+HEAPJPGM
+MoveDCMotorCCW
+MoveDCMotorCW
+SetDCMotorWaitTime
+ClearPMByGpio
+SetPMByGpio
+ClearPMByFs
+Canon PowerShot S20
+Canon PowerShot A50
+Canon PowerShot Pro70
+F2.4
+F2.5
+F2.6
+F2.9
+Canon PowerShot A5 Zoom
+dP
+DeviceFriendlyName
+Windows
+Canon IXY DIGITAL 500
+microsoft.com/WPDNA: 1.0;microsoft.com/WPDWCN: 1.0;canon.com: 1.0
+Canon Inc.
+1-6.0.1.0
+configurePrintService
+getCapability
+getJobStatus
+getDeviceStatus
+startJob
+abortJob
+continueJob
+notifyJobStatus
+notifyDeviceStatus
+BT@ 2T@
+Zv@ 
+ rv@
++,;=[] 
+.$%'-_@~`!(){}^#&
+RAMDISK
+NO NAME    FAT12   
+CANON_DC
+HIVSHD_V_PARAM_WIDE
+HIVSHD_HS_V_PARAM_WIDE
+HIVSHD_IR1_PARAM_WIDE
+HIVSHD_IR2_PARAM_WIDE
+HIVSHD_HS_IR1_PARAM_WIDE
+HIVSHD_HS_IR2_PARAM_WIDE
+pPTpj8
+rPTpm
+msTp
+msTp
+Tpk 
+Tpk 
+FBk(
+@6k(
+@.k(
+@&k(
+msTpz
+i8yh
+}0rp
+}0pPh9J
+}0rP
+!"Fb
+FBk(
+@6k(
+@.k(
+@&k(
+msTp
+i)yi
+} rp
+} pPz
+} rP
+ mvTpy
+l^j8
+p@Tpj8
+Tpj8
+p0Tpj8
+r0Tp
+Tpj8
+p`Tpj8
+r`Tpy
+0U@^
+Tpk(
+Tpk(
+Tpk(
+Tpk(
+Tpk(
+fTpk(
+rhpx@
+phrx@z
+0@(z
+rHpX@
+pHrX@z
+Tpk(
+hTpk 
+?Pj(
+hTpk 
+fTpk 
+hTp
+Tpk 
+ mvTpk
+ Tpk 
+8Tpk
+8Tpk 
+rTpk 
+nTpk 
+pTpk 
+vTpk 
+_2hIh
+LhIz
+PF ^
+,@iqn
+ @Xz
+$@Fz
+(@4z
+,@"z
+icyk
+icyc
+>hIz
+@2nH
+@(nH
+:h)n
+Ji0^
+nhi0
+Q@ y
+msTp
+r@Tpy
+7dTpy
+r0TpTp
+FTk 
+pPUb
+Tpj(
+~Tpj(
+lmsTpm
+mmsTp
+nTp
+oTpj(
+lTpj(
+mTpj(
+nTpj(
+oTpk
+Tpk"
+TpTpTp
+i8y(
+msTpi(y(
+msTp
+i0y 
+msTpi y 
+msTp
+i@y 
+muTpz
+FHiPy 
+iPy 
+muTp
+i@y 
+muTpz
+FHiPy 
+iPy 
+muTp
+i@y 
+muTpiPy 
+iPy 
+iPy 
+iPy 
+muTpj(
+pTpk!
+msTp
+]l]@
+]l]@Z
+]l]@
+irk 
+]l]@or
+Birk 
+]l]@or
+msTpj
+iPM
+iPL0
+i@M
+i@L0
+ mvTp
+riP^
+muTp
+GPoc
+$pp@
+$rpo
+$pp@z
+$rpo
+msTp
+?0 k
+muTpk"
+msTp
+?0(@
+?0(@
+msTp
+Tpy 
+?0-p
+@.y 
+?0-p @
+?0-p0@
+?0-p@j8
+?0-p
+?0-}
+Tpy 
+r Tpy 
+r0Tpy 
+r@Tp
+ mvTp
+Tpj)
+Tpj)
+Tpj)
+Tpj)
+w}
+msTp
+}Pgp
+icgKi
+iQg)i
+msTpj(
+msTpz
+@(sHG
+qs8G
+qs(G
+@(sHG
+rs8G
+rs(G
+msTpj(
+@(sHG
+qs8G
+qs(G
+@(sHG
+msTp
+bi!o
+muTpj
+Tpj(
+e(i0
+_ op
+KXn0
+FnP
+msTp
+DFz#
+N>z#
+M6o`
+Rp8
+ C"p)n
+Rs F,s
+msTp
+i4k(
+p@*k 
+N"k 
+EPk*
+RrAn
+Rr@n
+msTpm
+SrJn
+SsIG
+CNnA
+Ss!G
+@.s1G*j(
+C :
+sIG(
+ mvmsTp
+hNnI
+nCLn
+Rs)G
+@,s9G(j(
+nj 
+ mvTp
+GFj0
+s@F<n 
+Ivi`
+msTp
+s0X`
+$CXo!
+@(n+
+msTp
+fTp
+Tpj(
+C"nQ
+muTp
+s!F:p!n
+Tpz!
+F z 
+CRn9
+msTpz 
+D,n9
+D$o1
+msTp
+msTp
+s)X`
+muTp
+FToQ
+muTp
+F.oQ
+muTp
+muTp
+QGPoA
+ mvTp
+NTp^
+Tpk 
+iPy 
+ mvTp
+msTp
+,D2oP
+muTp
+|6k 
+|Fk 
+msTp
+muTp
+ Bk 
+muTp
+h(F(
+?0$i
+@Fj(
+R!R2
+?0$i
+iPF(
+R!R2
+iPG$
+?0 y
+?0$z
+?0 y
+(tk 
+x~iQ]0k 
+>@&^
+x~iQ]0k 
+(iA]0k 
+msTpTpTpj)
+Tpj(
+h(Gf
+msTps
+msTps!G
+msTps1G
+msTpj)
+Tpj(
+Tpj(
+Tpk 
+Tpj(
+Tpk"
+F i`F
+?0$i
+msTpj)
+msTpk
+IFhX
+muTp
+Tpk 
+\Tpk 
+msTp
+msTp
+F i`F
+?0$i
+msTpm
+msTpz
+Tpk"
+msTp
+x~k 
+x~k 
+x~k 
+x~k 
+Tpk 
+Tpk 
+Tpk"
+msTp
+?0$i
+?0$i
+iTk(
+R!R2
+hzX`
+Fk 
+msTpy
+msTp
+msTp
+TpTp
+ mrVp
+ mrVp
+ mrVp
+ mrVp
+ mrVp
+ mrVp
+ mrVp
+mhTp
+xTpy
+Tpy 
+(i(y
+Tpy 
+(i(y
+Tpy 
+0i(y
+Tpy 
+@y 
+msTp
+@y 
+@y 
+l^Tp
+@y 
+Tpy
+Tpk 
+6Tpk 
+:Tpy
+:Tpk
+HTpk
+Tpk 
+Tpz
+F4k 
+iHk 
+liXi0
+>FDk(
+Fi8i 
+msTp
+rPy
+msTpj
+msTp
+msTp
+GZj(
+?0 y
+RaR6
+msTp
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpy 
+g Tpy 
+Tpy 
+gpTpy 
+g@Tpy 
+gPTpy 
+g`Tpy 
+gpTpy 
+Tpy 
+~\msTp
+p0} r 
+msTpw
+g@Tpw
+g0Tpk
+Tpk 
+Tpk
+!g Tpw
+Tpk 
+$Tpk
+$Tpk
+(Tpk
+,Tpk
+p Tpy 
+Tpy 
+Tpy 
+Tpy 
+r Tpy 
+Tpy 
+Tpy 
+Tpy 
+Tpk 
+Tpk 
+x~oq
+muTp
+Fjk 
+R RR
+iak 
+x~oq
+ mvTp
+G&k 
+x~oq
+msTpk 
+?0$i
+i5k 
+i6k 
+R0RC
+msTp
+C(k 
+@&k 
+C(k 
+@&k 
+LDy 
+@By 
+R1R#
+R0R#
+@i o
+i(op
+G&y"
+msTp
+msTp
+msTp
+msTp
+XTpy
+Tpk 
+@Tpk 
+muTp
+muTp
+iHTpTp
+muTpm
+:"J
+mrTp
+mrTp
+msTpm
+ mvmrTp
+z2.07
+'Z'Z
+-^&<*
+ "#%&()+,-/0234678:;<=?@ABCDFGHIJKLMNOPQRSTTUVWXXYZZ[\\]^^__```aabbbcccccdddddddddddddcccccbbbaa```__^^]\\[ZZYXXWVUTTSRQPONMLKJIHGFDCBA@?=<;:8764320/-,+)(&%#" 
+  !"##$%&&'(()*++,--.//01223445667889::;;<==>??@@ABBCCDDEFFGGHHIIJJKLLMMNNOOOPPQQRRSSTTTUUVVVWWXXXYYYZZZ[[[\\\]]]^^^^____`````aaaaabbbbbbccccccccccdddddddddddddddddddddddddccccccccccbbbbbbaaaaa`````____^^^^]]]\\\[[[ZZZYYYXXXWWVVVUUTTTSSRRQQPPOOONNMMLLKJJIIHHGGFFEDDCCBBA@@??>==<;;::98876654432210//.--,++*)(('&&%$##"!  
+JFIF
+ $.' ",#
+(7),01444
+'9=82<.342
+!22222222222222222222222222222222222222222222222222
+$3br
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+Pqvc(
+ytyt
+MJ;3
+!Q^&
+,.Fh
+Tyus
+G*_U
+tyUs
+TyUs
+Imal
+o"}k[
+XTq_k
+yTyu
+ytyt
+QWVVo
+fK[h
+yTyT
+#cs+|
+x^;)G(
+yTyT
+|R4k
+u^]~
+2kGK
+ 1Z{(
+RIFF
+WAVEfmt 
+data
+$L&Q#
+,e&z
+#O*Q.
+1"B)
+-b-:(
+RIFF
+WAVEfmt 
+data
+]y1?8
+LH,"
+bn~6-
+wp
+^R+X x
+,t.U
+RIFF
+WAVEfmt 
+data
+6Au|
+*eTR
+RIFF
+WAVEfmt 
+data
+?????????????????
+|x>x
+0<<
+0<<
+0<<0<<0
+xx?
+xx0g
+xx0`
+||>>
+|||>>
+<xxx
+<xxp
+<xx?
+g>0`
+g>0c
+g>0c
+g>0`
+g>0`
+>>|>||
+x>>x
+00`x
+xxxx
+xxxx
+>x<?
+>x<?
+gaonisoyP
+<||x
+<|xxp
+<|xxp
+x8| a
+a|``
+<<<<<<
+gaonisoyP
+8p0
+fpfp
+pfx?
+pfx?
+x08>
+p<p8
+Lp<p`
+p0`
+p0
+p<p
+Lp<p
+p0
+p<p;
+Lp<p`
+p0`y
+00
+00
+88591_HDR_3220
+<~<8
+||88
+<x<x
+<<<<<<<<<<<<<
+xxxxxxxxxxxxx
+<<<<<<<<<<<
+xxxxxxxxxxx
+ASIAN_HDR_3220
+<~<8
+||88
+DTCanonGothic
+HCanonGothic20
+HCanonGothic20M
+HCanonGothic26
+HCanonGothic26M
+HCanonGothic34
+HCanonGothic34M
+p`pp
+djGI
+xqp>
+h"MM
+qZk~
+/Qkf
+At,
+<3Q"M:
+Z`W4
+H~7$W
+TL.h
++d^x
+d%h+
+!)BK=
+X:Lj
+Ux30
+Y l#
+9$t-
+WVV`1
+1%m-
+#54%
+kV\lH
+!0KR
+H(Yh
+x1@)
+_"Wd
+S$"8
+s#4^
+WAE 
+fhx mO!M/=c
+Dv*V
+YHT!
+/zz}'
+E9FF 
+Q.YS
+J-)
+nk}>
+H~s1l
+ndH]
+K8;)
+2xzF
+ @A0
+f8CZsJ
+%UT8
+R}n+4
+d Gj
+;4,rJ
+5e10
+wQQS
+&:z"T6
+X(X)}
+vZ887i
+6oia
++~<W
+/`H?TR
+giN_n
+If|H
+N-b*
+ ]{.
+rmc,K
+yn W8G
+.uc6
+PvH'
+#2Df
+Ub30
+Y6;8
+Ua]B
+Iuy4Pf
+LHOL
+LgIN 
+.${D
+o]@z
+8<-vMh(
+x?,0
+~v.a
+bmj!
+2NZ0x
+/yV>
+>3)<j>?
+[!!%E
+`_g~.
+.I1z^
+rby,
+_"4r
+yRw6O
+Ce"T
+'(Fgx,
+mN{~
+ocQj
+es.1:
+|EBr
+1PS|
+}mp{
+Anc7
+>sd)R-"
+VWg([]rRe
+/gJ%
+Ve[Xc
+j}z#
+T]ew
+yJKy|P
+.#t[
+ch,1gF
+oB%}
+z:8:
+8~X'
+]N3tn
+EN6G
+,kohY
+</r'
+zrv4
+}3lXF
+_Zz=#?
+[$wG1
+U)*G
+3Q;tc,
+u5hp
+Mu*j
+_/Y{
+,iS`q>5ZAb
+yTop
+6CMY
+W7E]
+Owf"}
+$YH?
+Cu$f\
+boB5a
+]Y"ZY$ee1P
+Bmj^
+vC9h
+>{[2
+?zxy
+{#c<
+aaU+
++Y:v
+^BKZ
+K=e[
+yz9]
+4#vX
+oa]C
+jv,
+^%R##4B5O
+$h50
+><M6|
+XC2F
+-|G`
+E~<&
+S#2Ss.
+Roe5
+%kr&
+.'IA\
+{tAN>2
+ooyipf
+r/D{
+9'80{4
+TmN%
+z{(q
+s^v2
+t"Ky5$
+{#ca
+KY@}x(
+HL98W
+[q$Z
+Ph~j
+,tbf
+WjWIw
+BjMN
+<9Gb
+dx~`
+;kF{l>p
+/PM=I
+5CSY
+\2K,
+QC;I
+v~z#Py
+sFy;
+ 5f 
+dr.D#
+i/wT
+5R"#
+ZND.
+g!\KbF/
+<9;6
+kK6S
+cuod\
+b\XS?a
+a1_1
+#hK{
+"dq@V
+  |(
+\2tf
+*,-1
+'X=,
+B"5|
+R:<kv
+f`'-w=
+gxR{
+%q2H
+MEie
+C?wQ
+^zre
+..$w
+R}?BkR
+[gVe<
+$%|Z
+gtXq
+gI9_
+ZB\$
+%7"$u
+JE4H
+_FF+
+,;;:
+UDy<
+sKU]H
+po\b
+zI[O
+c|2&4
+ouuU
+e9"{
+VR+y(
+~+&.
+ml3y
+H2wQ
+{u2!([
+~)#y
+-S['
+np}eQP$
+'#=U
+6QPN}R=-s
+EdQc
+i+nM
+[Mlk$
+;Z<_
+t8 h
+@5F'jMo9
+F7QH
+35i'f-
+zZ?4
+nd{%
+.'zmhRL
+hO:@
+~O?y2mB
+ik`rv
+>F/:
+)vZ7
+3%#/\
+a#fl
+zD2*<Dk
+}_*cR
+9pcI
+[al6
+0h4-!
+l^Y^1y
+ @0!
+'r/|
+0KL7
+5+Jn
+TU5f
+7x?*QE
+iQq.*
+Yw1v
+QDzM
+K`Xhe&
+,,b!
+H%3d
+a2'2
+{Eo\
+P_y/
+3dBw
+NVh
+#<2I
+[y}f
+'Y,)
+0[-U
+H)\n%
+>!T!
+v3yg
+UxK,
+.r'<
+NJvQw
+{haB
+=HFxY
+O2)Bs
+KTqQ
+n$KzI
+d$mC
+SjvV
+X;)o
+s:W9
+ii&}
+5|MH
+cma2
+Z3ciQ
+VRZI
+IiTe,,g[
+B|`-
+Gd_7
+|bwG:
+LT]%
+o\mN
+(g31iHMY
+G#AXO
+Kr*H
+mnlm
+a-+IT
+b!j
+Ft?8
+=<7J9cc
+&xCl
+)\aZ
+3<'$J
+W_>
+E'U}
++_7T
+yItQ
+PQ8n
+SjP)2
+#zOb
+hZc*
+Gv?f
+B]K6Z
+&w5*
+@b$e
+#GmcK
+R6Qo
+hq$I
+N6WP
+0ffH
+d=S5
+(!w<
+j?va
+mQf8
+R?Xk3U
+ HxZw
+eW)?
+6HX2M}
+^qM1
+-g+`d
+TTNJ
+kp|\
+([P>
+=G,O
+2"AmCPG
+V(!BlHm
+MV7&Q
+ZiR7t
+lD_]
++b5KbjOJl:4
+5_Dc#s
+UOGJ
+#=<[
+r9N;$
+3v}]I
+,)gT
+fV<IO
+T+7[
+Z}IKw
+&oE}
+dcL~Z0kf
+/4'i
+k0;u
+WX{i
+FkNp
+][=s
+mL@Z
+1Uz6
+wT:#
+eGAZ
+[l*~Y
+oBT|
+7T=:
+:TR*J
+Fn]I
+J??z
+_~AK
+*<i7
+%V[S
+%Ig\e
+Jg\e
+Q?B^G
+&WLr
+NP_/x
+Fb$Hz
+r]Fy^
+]F9^F
+rv!g
+E}wQ
+P~W 
+<WPvW 
+WPfW 
+*d]E
+yWI^
+_G[Y
+h|?c
+0ytg
+>(sB
+B,m(
+efK&
+32X^
+<^+g3
+Sf<]
+,Py#
+tKtY%5
+-E/}
+a(| 
+=|3a
+xL;eF
+UGw>E
+bv.o(
+%fYV
+\7o
+3BJ6
+sa*.
+K/%r
+B}YT/
+O1/H
+4pOxr6
+FoY^TX
+A$B@<
+JH8YR@
+3= p
+#<?G9
+G8c$
+i9s9
+(oZ_*o
+c-[b
+_X&n
+nBM~<
+e#,B
+0J-X
+\<{3
+c=KEil
+23zLR
+S']0
+,DvP
+.d@X
+8?F4
+~bI7
+$2B,
+a|iGp
+N]oC{
+':T**
+t7uo$
+1zJ
+)3Nl
+g#9e
+vS"@
+d+*N
+'%9JNC
+Y[[:[i
+LZnKZ
+2zlj
+&pau.%
+5M.t
+1v,;u
+4?";
+Vz/b
+I|q/
+Y}FYB
+QfQN(I
+@-r8~\
+7edn
+yj0g
+k</:9
+{F^W-6
+vK/M1o
+qxez
+5c55
+8,s=
+"Zm#
+(n!O
+G_]ID
+ecO]`
+fYXT
+&^?6
+Dm4$t
+J\y+
+#{3f
+3DH?
+^ery3
+vI;5
+=S9W
+!lsC
+Ykv,
+FFRxn
+.c7h
+i?5#
+Y m`
+`G8o
+r;5Wv
+#v+'
+TFj&
+/*pN
+tOT j
+$A@9
+"|Z3I
+^Xb|
+m$-Y
+E<mIs|DL
+ 7Ay:
+Mb;V
+5?)c
+%ffC
+j,}X
+ PR8v
+Cpj,K
+1b*M
+bA={
+!u^C
+H',l
+@[TX
++m1k
+rQ{it
+Dq{%
+:x|.
+xl{K
+cSQ)
+@\|#
+NmCZ!
+%Lu`
+yzn?
+m?fzT
+vbnm+4
+PY4(V
+q777
+dVdX
+RoV"
+.5g,
+i(EtO
+Lxz)
+{ino&
+Cp]#X
+^;J{K
+!ByaKe-_-
+F6Um
+eA;ld
+v.=K
+5Gvz
+MYV
+p|~l
+kR5n
+`(s)
+(.h_T
+RK~UY
+'vzT!
+rBY=
+8p:lr'
+QwC\
+htih
+,3{o?
+4cDb
+?8_A
+LwT3>u
+fn%z
+d\7O
+<mZY
+P<"C5
++3AL
+n"\\
+AsMH
+&Fjh
+TlJR
+<Rx 
+AM.$
+6Ufo
+j)3G
+h|Bo
+%\?O
+6pP3m
+Uj=wWY
+ifL%\;
+eIlE+
+X!:F
+1\1R
+lq;m
+LdEu
+=B{]
+uF5;
+N5~5~MC
+v<W:e
+vw%5
+ase'
+3oi;
+VrNmL
+m3r/o3
+T=g>
+<FE^b
+LO:&
+r<1"6
+lx6e)z
+>(Xc"
+lWTd
+E63l
+PDEs
+JS^@
+3^ND
+{<s2
+Ck!iE
+Izn'
+1k55
+""bE
+nB} e
+aKEd]L
+yOB/
+&r'<
+3,#0
+#aV-
+=<.
+l*Hy"
+z\{G
+GRM]
+:m%}}
+~Kio
+Y#Un
+fI^Hf'
++*.lT
+#A`N
+KMu/5
+M78 
+|9sO
+ge;:
+24 C
+24 C
+@~5^
+zi@/
+"d\D
+9.C_
+.#O/Cw
+jBWM
+jBgM
+26!c
+2d[&
+cPZD
+avZ^|
+Hv3IL
+''*BC
+mkqa
+oZY
+un3C
+7$*=]
+@{vGju
+tMii|
+mMOd
+V{*Y
+K'c;
+Mo9Z
+VX'=G
+9Lul G8
+#K.T
+J^xPw
+|d1ec
+?*M$g9I6J
+ZZ!M 
+Ri)J
+VbR%2Y
+I-GQ
+}2p/`H
+6;vx
+%E!
+fyu$
+}hm>
+S=|<
+"bbu
+M$wa
+uV,Q
+5PPb_
+M&Tm
+{O^Xk2B
+R,V?
+nh%
+(FT
+!js^
+Ceg).>#
+u4v8
+EIS(
+&H#D
+[N!i
+n4!]$S
+cw!B
+U=y^/HM_
+eQS-OS
+IMeN
+hn`j
+npx/(
+@+nJ
+q}-@
+u4Lc
+G&`9
+Xb^>e9
+'6FpLo
+nr3E
+Cg.S
+}Qm3
+#R~H
+|{sN
+)khO
+3J"A`?
+'aI&
+;w|}u-taIa
+kRh%
+_6,f
+@E-c[
+MRm~
+{A){
+3vai
+0v[6
+)FlE
+U6}Re'p
+Tu+P-/V
+?}!t
+WPfI
+~g/4
+q~^L?5/
+)COI
+7" 7os
+z(j_
+v%+#
+uOY]
+\!*5!
+u\/.
+h!+F6
+(EX S
+:6Kv
+4T%z7
+2OK.
+1z)t~
+S{+7
+b@f%*
+[Jgv
+TYGY
+[#"?
+n[y 
+3hSL 
+PG9,
+%w=vYo}2
+{m9[
+;>7pn
+n^u,
+"OCNz
+=#;&+?x
+X^{V
+MOjl
+c}/gp
+T|7RZn
+Qfwu
+XEiS
+5WT=u
+=z+F]h
+}p'r
+ccJT
+>EI=
+_gRl[
+Gq^KA
+>2q|
+9[Jsn'
+;#dh
+O}g74
+d<qQ.@
+LE{b
+a=@TT
+R+]#
+E,*NM$
+6oo"b*b
+Zg^h
+"NP$
+-+-;
+ls3V
+5QOG
+Ms8~
+v0Lu
+A q^~
+mkGn
+OkS8x^
+'}Z3
+@wTp
+/c_fb
+[ww[
+d}"j1
+(?@Y}
+Z~Ad
+:F}pO
+jAJM
+=T+
+L>e+
+mMSv
+Qo~]:
+@KE`
+5QWK
+r;2|{
+Fh=Xl
+V!4^g
+8N'&
+13MXQ
+OY2U
+Z':w
+#!x9
+1Q])
+up>?
+uTDg
+aESSB
+jUX1
+v#&4MYq
+cS+Vr
+D+rY
+q#'t
+GrPo
+G}tR
+{pz#
+/K^B
+L=69
+>g)#
+X`)R9yz
+~ mx
+Fd:p
+SVtvJ
+_ldU
+\eE]`Yp
+"]&"
+v2>p
+ONF%
+wdRF
+v}[t
+>/R2
+skJQ
+\_rK
+y)H9
+L#9a
+Plz8
+wI#e
+tatKx
+&&ba
+1kdy
+e6{a1*
+(sIX
+5S%,
+6Y&m
+zy8L;
+ZZgdF
+C?Ij
+:iDQ
+GMN`
+$AbO0
+!NuaQ
+='F+u=
+D^<;
+u#O3
+N$[z%Vy
+[y'v
+/j&/r
+w8/0
+KAg^I
+w4-{d
+ZGR_^L
+lM$
+3q|ET
+lrM2
+c9_L
+LanguageFnt
+p8pp
+ppppppp@
+ppppp|<
+\`y-
+SnJ-K
+y|[Z
+>U8W
+=E5E
+uqRIu
+{J[J
+ROY^
+bkeu
+V}cMm
+~NJY
+YuXk*ftC
+(N6
+AgZ^
+es>f
+8i0.
+Cu$ft
+LK{4&
+an6d
+ovYLT
+(G)!t
+wJpM
+[|<g
+Qki}X
+7+kM
+lY}$r
+seUl
+F=P5)
+t;Ln
+l=;
+'yYH
+>p?X#9
+h]97
+K'ph@vip
+s=PG
+.#\U
+61UQ
+Zdbkd
+7ZRHv
+g7fs
+CQ}Y`
+s4Igfh
+!<-R T
+]iRU
+QPA/
+MtOR
+ni_F
+k@"m
+'01=B=
+y5a)W
+y3T&
+iI8B
+D!gC
+r^F!C [
+DVp3
+)-,8
+Y7-J
+;:\`
+gZC;
+QnY- Y
+"-`5kmI7v
+2/oA
+G<:Mc
+[OSt+
+)i\[o
+F3@q
+}vW&
+hD}z
+9|+N
+9&kk
+{f9(
+xt:
+X{pU
+=RO{_
+`287X
+PehQhIhihe
+};v~l^
+F|g|
+|,~*
+<-?#
+derQ
+~izU
+*ssf]fC
+oero
+l}YC
+HkVI`
+>$L0
+1,]D
+$dm0
+J1M!L
+Eu@k
+V;hG
+0uW}
+(bdM
+xBm?X
+-%vs
+"FF'
+ QzA
+H9ef
+j>8#
+ow*w
+b<}qy
+I"IYm
+8:WK
+8sFZp
+aKPYEo
+(_uY
+qm>Ar
++YbFQ
+A9.R
+%`fE
+;T:h
+@^flth
+~W<#
+FZ}C
+A78F
+DmCU
+[H8s
+K.{q
+\NFZ;)
+r4_z
+Brq!Y[HV-* 
+ Qir
+4f55
+XGg6
+iXw%
+X=:\
+(RxM
+fBDh
+Iom
+>"F|
+Crm(
+xD!Y
+h^%I~
+DC/?$
+X}p\Wu
+6M2"h
+4MJ(
+}W|/
+`2x 8
+*xK(
+z:t9
+=C=Gz
+~5|-
+Xdwd(r0
+xd!rg$
+~9z5
+Pl4v0vk
+}3v-
+`;$&
+\u:yg2
+aUz@m
+ UXK(
+LiU&s
+Sx.J
+(m]2
+(k`h8(
+i{D+
+iYX8v
+4YH}
+_P2:
+X$KzI
+|J1Lt:L
+TRLr
+64t}
+pB;C
+U(b(" 3:M
+Z;F%
+bX*1
+FQk >0sZ
+a23cn
+sVAjB
+O2BP
+6p5
+46^*
+Y6 y
+<:Go
+iI5-
+=INC$
+,9?v
+jUXf
+:*:I
+6poV-
+K3EX
+:#+(a
+Lb]-2%
+nbmdLX-
+o4GG
+bt?H81
+fQVa!P
+QCV--
+]2]N,
+WGedN
+Nv*t$U
+U~p
++*~QH
+HL&)
+nWs%[_
+U`jm
+[Wy>c
+]IWZ=v
+k;vp
+{5HB
+p!|,<
+Ma5l
+E.D>
+y.r9
+i1+v
+.~,>
+-iJ*I
+=RMz
+t^z@
+D*qS
+??xe
+HeS7
+H]J}
+/} }8}{
+|.s9s%
+Zv'W3{_
+YQTR2e
+85khM
+d&n2k
+*5Rl
+"]Rt
+-;Of
+3*W-[
+*kS_
+)s^n
+-oZ6
+b5eT$w\
+~a5Uy
+CK&
+HQR[
+4=I&
+<90:Bo
+MEv'
+'%S-
+5ia
+rm(5D
+\W3lL%\
+F>]o5
+TY]U=cU
+DOa|
+9EU8
+Qa6{
+,zL
+37YX
+:5MQJ
+j/Sa
+14%X
+"Ptg
+J|G'
+M8x)
+%k*&I
+!>Sh
+&4i{
+7lP+
+#@#w5
+Ux-'
+aAc
+cc\bH
+~Z57!
+6c{mo
+P#tO
+Pd$r,rkd&r[
+}wt<zk
+^-jDw
+_$.%
+L~#y%
+/&_M
+gI_*
+i:8p
+Tf9s{
+|4s!
+}:w1
+\}SF
+|/^X6v
+QKsT
+1yQQl
+VIY3
+dF3L
+V[Sv)vI
+,q,>
+F-wY:
++ m*"
+A%2Y
+ZnWM~2
+H$KF
+ML,(
+nT."
+saoH
+n-n'SX
+$58]
+{r]|
+Fm+"~
+[Lq\M
+&2@h
+Eq |
+4A0i
+q\>N
+)'L ?z
+pDQI
+qii)
+d\\4
+-17PE
+la**
+0/\.5
+z;qTD
+&q5q
+u]4RRK5qk
+X{ld
+o<^{
+D(O%
+D|(.
+l|`
+Tr49
+/$_N
+3i%}y
+`z1]O[
+l5{"
+\/wG
+0T8P
+8_\)n
+)>[|
+|cY/
+bc.{
+unsGP!
+|Yo4
+8Nh;
+QoZ&
+%5+z[mp{& 
+fnre
+vG4e
+hAuAY6
+',]S
+c9cnG
+V;\z
+a+.4
+mA1'C@Y2
+)=ED)
+@slu
+ca/2
+k7z8W
+&-hX:
+DtSo
++{ :
+m93^
+:r!@b
+,+2q
+=#*[.|
+39#Y
+1;$i
+v:(O({K
+czYp]6
+Fdf65
+k&Jj
+Y-Jg7
+1LTC=V
+Ifl"
+LUH;B
+ ZGe
+6jgY
+o5k&
+Y|9Zl
+bnAy
+S#_Cq
+Aq/4
+X}p$U
+.ogvf
+}:t{
+jhmxc
+Gz"o
+dl>vA
+{0v0
+8;!>
+pj 5
+$3'e
+qN<W<O
+~7L
+UE9;
+Zn4A
+jPPi
+vtbQ
+n-[p
+q^YPt
+ISj5
+^g8$
+#Eg4PQ
+S57l-a
+8`R8
+SMiO
+H@g$
+WIm/
+g.HU
+)Nt
+$UuQ
+-(&0e
+Wz+T7
+0>7#
+7@)bV!
+XH40L
+qMQo
+A*a]
+gkhT
+e0[8G
+Njdq
+pR@3
+/6*xf
+RK>4x
+m|@y
+/FG<-
+mHq3l
+X"Z7
+,_%P
+Wu_[0B
+O|n.
+a'kC
+T#KGRb'SbV1
+l{ ] 
+/iJN(
+z$t:
+y2})
+hr(yU
+d-yG
+ne[Y+{O
+~9{&
+${.+
+]1t=Fo
+3<0|
+76U<Z
+U<Y<U|
+]gGn
+Qodh
+WtG\Pj
+ajrSXQl
+RSdG
+WgC
+[ igG
+u(Vl
+g|S!
+jOCz
+kGhV
+E\t0
+nXd>
+4m|kk\
+_jAf
+Kssn
+j1t]
+@4x.
+VIJb"
+)v>/
+>JaB
+dFv,%8"Z
+q1zw
+w$Dj
+m*"B
+4Ac{\
+!"Dh
+RH9b
+P*o+5
+B\tvn
+\75}
+5M(O
+]>0F
+'p10
+vv@9T1
+L`)k1U
+Q!AYt/
+$.s 
+5f|q*[
+=[n|e
+2%ZZ
+RYjM
+kPf-
+f7o>
+/Sz3c
+%R0#
+9D)s
+ .FWg
+y>Y1J|I
+gyp]
+x8p)
+~5x9
+xh0t[
+*w9]
+G]ov
+H*"G
+H5bG
+13vO
+,~9~5
+`b21
+_H|9
+z u#
+zt`v
+4ulk
+2m:kU
+IyZ
+YU+Y
+@!G+p
+INi<
+fUR4
+.gWqh
+cJ.vP
+CBzJ
+\ndee
+0nh2
+F#$yC
+mp+0
+iX@M66c"Oe
+-3"'
+E*T(
+h&zx
+MYTF
+U(Lu
+,"R$T
+Zc^k
+E..S)
+& 6W5
+%b8`
+k1RA
+%^oP
+d@lR
+CsK=
+!F^Pj
+^<]Yx
+y,)P
+1+c)
+pI3
+GW>~h
+X]Ni
+tnm|
+6m_B
+T7DI)#
+8@<W
+Vh#rplL
+dc!c9
+VZrL
+4@gR(m
+$%<
+O&~'q%
+?N~;
+bFGFo
+vOink
+w6o5
+)<Vx
+WK^+y
+eMe{
+Wz+K*[+
+7T%V
+Z1^k
+_X]Q#
+"v0%v
+&<K
+e\Q/(2
+Sao \
+uh1>
+^588b
+7Pc%
+k/rv
+y8g@_
+UVf}
+`dI7
+N>XH
+:mJH
+'%s!
+H?FD
+DSV2
+>vIsz
+vZC
+h<bAe
+DTDE
+`>tZV
+,nIA
+N+,g
+$Ls=?J
+3tgd
+%v!:gm
+!"q#
+ =(;
+!-{@y
+b{G}#IL
+Ay;C
+Dzii
+E!qo
+sZr#
+G7Vt.
+~1IG8K
+RIK[
+z}c`
+'iaC
+=nk+
+u,Tdc
+#R[`
+fm+q
+rcC]
+ogfgg
+d_r4)FoM
+HRNV
+?&_O^M
+G-WZ
+l5Z?
+^45w
+q7JLc
+Mj96
+1TT
+,w]f
+fs7K
+@akLv@<1
+qn_3LkA
+nHKB-
+& `K
+Kh0f*
+#2m8
+rF)1
+}Au/
+-PaE,A
+CfhU
+XEc2
+3/-1
+MRI0
+na8F
+;zox
+7!*
+N)K+pX
+Fj/@
+pPHa<
+Vn5oQ
+! %0=
+ }R+A
+@ffEc?4
++dhdu
+Cshh
++TZZ
+KNcLS
+Tj3 
+8`Jd
+z8p]
+h*Hw
+4jhof
+1}wa
+8eR2mXA
+^9@"
+<8'j
+XH1&r
+Bk-vGL
+B|5~{
+?%/%
+H}6uo
+H~db
+Hf$S
+|*s!
+>{$;
+~<{O
+?*<X
+?/DF
+->Q|
+)mE*
+V&*3
+>7v!
+v,Ff
+v\M'
+&gtU
+4AWp?
+5FmM
+n9*Y
+nr0=
+qjvN*pb
+\vT*L
+=8!(n
+6=IVu
+&1HK
+')@q
+5N$I
+H[A_
+<q8)
+K!>n
+0)F6G
+1 R\
+-}.a
+(8z[}c~
+*HiY
+B.r8
+`^e2X
+%GTh
+ {ET
+XV=E/?
+wdb:
+o*`$
+UYMx
+-*31
+S7MzW 
+.(8F
+nrz{
+8X00 
+4aP+
+#*rG
+"x3`
+!33@
+9yP[
+VuqX
+U'}io
+kQ`v[
+y-y#y[yo
+n)8T
+sAva]
+>g;n
+vSq~qY
+WK~W
+seMe
+U{W+
+9apJ
+[/kA
+F1a,
+16-D
+#b8N@, 
+N%6/
+$6."
+z1bn
+6D'B
+@/#,
+2b`+
+V=I5
+ /5<
+i()n
+TS87
+~8A\
+syqd^
+9M5<9}W
+JUKvT
+vt?U
+m~'$
+r*ES
+c(QA
+tDN#%
+Qq"N
+g5]
+sWZr
+Rb4n
+4(uhV
+):1F
+*)JK
+IGZ+
+ WG;B
+H]IS
+*A/"A
+&=62b
+pdoG
+<+i)
+!ah0
+eS6iQ
+-0o.
+5P2Z2
+g9d9ny
+k=`}
+i;f;n{
+wl7m
+?j?j
+=seoC
+<g<c
+<JMu
+smmm
+blU->
+:9O{
+%TzjM
+k,FWb4
+VH4Jg
+T<k(A'G
+L!?g
+eN!}92
+Ph_@
+TL%K
+d(Ng{
+:4MNf
+I2#d
+YTj|Z
+U`%X
+UPCD
+Q;;
+d1d'
+!K> 
+M%Ht
+p3R1
+F{Ab
+8b{1
+G Mk7
+8f1y
+dXyu
+tmt
+e?&N
+$h:_
+_,U&&
+.AkC
+E}>;
+|. j^
+wZ %S7
+%[tN
+@.@vw
+P(K*
+j*Hb
+Is(x
+rR=q/
+H/Nl
+4$2'%
+bll'
+hAMA
+`.xV
+-xip:
+=tIh:
+g#7Fn
+#zItwto
+~:zC
+{(v,v<v2vFO
+x<~v
+MlJ$.JL'>
+x9q2!$S
+sI%y8
+Y|]|S<%
+H}.u{
+z+u*
+MG25
+`v8{i
+YUe
+nV`qO
+lYkPS
+%U(Q
+EMalj
+\tN7
+UG3&
+9I1uaB
+%S;w
+T[Rj
+^%`~
+V,E2
+a|0dI(
+Yp+1@L./S
+]1*a
+igZ0
+B5gn
+/L;g
+A|7h=
+49Rp
+{^C2d
+Up@p[
+c_~a
+PIH*:6
+V-gn
+p7xw
+ueGa
+mqGCE
+uN'iX
+T4^{
+1=Axx`}
+!c&b(qk
+Q(VQJ
+^iXx
+93XU
+Pf$,6
+b/t3
+y?3N
+^]%`W
+<PUu
+%08t
+[ABq
+2\pP
+}NbT
+,e44X>
+y|bQ
+<GR{
+-S-3-
+zgkcF
+p.tg
+y8r!"
+h9zo
+\h)e
+tw:h
+j^?4
+ehlh
+MIy+
+@2_4
+j@L^
+4TVU0
+;e1V
+%w uaT
+lsG9
+$BE8K
+ZW/C
+s&;r
+gm!W
+Df!t
+l{B@}
+05ezos
+";Xt
+tVLCn
+PdVn
+cslr
+ai<G,
+!b]]K
+m+;Gv
+Q~sk
+h6i:
+mJ#t
+~*6J
+j}PiV
+t6aM
+%#UG
+VFH\
+IDgl
+3,*ap
+rBw2
+wK6i
+<JQp
+^uE[
+fd;l
+V}P%
+e7(U
+X}pc
+0bKJ[&L
+@;p[
+}#t1
+`x;0
+Pd r(rMd!r<r2
+/E/D
+Wt_,
+Pz<}m
+|z%}<
+}-{1
+>9xn
+<iHk
+TE^`
+duzJ*
+:%-0
+1uVc
+-.UH
+uP5N
+LV#My
+,hs
+6;gk
+.-i 
+0 dL
+U@pP
+7@ws
+40sP
+wBL@
+Vg5*
+/;)F
+<`u>, 
+B]@L
+^UEQ@
+(uw=
+{N:-
+gPt8
+9~;:
+g"*T
+Sd*8
+`uiu
+s?"
+z5cW
+zP>f
+=~Nv
+NW@\
+*:SgUh
+18toR!U
+-0]E
+F.sbp
+,$(
+MblI%
+CX0]
+$.m)
+w(o 
+EcESE
+>,*-
+K%oS
+OYNyw
++WUn
+U_Wc
+Oj*ko
+^Sw]]s
+zIp]
+|^SZ
+NgVg
+5L3xQ\?f
+13ah
+8L'J1)
+8.g.
++1K
+Q(e=
+X=bHY( 
+4.P{XP
+z7KnA9
+([sFO
+e].z
+4*BW t,
+, N"L
+'d,,TY
+ ]cd
+I#6b
+tCO\
+x)#27
++=*BL
+J!JYU
+iA}pm)BzW
+bq"#
+zD5=M
+ho?V
+&.Rf
+hY3&
+<%kQ
+!T/R8
+c$#6m
+ur_is
+4LKa:
+ze0GR
+ElOd
+}+Bh
+bcC'
+r}1E
+{afD
+Y.zu
+vqY=
+;{(QX
+1@0;
+z(n3hj
+vf7x\
+7V|O
+1\(fa
+=EmLb(]
+v.!u
+E~ ~
+d\_Qd
+Q$%YT
+p4$7
+#ijO
+1;vg
+o}cg|
+|,y)
+Ijxhj
+|f9sk
+13wf>
++gpr
+r/_1
+tFz3
+_)<^
+7zpta
+WD[N9o
+U.;Jfo
+N+6o;
+\);F
+seY7*
+UsUcK
+86{\
+Km1L9a6T
+aCb^@_
+,w7Wi/3:G`a
+n =e
+)[zS
+yHA@
+FenLV
+*n^1
+`/I)
+lBKyM
+-s){
+fHHiV`
++KJq
+,k`kxQ
+`W]s<
+BWJE
+,N)x
+%f@&#
+JEY7H,
+2UQU
+K+eq
+d7UT
+$p,#
+MILB
+l\-Z.
+J('T
+skY~
+3E?
+Vs@6
+8yu7Q 
+)*.q1*
+xuE|
+&XOM
+X{p#G
+=Hr^[
+3#E")
+z6.y-
+E`,0
+kB4T
+ph;t
+xd#R
+"g"wE>
+y$r>
+D.q0
+Bb5qM
+br_r:ye
+=<xb
+NdV2k
+sWS2*
+#~&(
+S;;&
+fZ"mZF
+rlM{K
+;;`H
+Mg;X03'Y+
+&7;;e
+e@;0Q
+4k`;K+
+etB@
+S2W.K
+(`,g
+BkZYR
+\UT FSK
+;FNB@
+Jl;Z
+ddqF
+J(]H
+M;j9~C
+rH0k
+7Sdi}
+clj6H
+"%YY
+D+?=
+1Zvw
+j'J+N
+ETzDj
+:A!q
+!l]ol
+W6zu
+wI2Y
+?<OX
+4m_1
+hMtx
+I\;
+K4)/
+6p5[X
+o^Xj
+Fg[a
+1t4$
+6<)<-<3|Yx^
+pKxyxmxkxg
+H2rJdRdz
+~;zit~
+&_&V
+;56=636/
+ v[L
+<+yarN
+dkr]
+.K}?
+`jejKjWj4
+t_z8=
+9%sf
+;7wE
+.U_T}e
+xCqQ
+n06I
+s)h{@^
+tAXKAY
+9X=
+)LDg
+![]5l!J
+([@]
+^l:@
+I_=2
+IL@p
+u\}q'&
+G6e?
+s-M!S,
+,GBK
+)LEdSE
+]t5m
+EUju
+Sz&w
+16$U4
+'QPf
+.g%X
+*S7-
+M*56
+vJsij=
+Ll>{"q
+A/]^
+aZ.*
+yeBw
+hRa{XZE\
+q&A=7{
+e \O
+wd58
+nM$]|
+OLL=
+_}9V
+y*I}
+w{5(#4
+kY`
+@I*D
+G]QW
+-H.xk
+QWla
+@/h*
+jaNQ
+]XV[
+qyyEs
+W*:+
+[+o4
+e_^v
+nroq
+ZwQ}c
+[Zoh
+ItiK
+'P#}@
+5{av
+M T1&
+D!}?a
+p3v>
+OPAD
+wt|Uc
+h 9#p
+4u1O
+9{7C!
+;2L,
+p\c>A
+~N)'
+ad;U
+D"f"
+fp`-
+1 C 
+S[3tGH$
+(+Vs
+)WGK=J
+uj1^
+T]g(%
+(1e0Q
+8-u(
+$ifI
+k6*W
+k8Vb>
+!HIL
+`*8c`
+$L`4
+28FK7$
+|mOd
+8+wP
+jiPO
+&9Hq
+gA[W0|
+fGX3
+q zm
++MSL
+`Muo
+6Id{o
+5E=0
+CUz:e:
+=4j#t
+&xPil
+?x.:N
+GZ9 <
+0,s5
+K,D[<
+aqBBTk!T
+AzScj
+:vul
+yD)
+X}p\
+vi24%
+6P7-%V
+?x&x6xw
+u>x?o}.
+";#C
+\y(2
+$.'^H
+,$oI
+K~4y>
+T!uK
+HKi-m
+lh ;
+e5V#
+T]cVk
+IdR7
+J5C&
+P%8!GM-O
+yIm^hn
+Zkx4
+w+tT6
+%M1t
+\e&7
+,23v
+FMSn
+p7P`
+J`ZS
+XgYZ
+Q@_MA
+@?iKX`
+V*+hf
+8kk6o:
+*huuY
+&nBb
+$79JK:
+Hy c
+cdZV
+%`Oaj
+5Z"j
+e[,k
+:dEn
+\Q'!3(
+V#s 
+c|"C
+z50O
+I$Ln
+hqK&
+ua4pp
+Iizj|
+S~Wu
+>L4/5J
+&:d
+y%OF
+1]n?
+\%seu
+i]<B
+Elr
+ugjY
+>2<4
+ldWy
+1uFQ
+)A@)
+Lx#4
+/Bo;
+X*vEL
+Tb4qmb,qh
+_H|)
+o%^M|?
+0xq0?
+t>}Ez"}$}[z%}"]O7
+|v9{g
+~${:
+T*UJS%\_+
+-=Qz
+\521
+Oujd~
+i]5Lj
+JwQo
+T\9z
+j0`Vl
+65mI
+%X9*d
+b[p4b
+3(T&
+/"v@4,
+eRSqt@"Y
+@G69,-Sf
+<p7]
+L5t-_
+n'3Q
+|_Ta\
+"D=H
+XhX@
+E8K%
+KCW!
+p& ,*\
+8=/,
+0ejIc
+de?aQ
+:Tx2 
+<d"Xglo
+3V]&
+f[7{B-
+JW^`y2j
+5Xr@
+T}[[
+4%YW
+\tab
+^;@Y
+x.expm
+x;A(
+K~Qr
+oWTV
+o\o|
+@w` pk`_
+d`6p>
+*7*w*
+S^WJB
+P0|C
+_ZjZzZnj
+=r}D
+y~EWkWO
+Ln$w\Ki1
+tiOk
+0#jbj
+znB[AB
+iP*m
+rQgU
+:vRHY;O:
+QQ#I
+{L%Qi
+06mVwr
+( [q
+EShY
+~:b\
+OqiO
+PchZ
+z-@L7
+7<%`z
+\%@[
+MT@a
+w88 
+,Q2+
+WgLQ
+4_:2
+8OI\
+!>-J>
+)$f\A^
+yFTD
+ +.Neg
+Ma&*$
+4Kwl
+#8Eu
+)":lj$
+DvEv
+i.y,
+{>4f]
+z\}=x@>
+H)7'
+NTg7
+u:.]
+$wSe2
++f,4H^
+&rsaz
+BKF\
+1[:&
+:MW]
+C 6`M
+K+kWv$?
+6cMfs
+$+3;
+y*goN
+ wUnC
+;w(w6
+[n~^c
++*W6
+@nMAMuM[
+/mt~
+jgZ.
+}/z9
+Z{[_m
+uGfgG'
+1m%Ftk
+)hO\
+Ava>g
+vB Y
+)z5F}
+2GpA
+%4q2
+Tay6F
+7G&K
+Wdc
+&Ua3
+d*~
+$*9F
+]B+:
+4UOn
+[e_&u
+UsH!Q
+<*nR
+DgzZ
+;8% 
+TCSs
+5Nes
+qIN9
+qM)-.
+pB<-IWh
+.61,g
+4f8
+a 0H
+4O_H
+6U[.
++<tW
+Q7m7&%\
+A%=V
+;AMz
+RXRga
+IoL',t"Ae
+M<Zh
+Hm$b/
+$"0x
+k\`Z
+YB"{
+}YHs
+@lV@=
+|!&\
+[Y9_
+5KS;
+f6F=}
+M$GT<
+Y>~9
+M;w=
+}Pw}BW9
+<}fYh/
+6!Vn
+sv"X5
+"Sh^
+omRxr
+!1{N
+(^^N`8!
+English
+Deutsch
+Fran
+Nederlands
+Dansk
+Suomi
+Italiano
+Norsk
+Svenska
+Espa
+Portugu
+Polski
+tina
+Magyar
+RIFF
+WAVEfmt 
+data
+~~~~~
+~~~~
+~~{]
+~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~}}}}}~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+~~~~~~~~
+~~~~~~~
++e.x5
+P%}SS
+KIZUK
+`KIZUK9">
+ZKIZUK
+wKIZUK
+Ver.006.008
+Canon DIGITAL IXUS 95 IS
+DD"b
+dP
+((((
+!!!!::::
+((((
+ `"3$
+#%&w(
+,v1a3
+H!L$/'
+4n;\>
+#T)V.Q3
+' {!
+V!N#3%
+0';nD
+M@V\_tq
+#b%-'
+) ,s.
++`.B1
+'{+A/
+2j6T=B@
+&{+}0x5
+*Y2!9
+!_#l&Q(5*
+P^Yzb
+#b%-'
+) ,s.
++`.B1
+'{+A/
+2j6T=B@
+&{+}0x5
+*Y2!9
+!_#l&Q(5*
+P^Yzb
+PTPS
+PTPS
+PTPS
+PTPS
+PTPS
+PTPS
+PTPS
+#RomStarter Ver1.08 for EC264
+UART loopback switch ON...
+UART loopback switch OFF...
+Rescue Loader
+ Signature is OFF...
+< Verify Error >
+Start Program on RAM
+!!!!Mount SD-Card ERROR
+---------------------------
+DISKBOOT.BIN
+DISKBOOT.BIN is started.
+--- DISKBOOT.BIN start ABORT!!! ---
+ROMWRITE.BIN
+ROMWRITE.BIN is started.
+--- ROMWRITE.BIN start ABORT!!! ---
+UPGRADER.BIN
+UPGRADER.BIN is started.
+--- BIN FILE LOAD ERROR ---
+--- UPGRADER.BIN start ABORT!!! ---
+DISKBOOT.BIN ReadError 
+MBR ReadError 
+BootSector ReadError 
+FORMAT ERROR (NOT FAT12/16)
+ROOTDIR  ReadError
+ Not Found
+FAT  ReadError
+DiskBoot Copy ERROR 
+ Cluster = 0 : Free Space!!!
+SD-Card is not Ready. (ACMD41: WAIT BUSY TIMEOUT) 
+GET CID ERROR 
+GET RCA ERROR 
+CMD7 ERROR 
+ACMD6 ERROR 
+gaonisoyp@-
+aB@02
+RE|E
+y|M6
+t1#R
+eu5_
+8+.Uj
+d!\v
+~tUM
+[\3>
+|`(0
+~(k?
+~(k?
+k?dnOY
+%qMv
+T$qMe
+:gd+
+HwE[j
+2%Q=o
+CCJ*
+yh(I
++y#}If
+[rbyKL
+/soNs
+5{8|K
+-1Id
+x~.K
+`x#f
+rW).ww)
+KVcg 
+~&' p
+xjD^
+b80_
+%lK8>
+<W=H
+Zmmah=
+|dx[6[
+\ a)
+6LcH
+pUpo
+O6t9p9
+8/B|
+-7!Lg4
+,DFVP}"L3
+j`n&
+OQlW
+0:}1ph
+)K[$,
+Qds%
+7qH0c
+KFI?Z
+k_})
+IS>il=@
+qS_K
+B:oH
+a?cISn
+&|*|
+OJ3;
+~*|^(i|
+qe<>2|~
+I|vA
+;}|V
+}'>O
+kb?o
+Ici4
+Zs_a
+Nb?O
+?/s
+g&>?
+>GS^
+V*Jy
+&{Me
+MmIs}P
+-5|n
+<!|>[
+nxnB
+Wpw-
+4G6"
+g0|>
+C:"?A
+p_)|
+Sx}s
+|Bs_;
+k?CS
+k?XS
+ep1k
+*BL;
+&D}<
+P"h)
+NWA}
+iWTv
+8^-t
+=@&:
+]2x-
+B5]?
+td)td
+:r.t
+CG&@G.
+3Uuv&
+W?{q>0
+t`&0
+.vF{
+8g{';
+ctvF
+9z`F
+V`\s
+t<By
+#Q~`
+t|;wt
+RCG,S
+rN}\]z
+.W;FwV
+Canon
+Canon DIGITAL IXUS 95 IS
+Comment
+CANON_DC
+2.0x2.0inch
+CANON_DC
+Canon
+Canon DIGITAL IXUS 95 IS
+Comment
+CANON_DC
+2.0x2.0inch
+CANON_DC
+Canon
+Canon DIGITAL IXUS 95 IS
+Comment
+CANON_DC
+2.0x2.0inch
+CANON_DC

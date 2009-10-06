@@ -1,0 +1,18 @@
+#!/bin/sh
+
+die() {
+    echo "FAILURE"
+    exit 1;
+}
+
+rm bin/DISKBOOT.bin bin/PS.FI2 2> /dev/null
+make fir || die
+
+cd bin || die
+../tools/packfi2/fi2enc -p 12740 -key 0b454d77d8c510f86374cf9bd56aede7 -iv F7C1F7E5573FAB204F78B95948018398 DISKBOOT.bin PS.FI2 || die
+
+if [ "`uname`" == "Darwin" ]; then
+    cp PS.FI2 /Volumes/CANON_DC/PS.FI2 || die
+    hdiutil detach /Volumes/CANON_DC
+fi
+

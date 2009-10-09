@@ -1,6 +1,10 @@
 #include "stubs_asm.h"
 // not found correctly by finsig
 
+NHSTUB(AllocateUncacheableMemory, 0xFFC17288) // Calls j_malloc
+NHSTUB(UpdateMBROnFlash, 0xFFC3F674) // Autodetect was too early
+NHSTUB(qsort, 0xFFE1CC78) // Similar to SD990's qsort
+
 //Autofound Required!
 NHSTUB(TurnOnBackLight,0xFFC68A90)	//"TurnOnBackLight" string
 NHSTUB(TurnOffBackLight,0xFFC68AA8)	//"TurnOffBackLight" string

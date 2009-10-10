@@ -85,27 +85,21 @@ void *vid_get_viewport_fb_d()
 }
 
 
-//SD780 - 720px real screen width
-//VERIFY SD1200
 long vid_get_bitmap_screen_width()
 {
     return 720;
 }
 
-//SD780 - 240px real screen height
-//VERIFY SD1200
 long vid_get_bitmap_screen_height()
 {
     return 240;
 }
 
-//VERIFY_SD780 - - Check resolutions again.
 int vid_get_viewport_width()
 {
-	return 720; // viewport is still 360, even though live view is 720 (960?)
+    return 720;
 }
 
-//VERIFY_SD780 - - Check resolutions again.
 long vid_get_viewport_height()
 {
     return 240;
@@ -118,6 +112,6 @@ char *camera_jpeg_count_str()
 }
 
 //VERIFY_SD1200
-long vid_get_bitmap_buffer_width() { return 360; }
+long vid_get_bitmap_buffer_width() { return 720; }
 //VERIFY_SD1200
-long vid_get_bitmap_buffer_height() { return 270; }
+long vid_get_bitmap_buffer_height() { return 240; }

@@ -40,16 +40,18 @@ void taskCreateHook2(int *p) {
 
 
 void boot() { //#fs
-    long *canon_data_src = (void*)0xFFECD3E4;  	//From end of first function
-    long *canon_data_dst = (void*)0x1900;		//From end of first function
-    long *canon_bss_start = (void*)0xCDAC; 		// just after data
-    long canon_data_len = 0xAEB8 - 0x1900; 		// data_end - data_start
-    long canon_bss_len = 0x12AD3C - 0xAEB8;		//In loop at end of first function
+    int *canon_data_src  = (int *)0xFFECD3E4;  	     //From end of first function
+    int *canon_data_dst  = (int *)0x1900;            //From end of first function
+    int canon_data_len   = (int *) 0xAEB8 - canon_data_dst;   // data_end - data_start
+
+    int *canon_bss_start = (int *)0xCDAC;           // just after data
+    int canon_bss_len    = (int *)0x12AD3C - canon_bss_start; //In loop at end of first function
 
     long i;
-    // enable caches and write buffer... this is a carryover from old dryos ports, may not be useful
-    // SD780 still has this in first function VERIFY_SD780
-    // SD1200 has it too (0xFFC00088)
+
+    
+    // enable caches and write buffer. Makes things go faster.
+    // SD1200 original 0xFFC00088
     asm volatile (
 	"MRC     p15, 0, R0,c1,c0\n"
 	"ORR     R0, R0, #0x1000\n"
@@ -116,11 +118,14 @@ void boot() { //#fs
 "    BCC     loc_FFC00154\n" 
     :::"r0","r1","r2","r3");
 
-    for(i=0;i<canon_data_len/4;i++)
-	canon_data_dst[i]=canon_data_src[i];
 
-    for(i=0;i<canon_bss_len/4;i++)
-	canon_bss_start[i]=0;
+
+    for(i = 0; i < canon_data_len/4; i++)
+        canon_data_dst[i]=canon_data_src[i];
+
+    for(i = 0; i < canon_bss_len/4; i++)
+        canon_bss_start[i]=0;
+
 
 
 // see http://chdk.setepontos.com/index.php/topic,2972.msg30712.html#msg30712
@@ -138,7 +143,7 @@ void boot() { //#fs
 //SD780 - ASM matches but comments are unknown if correct....
 //SD1200 - Changed offsets (Just s/FF81/FFC0/). Found code at 0xFFC001A0
 void __attribute__((naked,noinline)) sub_FFC001A0_my() {
-        asm volatile (
+asm volatile (
 "                LDR     R0, =0xFFC00218\n" // exception handler code
 "                MOV     R1, #0\n"
 "                LDR     R3, =0xFFC00250\n"
@@ -563,8 +568,6 @@ void DumpMemory(char *path, void *start_address, int length) {
 }
 
 
-//VERIFY_SD780 - What does this do for us?
-//VERIFY_SD1200
 void CreateTask_spytask() {
        _CreateTask("SpyTask", 0x19, 0x2000, core_spytask, 0);
 }

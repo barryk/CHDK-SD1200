@@ -60,7 +60,7 @@ void __attribute__((naked,noinline)) sub_FFCFC540_my() {
 "                 SUB     R3, R3, #8\n"
 "                 BL      sub_FFCFD5F8\n" // NRTable.c:219\n"
 //VERIFY_SD780"                 BL      wait_until_remote_button_is_released\n"
-//VERIFY_SD780"                 BL      capt_seq_hook_set_nr\n"
+"                 BL      capt_seq_hook_set_nr\n"
 "                 B       sub_FFCFC5EC\n" // -> continue function in firmware
     );
 }
@@ -109,7 +109,7 @@ void __attribute__((naked,noinline)) sub_FFC4A3B8_my() {
 "                BL      sub_FFCFCEA0\n" // SsShootLib.c:32768
 "                MOV     R0, R4\n"
 "                BL      sub_FFCFC540_my\n" // SsCaptureSeq.c:0 nr setup
-//"                BL      capt_seq_hook_raw_here\n" // Inserted this
+"                BL      capt_seq_hook_raw_here\n" // Inserted this
 "                MOV     R5, R0\n"
 "                B       loc_FFC4A464\n"
 "loc_FFC4A454:\n"

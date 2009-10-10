@@ -19,7 +19,8 @@ NHSTUB(VbattGet,0xFFC10644) // string, eventproc
 NHSTUB(vsprintf, 0xFFC0CBA0) // via eventproc_export_CPrintf (call before aCprintfSizeOve)
 
 NHSTUB(PostLogicalEventForNotPowerType, 0xFFC5D1F8) // string "PostLogicalEventForNotPowerType"
-NHSTUB(PT_PlaySound, 0xFFC47A78)
+//NHSTUB(PT_PlaySound, 0xFFC47A78)
+NHSTUB(PT_PlaySound, 0xFFC47764)
     /* Similar to SD780. They said look for "LDRH R0, [R0]"
      * Followed by LDR R1, [R1]. (True, but hard to search like that).
      * I found by looking for "%Y/%m/%d %H:%M:%S" in the function _prior_ to this

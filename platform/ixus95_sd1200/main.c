@@ -15,8 +15,7 @@ void startup()
     long *bss = &link_bss_start;
     long *ptr;
 
-
-   // sanity check (pointless with automemiso)
+    // sanity check (pointless with automemiso)
     if ((long)&link_bss_end > (MEMISOSTART + MEMISOSIZE)){
 	started();
 	shutdown();

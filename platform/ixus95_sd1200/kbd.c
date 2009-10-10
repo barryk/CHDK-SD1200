@@ -11,7 +11,6 @@ typedef struct {
         long canonkey;
 } KeyMap;
 
-
 static long kbd_new_state[3];
 static long kbd_prev_state[3];
 static long kbd_mod_state[3];
@@ -22,11 +21,10 @@ static int remote_key, remote_count;
 static int shoot_counter=0;
 #define DELAY_TIMEOUT 10000
 
-// OK: taken from sd780
-#define KEYS_MASK0 (0x0000000F)
-#define KEYS_MASK1 (0x00094800)
-#define KEYS_MASK2 (0x00007041)
-
+// OK: taken from sd990
+#define KEYS_MASK0 (0x00000000)
+#define KEYS_MASK1 (0x00000000)
+#define KEYS_MASK2 (0x0FFF)
 
 #define SD_READONLY_FLAG (0x20000)
 
@@ -215,56 +213,7 @@ void my_kbd_read_keys()
     // _kbd_pwr_on();
 
     kbd_fetch_data(kbd_new_state);
-
-    /*
-    sprintf(osd_buf, "1:       %8x  --> %8x", physw_status[0],kbd_new_state[0]);
-    draw_txt_string(20, 10, osd_buf, conf.osd_color);
-
-    sprintf(osd_buf, "2:       %8x  --> %8x", physw_status[1],kbd_new_state[1]);
-    draw_txt_string(20, 11, osd_buf, conf.osd_color);
-
-    sprintf(osd_buf, "3:       %8x  --> %8x", physw_status[2],kbd_new_state[2]);
-    draw_txt_string(20, 12, osd_buf, conf.osd_color);
-    msleep(500);
-    if (kbd_get_held_key() == KEY_PRINT) {
-        draw_txt_string(26, 14, "<DISP>", conf.osd_color);
-        isHeldDisp=1;
-    }
-    if (kbd_get_pressed_key() == KEY_UP) {
-        draw_txt_string(26, 14, "<HELLO>", conf.osd_color);
-        OpLog_Get(1); OpLog_Get(2); OpLog_Get(3); OpLog_Get(0);
-    }
-    if (isHeldDisp != 1) {
-        if (kbd_process() == 0) {
-            physw_status[0] = kbd_new_state[0];
-            physw_status[1] = kbd_new_state[1];
-            physw_status[2] = (physw_status[2]  & (~KEYS_MASK2)) |
-                              (kbd_new_state[2] & KEYS_MASK2);
-        } else {
-            //        draw_txt_string(20, 5,    "kbd_process() != 0", conf.osd_color);
-            // override keys
-            //        physw_status[0] = (kbd_new_state[0] & (~KEYS_MASK0)) |
-            //                          (kbd_mod_state[0] & KEYS_MASK0);
-            //        physw_status[1] = (kbd_new_state[1] & (~KEYS_MASK1)) |
-            //                          (kbd_mod_state[1] & KEYS_MASK1);
-            //        physw_status[2] = (physw_status[2]  & (~KEYS_MASK2)) |
-            //                                (kbd_new_state[2] & KEYS_MASK2);  //fix needed as below
-
-            //        physw_status[2] = (kbd_new_state[2] & (~KEYS_MASK2)) |
-            //                          (kbd_mod_state[2] & KEYS_MASK2);
-            //        if ((jogdial_stopped==0) && !state_kbd_script_run) {
-            //                jogdial_stopped=1;
-            //                get_jogdial_direction();
-            //        }
-            //        else if (jogdial_stopped && state_kbd_script_run)
-            //                jogdial_stopped=0;
-            //
-        }
-    } else {
-        draw_txt_string(26, 14, "      ", conf.osd_color);
-        isHeldDisp = 0;
-        *mmio2 = *mmio2 & ~(0x00000040);
-    }*/
+    char osd_buf[128];
 
     if (kbd_process() == 0) {
         // leave it alone...
@@ -506,30 +455,20 @@ static KeyMap keymap[] = {
     /* tiny bug: key order matters. see kbd_get_pressed_key()
      * for example
      */
-        //SD780 - Keymap
-        { 0, KEY_UP                  , 0x00000008 },
-        { 0, KEY_DOWN                , 0x00000004 },
-        { 0, KEY_LEFT                , 0x00000001 },
-        { 0, KEY_RIGHT               , 0x00000002 },
-
-
-        { 1, KEY_SET                 , 0x00004000 },
-        { 1, KEY_PLAY                , 0x00080000 },
-        { 1, KEY_MENU                , 0x00000800 },
-        { 1, KEY_POWER               , 0x00010000 },
-
-        //xxxf --> xxxd when in movie mode by switch
-        //xxxxxxx4 --> xxxxxxx5 when in lens extended recording mode
-
-
-        { 2, KEY_SHOOT_FULL          , 0x00001001 },
-        { 2, KEY_SHOOT_HALF          , 0x00000001 },
-        { 2, KEY_ZOOM_IN             , 0x00004000 },
-        { 2, KEY_ZOOM_OUT            , 0x00002000 },
-        { 2, KEY_PRINT               , 0x00000040 }, //doesn't exist
-        { 2, KEY_DISPLAY             , 0x00000040 }, //swapped for print atm
-                                                                                //We will see if I can make KEY_DISPLAY a long KEY_DISPLAY...
-        { 0, 0, 0 }
+    { 2, KEY_UP         , 0x00000080 },
+    { 2, KEY_DOWN       , 0x00000040 },
+    { 2, KEY_LEFT       , 0x00000010 },
+    { 2, KEY_RIGHT      , 0x00000020 },
+    { 2, KEY_SET        , 0x00000100 },
+    { 2, KEY_SHOOT_FULL , 0x00000003 },
+    { 2, KEY_SHOOT_HALF , 0x00000001 },
+    { 2, KEY_ZOOM_IN    , 0x00000004 },
+    { 2, KEY_ZOOM_OUT   , 0x00000008 },
+    { 2, KEY_MENU       , 0x00000400 },
+    { 2, KEY_DISPLAY    , 0x00000200 },
+    { 2, KEY_PRINT      , 0x00000800 }, // Doesn't exist. Faked with KEY_PLAY
+    { 2, KEY_PLAY       , 0x00000800 },
+    { 0, 0, 0 }
 };
 
 

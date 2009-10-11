@@ -37,8 +37,8 @@ NHSTUB(WriteSDCard, 0xFFCE4118) // Similar to SD990, searched SdCon.c
 NHSTUB(DoAFLock, 0xFFC47B8C) // Similar to SD990, AFL and AFL* strings
 NHSTUB(UnlockAF, 0xFFC47B9C) // Similar to SD990, AFUL and AFUL* strings
 
-NHSTUB(PutInNdFilter, 0xFFC00950) // String TurnOnNdFilter at 0xFFDEAD54 but I don't think it's right
-NHSTUB(PutOutNdFilter, 0xFFC00950) 
+NHSTUB(PutInNdFilter, 0xFFDEAD53) // String TurnOnNdFilter at 0xFFDEAD54 but I don't think it's right
+NHSTUB(PutOutNdFilter, 0xFFDEAD80) 
 
 NHSTUB(kbd_p2_f, 0xFFC116B0) // Similar to SD780, PhySw+1C
 NHSTUB(kbd_read_keys, 0xFFC11D80) // Look for LDR R0, =YYYY then,
@@ -47,18 +47,19 @@ NHSTUB(kbd_read_keys, 0xFFC11D80) // Look for LDR R0, =YYYY then,
 NHSTUB(kbd_read_keys_r2, 0xFFC30824) // autodetect basically right, just go to beginning of function
 NHSTUB(strchr, 0xFFC6CAD4) // Similar to SD780. AND R2, R1, #0xFF then LDRB R1, [R0]
 
-NHSTUB(RefreshPhysicalScreen, 0xFFC00950) // Unknown. nullsub for now
-NHSTUB(kbd_pwr_off, 0xFFC00950) // Unknown. nullsub for now
-NHSTUB(kbd_pwr_on, 0xFFC00950) // Unknown. nullsub for now
-NHSTUB(ScreenLock, 0xFFC00950) // Unknown. nullsub for now
-NHSTUB(ScreenUnLock, 0xFFC00950) // Unknown. nullsub for now
+NHSTUB(ScreenLock, 0xFFD64C2C) // aScreenlock
+NHSTUB(ScreenUnLock, 0xFFD64C80) // sScreenunlock
+NHSTUB(RefreshPhysicalScreen, 0xFFD64C80) // Same as ScreenUnLock
 
-NHSTUB(GetDrive_ClusterSize, 0xFFC00950) // Unknown. nullsub for now
-NHSTUB(GetDrive_FreeClusters, 0xFFC00950) // Unknown. nullsub for now
-NHSTUB(GetDrive_TotalClusters, 0xFFC00950) // Unknown. nullsub for now
+NHSTUB(GetDrive_FreeClusters, 0xFFC3F874) // Similar to 990 based on callers
+NHSTUB(GetDrive_TotalClusters, 0xFFC3F848) // Similar to 990, Above FreeClusters
+NHSTUB(GetDrive_ClusterSize, 0xFFC3F81C) // Similar to 990, Above TotalClusters
+
+NHSTUB(kbd_pwr_off, 0xFFC00950) // SD1200 doesn't use
+NHSTUB(kbd_pwr_on, 0xFFC00950) // SD1200 doesn't use
 
 // Don't exist in dryos
-NHSTUB(Mount_FileSystem, 0xFC00950) // NULLSUB
-NHSTUB(Unmount_FileSystem, 0xFC00950) // NULLSUB
-NHSTUB(rewinddir, 0xFC00950) // NULLSUB
-NHSTUB(SetZoomActuatorSpeedPercent, 0xFC00950) // NULLSUB
+NHSTUB(Mount_FileSystem, 0xFFC00950) // NULLSUB
+NHSTUB(Unmount_FileSystem, 0xFFC00950) // NULLSUB
+NHSTUB(rewinddir, 0xFFC00950) // NULLSUB
+NHSTUB(SetZoomActuatorSpeedPercent, 0xFFC00950) // NULLSUB

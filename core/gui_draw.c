@@ -6,6 +6,7 @@
 #include "font.h"
 #include "ubasic.h"
 #include "gui_draw.h"
+#include "camera.h"
 
 //-------------------------------------------------------------------
 static char*    frame_buffer[2];

@@ -2,6 +2,7 @@
 #include "platform.h"
 #include "core.h"
 #include "../../sd1200_debug.h"
+#include "stdlib.h"
 
 const char * const new_sa = &_end;
 
@@ -322,7 +323,7 @@ void __attribute__((naked,noinline)) task_Startup_my() {
         );
 
        CreateTask_spytask();
-       CreateTask_blinker();
+       //CreateTask_blinker();
 
         asm volatile (
 "                 BL      sub_FFC18E88\n"
@@ -485,7 +486,7 @@ void __attribute__((naked,noinline)) taskcreate_PhySw_my() {
 "                LDMFD   SP!, {R3-R5,PC}\n"
 	);
 }
-extern void msleep(int x);
+
 const unsigned ledlist[]={
     0xC0220134, // green
     0xC0220130, // red

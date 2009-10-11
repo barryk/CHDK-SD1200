@@ -47,7 +47,7 @@ void *vid_get_viewport_live_fb()
     void **fb=(void **)0x40E4; // SD1200 from 0xFFC953B4 Really not sure about this.
     unsigned char buff = *((unsigned char*)0x3F50); // SD1200 from 0xFFC95230
     if (buff == 0) {
-        buff = 3;
+        buff = 2;
     }
     else {
         buff--;
@@ -87,7 +87,7 @@ void *vid_get_viewport_fb_d()
 
 long vid_get_bitmap_screen_width()
 {
-    return 720;
+    return 320;
 }
 
 long vid_get_bitmap_screen_height()
@@ -97,7 +97,7 @@ long vid_get_bitmap_screen_height()
 
 int vid_get_viewport_width()
 {
-    return 720;
+    return 320;
 }
 
 long vid_get_viewport_height()
@@ -111,7 +111,10 @@ char *camera_jpeg_count_str()
     return (char *)0x2F1D4;  //SD1200 from 0xFFD57DC0
 }
 
-//VERIFY_SD1200
+/* SD1200:
+ * FFCADBF4                 MOV     R0, #0x2D0 ; 0x2D0 == 720
+ * FFCADBF8                 MOV     R1, #0xF0  ;  0xF0 == 240
+*/
+
 long vid_get_bitmap_buffer_width() { return 720; }
-//VERIFY_SD1200
 long vid_get_bitmap_buffer_height() { return 240; }
